@@ -1,0 +1,93 @@
+name: Fetch Nexon Weekly Videos
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 UTC 00:00 (한국시간 오전 9시)
+  workflow_dispatch:       # 수동 실행 버튼
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch YouTube Videos
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request, json, urllib.parse
+          from datetime import datetime, timezone, timedelta
+
+          YT_KEY = '${{ secrets.YOUTUBE_API_KEY }}'
+
+          # 이번 주 월요일 계산
+          now = datetime.now(timezone.utc)
+          mon = now - timedelta(days=now.weekday())
+          mon = mon.replace(hour=0, minute=0, second=0, microsecond=0)
+          after = mon.isoformat()
+
+          KEYWORDS = [
+            'Khazan OR "Embers of the Uncrowned" OR MapleStory game',
+            '"Blue Archive" OR "Arc Raiders" OR "First Descendant" game',
+            'Nexon game',
+          ]
+          EXCL_TITLE = ['tata nexon','nexon ev','nexon car','tractor','nexon suv']
+          EXCL_CH    = ['tata','rohit','pehchan','hr vehicle']
+
+          def is_clean(title, channel):
+            t, ch = title.lower(), channel.lower()
+            import re
+            if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
+            if any(x in t for x in EXCL_TITLE): return False
+            if any(x in ch for x in EXCL_CH): return False
+            return True
+
+          pool = []
+          seen = set()
+          for kw in KEYWORDS:
+            url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date&publishedAfter={urllib.parse.quote(after)}&maxResults=10&relevanceLanguage=en&key={YT_KEY}'
+            try:
+              with urllib.request.urlopen(url) as r:
+                d = json.loads(r.read())
+              for item in d.get('items', []):
+                vid = item['id']['videoId']
+                if vid not in seen and is_clean(item['snippet']['title'], item['snippet']['channelTitle']):
+                  seen.add(vid)
+                  pool.append(item)
+            except Exception as e:
+              print(f'Error: {kw}: {e}')
+
+          # 조회수 수집
+          ids = ','.join(i['id']['videoId'] for i in pool[:40])
+          stats = {}
+          if ids:
+            url2 = f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={ids}&key={YT_KEY}'
+            with urllib.request.urlopen(url2) as r:
+              sd = json.loads(r.read())
+            for i in sd.get('items', []):
+              stats[i['id']] = int(i['statistics'].get('viewCount', 0))
+
+          videos = [{
+            'id': i['id']['videoId'],
+            'title': i['snippet']['title'],
+            'channel': i['snippet']['channelTitle'],
+            'thumb': i['snippet']['thumbnails'].get('medium', {}).get('url', ''),
+            'date': i['snippet']['publishedAt'],
+            'views': stats.get(i['id']['videoId'], 0),
+            'url': f"https://www.youtube.com/watch?v={i['id']['videoId']}"
+          } for i in pool]
+
+          videos.sort(key=lambda x: x['views'], reverse=True)
+
+          result = {'videos': videos, 'fetched_at': now.isoformat(), 'count': len(videos)}
+          with open('weekly_videos.json', 'w', encoding='utf-8') as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+          print(f'완료: {len(videos)}개 영상 수집')
+          PYEOF
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add weekly_videos.json
+          git diff --staged --quiet || git commit -m "Weekly video update: $(date -u '+%Y-%m-%d')"
+          git push
