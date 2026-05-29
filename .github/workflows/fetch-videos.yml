@@ -3,7 +3,7 @@ name: Fetch Nexon Weekly Videos
 on:
   schedule:
     - cron: '0 0 * * *'  # 매일 UTC 00:00 (한국시간 오전 9시)
-  workflow_dispatch:       # 수동 실행 버튼
+  workflow_dispatch:
 
 jobs:
   fetch:
@@ -14,16 +14,21 @@ jobs:
       - name: Fetch YouTube Videos
         run: |
           python3 << 'PYEOF'
-          import urllib.request, json, urllib.parse
+          import urllib.request, json, urllib.parse, re
           from datetime import datetime, timezone, timedelta
 
           YT_KEY = '${{ secrets.YOUTUBE_API_KEY }}'
 
-          # 이번 주 월요일 계산
+          # ── 이번 주 월요일 00:00 UTC 계산 ──
           now = datetime.now(timezone.utc)
-          mon = now - timedelta(days=now.weekday())
+          week_day = now.weekday()  # 월=0, 일=6
+          mon = now - timedelta(days=week_day)
           mon = mon.replace(hour=0, minute=0, second=0, microsecond=0)
-          after = mon.isoformat()
+          sun = mon + timedelta(days=6, hours=23, minutes=59, seconds=59)
+          after  = mon.isoformat()
+          before = sun.isoformat()
+          week_label = f"{mon.strftime('%Y.%m.%d')}~{sun.strftime('%Y.%m.%d')}"
+          print(f"수집 기간: {week_label}")
 
           KEYWORDS = [
             'Khazan OR "Embers of the Uncrowned" OR MapleStory game',
@@ -35,7 +40,6 @@ jobs:
 
           def is_clean(title, channel):
             t, ch = title.lower(), channel.lower()
-            import re
             if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
             if any(x in t for x in EXCL_TITLE): return False
             if any(x in ch for x in EXCL_CH): return False
@@ -44,27 +48,41 @@ jobs:
           pool = []
           seen = set()
           for kw in KEYWORDS:
-            url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date&publishedAfter={urllib.parse.quote(after)}&maxResults=10&relevanceLanguage=en&key={YT_KEY}'
+            # publishedAfter + publishedBefore 로 정확히 이번 주만 수집
+            url = (
+              f'https://www.googleapis.com/youtube/v3/search'
+              f'?part=snippet&q={urllib.parse.quote(kw)}'
+              f'&type=video&order=date'
+              f'&publishedAfter={urllib.parse.quote(after)}'
+              f'&publishedBefore={urllib.parse.quote(before)}'
+              f'&maxResults=15&relevanceLanguage=en&key={YT_KEY}'
+            )
             try:
               with urllib.request.urlopen(url) as r:
                 d = json.loads(r.read())
+              if 'error' in d:
+                print(f'API 에러: {d["error"]["message"]}')
+                continue
               for item in d.get('items', []):
                 vid = item['id']['videoId']
                 if vid not in seen and is_clean(item['snippet']['title'], item['snippet']['channelTitle']):
                   seen.add(vid)
                   pool.append(item)
             except Exception as e:
-              print(f'Error: {kw}: {e}')
+              print(f'에러 {kw}: {e}')
 
           # 조회수 수집
           ids = ','.join(i['id']['videoId'] for i in pool[:40])
           stats = {}
           if ids:
             url2 = f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={ids}&key={YT_KEY}'
-            with urllib.request.urlopen(url2) as r:
-              sd = json.loads(r.read())
-            for i in sd.get('items', []):
-              stats[i['id']] = int(i['statistics'].get('viewCount', 0))
+            try:
+              with urllib.request.urlopen(url2) as r:
+                sd = json.loads(r.read())
+              for i in sd.get('items', []):
+                stats[i['id']] = int(i['statistics'].get('viewCount', 0))
+            except Exception as e:
+              print(f'조회수 수집 에러: {e}')
 
           videos = [{
             'id': i['id']['videoId'],
@@ -78,10 +96,18 @@ jobs:
 
           videos.sort(key=lambda x: x['views'], reverse=True)
 
-          result = {'videos': videos, 'fetched_at': now.isoformat(), 'count': len(videos)}
+          result = {
+            'videos': videos,
+            'week_label': week_label,
+            'week_start': mon.isoformat(),
+            'week_end': sun.isoformat(),
+            'fetched_at': now.isoformat(),
+            'count': len(videos)
+          }
+
           with open('weekly_videos.json', 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
-          print(f'완료: {len(videos)}개 영상 수집')
+          print(f'완료: {len(videos)}개 영상 ({week_label})')
           PYEOF
 
       - name: Commit and Push
