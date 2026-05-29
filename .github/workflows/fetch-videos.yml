@@ -119,7 +119,8 @@ jobs:
             subs  = int(s.get('subscriberCount', 0))
             views = int(s.get('viewCount', 0))
             vids  = int(s.get('videoCount', 1)) or 1
-            ch_stats[name] = {'subscribers': subs, 'avgViews': views // vids}
+            thumb = item.get('snippet', {}).get('thumbnails', {}).get('default', {}).get('url', '')
+            ch_stats[name] = {'subscribers': subs, 'avgViews': views // vids, 'thumbnail': thumb}
 
           items_list = list(id_map.items())
           for i in range(0, len(items_list), 50):
@@ -127,7 +128,7 @@ jobs:
             ids_str = ','.join(cid for _, cid in batch)
             id_to_name = {cid: nm for nm, cid in batch}
             try:
-              with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id={ids_str}&key={YT_KEY}') as r:
+              with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&id={ids_str}&key={YT_KEY}') as r:
                 for item in json.loads(r.read()).get('items', []):
                   nm = id_to_name.get(item['id'], '')
                   if nm: parse_yt(item, nm)
@@ -137,7 +138,7 @@ jobs:
 
           for name, handle in handle_map.items():
             try:
-              with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/channels?part=statistics&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}') as r:
+              with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}') as r:
                 items2 = json.loads(r.read()).get('items', [])
               if items2: parse_yt(items2[0], name)
             except Exception as e:
@@ -149,7 +150,7 @@ jobs:
               with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}') as r:
                 cid = json.loads(r.read()).get('items', [{}])[0].get('id', {}).get('channelId', '')
               if cid:
-                with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/channels?part=statistics&id={cid}&key={YT_KEY}') as r:
+                with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&id={cid}&key={YT_KEY}') as r:
                   items3 = json.loads(r.read()).get('items', [])
                 if items3: parse_yt(items3[0], name)
             except Exception as e:
