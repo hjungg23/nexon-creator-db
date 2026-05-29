@@ -177,7 +177,14 @@ jobs:
                 followers = tw(f'channels/followers?broadcaster_id={uid}').get('total', 0)
                 vods = tw(f'videos?user_id={uid}&type=archive&first=10').get('data', [])
                 avg_v = sum(int(v.get('view_count', 0)) for v in vods) // len(vods) if vods else 0
-                ch_stats[c['name']] = {'subscribers': followers, 'avgViews': avg_v}
+                # 채널 썸네일 수집
+                prof_req = urllib.request.Request(
+                  f'https://api.twitch.tv/helix/users?id={uid}',
+                  headers={'Client-Id': TW_ID, 'Authorization': f'Bearer {tw_token}'})
+                with urllib.request.urlopen(prof_req) as r:
+                  prof = json.loads(r.read())
+                thumbnail = prof.get('data',[{}])[0].get('profile_image_url','')
+                ch_stats[c['name']] = {'subscribers': followers, 'avgViews': avg_v, 'thumbnail': thumbnail}
               except Exception as e:
                 print(f'Twitch 에러 {c["name"]}: {e}')
               time.sleep(0.2)
