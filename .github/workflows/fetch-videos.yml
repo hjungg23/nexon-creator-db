@@ -266,7 +266,6 @@ jobs:
             json.dump({'videos': videos, 'fetched_at': now.isoformat(), 'count': len(videos)}, f, ensure_ascii=False, indent=2)
           print(f'모니터링 영상: {len(videos)}개')
           PYEOF
-          
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
