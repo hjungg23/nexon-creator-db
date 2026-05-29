@@ -206,11 +206,71 @@ jobs:
 
           print('저장 완료')
           PYEOF
+- name: Fetch Monitoring Videos
+        env:
+          YT_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request, json, urllib.parse, re, os
+          from datetime import datetime, timezone
 
+          YT_KEY = os.environ['YT_KEY']
+          now = datetime.now(timezone.utc)
+
+          EXCL_TITLE = ['tata nexon','nexon ev','nexon car','tractor','nexon suv']
+          EXCL_CH    = ['tata','rohit','pehchan','hr vehicle']
+
+          def is_clean(title, channel):
+            t, ch = title.lower(), channel.lower()
+            if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
+            if any(x in t for x in EXCL_TITLE): return False
+            if any(x in ch for x in EXCL_CH): return False
+            return True
+
+          kw = '"First Berserker" Khazan OR "Embers Uncrowned" OR MapleStory OR "Blue Archive" OR "Arc Raiders" OR "First Descendant" Nexon'
+          url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date&maxResults=30&relevanceLanguage=en&key={YT_KEY}'
+
+          pool = []
+          try:
+            with urllib.request.urlopen(url) as r:
+              d = json.loads(r.read())
+            if 'error' in d:
+              print(f'모니터링 에러: {d["error"]["message"]}')
+            else:
+              pool = [i for i in d.get('items',[]) if is_clean(i['snippet']['title'], i['snippet']['channelTitle'])]
+          except Exception as e:
+            print(f'모니터링 수집 에러: {e}')
+
+          # 조회수
+          ids = ','.join(i['id']['videoId'] for i in pool[:30])
+          stats = {}
+          if ids:
+            try:
+              with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={ids}&key={YT_KEY}') as r:
+                for i in json.loads(r.read()).get('items',[]):
+                  stats[i['id']] = int(i['statistics'].get('viewCount',0))
+            except Exception as e:
+              print(f'조회수 에러: {e}')
+
+          videos = [{
+            'id': i['id']['videoId'],
+            'title': i['snippet']['title'],
+            'channel': i['snippet']['channelTitle'],
+            'thumb': i['snippet']['thumbnails'].get('medium',{}).get('url',''),
+            'date': i['snippet']['publishedAt'],
+            'views': stats.get(i['id']['videoId'],0),
+            'url': f"https://www.youtube.com/watch?v={i['id']['videoId']}"
+          } for i in pool]
+
+          with open('monitoring_videos.json', 'w', encoding='utf-8') as f:
+            json.dump({'videos': videos, 'fetched_at': now.isoformat(), 'count': len(videos)}, f, ensure_ascii=False, indent=2)
+          print(f'모니터링 영상: {len(videos)}개')
+          PYEOF
+          
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add weekly_videos.json channel_stats.json
+          git add weekly_videos.json channel_stats.json monitoring_videos.json
           git diff --staged --quiet || git commit -m "Daily update: $(date -u '+%Y-%m-%d')"
           git push
