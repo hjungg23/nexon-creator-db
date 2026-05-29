@@ -1,24 +1,24 @@
 {
   "stats": {
-    "ZeroLenny": {
-      "subscribers": 331000,
-      "avgViews": 319579
-    },
     "GameXplain": {
       "subscribers": 1440000,
       "avgViews": 110831
-    },
-    "Boomstick Gaming": {
-      "subscribers": 411000,
-      "avgViews": 172735
     },
     "Arrekz Gaming": {
       "subscribers": 1510000,
       "avgViews": 111802
     },
+    "Boomstick Gaming": {
+      "subscribers": 411000,
+      "avgViews": 172735
+    },
     "BawkbaSoup": {
       "subscribers": 202000,
       "avgViews": 58518
+    },
+    "ZeroLenny": {
+      "subscribers": 331000,
+      "avgViews": 319579
     },
     "Fextralife": {
       "subscribers": 1170000,
@@ -104,6 +104,10 @@
       "subscribers": 215000,
       "avgViews": 22797
     },
+    "Ziostorm": {
+      "subscribers": 165000,
+      "avgViews": 75546
+    },
     "Iron Pineapple": {
       "subscribers": 1680000,
       "avgViews": 1980734
@@ -127,10 +131,6 @@
     "widdz": {
       "subscribers": 238000,
       "avgViews": 34962
-    },
-    "Playstation Access": {
-      "subscribers": 2180000,
-      "avgViews": 139651
     },
     "CohhCarnage": {
       "subscribers": 489000,
@@ -161,44 +161,44 @@
       "avgViews": 3661
     },
     "aceu": {
-      "subscribers": 2890141,
-      "avgViews": 37344
+      "subscribers": 2890139,
+      "avgViews": 37345
     },
     "Admiral Bahroo": {
       "subscribers": 844670,
-      "avgViews": 50203
+      "avgViews": 50205
     },
     "Distortion2": {
       "subscribers": 700691,
-      "avgViews": 103218
+      "avgViews": 103223
     },
     "Lirik": {
       "subscribers": 2996357,
-      "avgViews": 224173
+      "avgViews": 224184
     },
     "MOONMOON": {
-      "subscribers": 1183227,
-      "avgViews": 116962
+      "subscribers": 1183228,
+      "avgViews": 116973
     },
     "MissMikkaa": {
-      "subscribers": 510809,
-      "avgViews": 143413
+      "subscribers": 510808,
+      "avgViews": 143414
     },
     "Asmongold": {
-      "subscribers": 3540644,
+      "subscribers": 3540643,
       "avgViews": 0
     },
     "BreaK": {
       "subscribers": 303910,
-      "avgViews": 9214
+      "avgViews": 9215
     },
     "LobosJr": {
       "subscribers": 433866,
-      "avgViews": 16599
+      "avgViews": 16600
     },
     "Oroboro": {
       "subscribers": 215113,
-      "avgViews": 3837
+      "avgViews": 3838
     },
     "Simply": {
       "subscribers": 312067,
@@ -206,27 +206,27 @@
     },
     "RoundTwo": {
       "subscribers": 38489,
-      "avgViews": 6342
+      "avgViews": 6343
     },
     "Yogscast": {
-      "subscribers": 949534,
+      "subscribers": 949533,
       "avgViews": 9532
     },
     "Soviet Womble": {
       "subscribers": 1607796,
-      "avgViews": 14108
+      "avgViews": 14113
     },
     "Tubbo": {
-      "subscribers": 5231090,
-      "avgViews": 105872
+      "subscribers": 5231089,
+      "avgViews": 105873
     },
     "Sweet Anita": {
-      "subscribers": 1848928,
-      "avgViews": 51647
+      "subscribers": 1848927,
+      "avgViews": 51648
     },
     "Mynthos": {
-      "subscribers": 323891,
-      "avgViews": 44890
+      "subscribers": 323892,
+      "avgViews": 44891
     },
     "Pressea": {
       "subscribers": 166064,
@@ -234,30 +234,30 @@
     },
     "Clemovitch": {
       "subscribers": 216895,
-      "avgViews": 94917
+      "avgViews": 94922
     },
     "maxim": {
-      "subscribers": 515924,
-      "avgViews": 46836
+      "subscribers": 515925,
+      "avgViews": 46837
     },
     "Bonjwa": {
       "subscribers": 265806,
-      "avgViews": 114382
+      "avgViews": 114384
     },
     "metashi12": {
       "subscribers": 439823,
-      "avgViews": 125057
+      "avgViews": 125061
     },
     "H0llyLP": {
       "subscribers": 232717,
-      "avgViews": 36849
+      "avgViews": 36850
     },
     "Papaplatte": {
-      "subscribers": 3112605,
-      "avgViews": 375661
+      "subscribers": 3112604,
+      "avgViews": 375662
     },
     "KDRkitten": {
-      "subscribers": 347717,
+      "subscribers": 347716,
       "avgViews": 38953
     },
     "Broeki": {
@@ -265,15 +265,15 @@
       "avgViews": 11522
     },
     "DoktorFroid": {
-      "subscribers": 253732,
-      "avgViews": 11511
+      "subscribers": 253727,
+      "avgViews": 9927
     },
     "Hirznsturz": {
       "subscribers": 59151,
       "avgViews": 5942
     },
     "Divi": {
-      "subscribers": 103400,
+      "subscribers": 103399,
       "avgViews": 12660
     },
     "mon_official": {
@@ -290,7 +290,7 @@
     },
     "DarthMicrotransaction": {
       "subscribers": 330812,
-      "avgViews": 42209
+      "avgViews": 42211
     },
     "itmeJP": {
       "subscribers": 371962,
@@ -298,7 +298,7 @@
     },
     "Kanon": {
       "subscribers": 150269,
-      "avgViews": 24318
+      "avgViews": 24319
     },
     "MisoxShiru": {
       "subscribers": 17861,
@@ -309,7 +309,7 @@
       "avgViews": 3366
     },
     "Towelliee": {
-      "subscribers": 983037,
+      "subscribers": 983036,
       "avgViews": 8321
     },
     "Zepla HQ": {
@@ -317,6 +317,6 @@
       "avgViews": 6921
     }
   },
-  "fetched_at": "2026-05-29T08:15:20.791003+00:00",
+  "fetched_at": "2026-05-29T08:23:28.452317+00:00",
   "count": 79
 }
