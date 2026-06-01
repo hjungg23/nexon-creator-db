@@ -194,24 +194,48 @@ jobs:
           print(f'  통계 수집: {len(ch_stats)}명')
 
           # ── 5. 크리에이터별 영상 수집 ─────────────────
-          # 최신영상 2개 + 넥슨게임 영상 4개를 1회 검색으로 수집
-          # 1회 검색 = 100유닛. 85명이어도 8,500유닛으로 해결
-          print('\n[5] 크리에이터별 영상 수집 (최신2 + 넥슨게임4)')
+          # channel_stats에 수집된 채널 ID로 정확히 해당 채널 영상만 가져옴
+          print('\n[5] 크리에이터별 영상 수집')
           creator_videos = {}
           NEXON_KW_LIST = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','vindictus','kartrider','mabinogi','dungeon fighter']
 
+          # channel_stats에서 채널 ID 역추출
+          # channels API 응답에 channel ID가 포함되어 있음
+          # id_map을 재활용
           for c in creators:
             name = c.get('name', '')
-            if not name: continue
+            if not name:
+              continue
 
-            # YouTube 크리에이터만 영상 검색 (Twitch는 VOD가 별도)
-            if c.get('platform') != 'YouTube': 
+            # Twitch 크리에이터는 영상 수집 불가
+            if c.get('platform') != 'YouTube':
               creator_videos[name] = {'latest': [], 'nexon': []}
               continue
 
-            # 1회 검색: 크리에이터 최신 영상 10개
-            q = urllib.parse.quote(f'"{name}"')
-            d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={q}&type=video&order=date&maxResults=10&relevanceLanguage=en&key={YT_KEY}')
+            # 채널 ID 찾기 (id_map, handle_map에서)
+            channel_id = id_map.get(name, '')
+
+            # handle_map의 경우 channel_stats에서 ID 가져오기
+            if not channel_id and name in handle_map:
+              # channels API로 핸들 → ID 변환 (이미 수집됨)
+              # forHandle로 직접 검색
+              handle = handle_map[name]
+              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
+              channel_id = d.get('items', [{}])[0].get('id', '')
+              time.sleep(0.1)
+
+            # search_list는 채널명으로 ID 검색
+            if not channel_id and name in search_list:
+              d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}')
+              channel_id = d.get('items', [{}])[0].get('id', {}).get('channelId', '')
+              time.sleep(0.1)
+
+            if not channel_id:
+              creator_videos[name] = {'latest': [], 'nexon': []}
+              continue
+
+            # 해당 채널의 최신 영상 10개 수집 (channelId 파라미터로 정확히 해당 채널만)
+            d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={channel_id}&type=video&order=date&maxResults=10&key={YT_KEY}')
             time.sleep(0.15)
 
             if 'error' in d:
@@ -220,24 +244,28 @@ jobs:
               continue
 
             items = d.get('items', [])
-            # 해당 크리에이터 채널 영상만 필터 (다른 채널 영상 제거)
-            items = [i for i in items if name.lower().split()[0] in i['snippet']['channelTitle'].lower() or i['snippet']['channelTitle'].lower() in name.lower()]
 
             # 최신 2개
             latest = [{'id':i['id']['videoId'],'title':i['snippet']['title'],'date':i['snippet']['publishedAt'],'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in items[:2]]
 
-            # 넥슨 관련 최대 4개 (제목에 넥슨 키워드 포함된 것)
+            # 넥슨 관련 (제목에 키워드 포함)
             nexon_items = [i for i in items if any(k in i['snippet']['title'].lower() for k in NEXON_KW_LIST)]
-            # 넥슨 영상이 부족하면 별도 검색 1회 추가 (100유닛)
+
+            # 넥슨 영상이 2개 미만이면 추가 검색
             if len(nexon_items) < 2:
-              nexon_q = urllib.parse.quote(f'{name} Nexon game')
-              d2 = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={nexon_q}&type=video&order=relevance&maxResults=6&relevanceLanguage=en&key={YT_KEY}')
+              nexon_q = urllib.parse.quote('Nexon game')
+              d2 = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={channel_id}&q={nexon_q}&type=video&order=relevance&maxResults=6&key={YT_KEY}')
               time.sleep(0.15)
-              extra = [i for i in d2.get('items', []) if any(k in i['snippet']['title'].lower() for k in NEXON_KW_LIST)]
-              nexon_items = (nexon_items + extra)[:4]
+              extra = d2.get('items', [])
+              seen_ids = {i['id']['videoId'] for i in nexon_items}
+              for item in extra:
+                if item['id']['videoId'] not in seen_ids:
+                  nexon_items.append(item)
+                  seen_ids.add(item['id']['videoId'])
+                if len(nexon_items) >= 4:
+                  break
 
             nexon = [{'id':i['id']['videoId'],'title':i['snippet']['title'],'date':i['snippet']['publishedAt'],'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in nexon_items[:4]]
-
             creator_videos[name] = {'latest': latest, 'nexon': nexon}
 
           print(f'  완료: {len(creator_videos)}명')
