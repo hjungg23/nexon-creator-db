@@ -1,0 +1,77 @@
+name: Fetch Monitoring Videos
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Monitoring Videos
+        env:
+          YT_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request, json, urllib.parse, re, os
+          from datetime import datetime, timezone
+
+          YT_KEY = os.environ['YT_KEY']
+          now = datetime.now(timezone.utc)
+
+          EXCL_TITLE = ['tata nexon','nexon ev','nexon car','tractor','nexon suv','rohit','pehchan','ram ram','indianvehicle','214 ram','earn with','indian bike','farming simulator']
+          EXCL_CH    = ['tata','rohit','pehchan','hr vehicle','harshgamer','akash','earn with','pro ivs','kumar','orin-chan']
+          GAME_KW    = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','dungeon','vindictus','kartrider','mabinogi']
+
+          def is_clean(title, channel):
+            t, ch = title.lower(), channel.lower()
+            if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
+            if any(x in t for x in EXCL_TITLE): return False
+            if any(x in ch for x in EXCL_CH): return False
+            ch_latin = len(re.findall(r'[a-zA-Z]', ch))
+            if len(ch.replace(' ','')) > 3 and ch_latin / len(ch.replace(' ','')) < 0.3: return False
+            if not any(k in t for k in GAME_KW): return False
+            return True
+
+          kw = 'Nexon game OR Khazan OR "Blue Archive" OR MapleStory OR "Arc Raiders" OR "First Descendant"'
+          url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date&maxResults=30&relevanceLanguage=en&key={YT_KEY}'
+
+          videos = []
+          try:
+            with urllib.request.urlopen(url, timeout=15) as r:
+              d = json.loads(r.read())
+            if 'error' in d:
+              print(f'API 에러: {d["error"]["message"]}')
+            else:
+              pool = [i for i in d.get('items',[]) if is_clean(i['snippet']['title'], i['snippet']['channelTitle'])]
+              ids = ','.join(i['id']['videoId'] for i in pool[:30])
+              stats = {}
+              if ids:
+                with urllib.request.urlopen(f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={ids}&key={YT_KEY}', timeout=15) as r:
+                  for i in json.loads(r.read()).get('items',[]):
+                    stats[i['id']] = int(i['statistics'].get('viewCount',0))
+              videos = [{'id':i['id']['videoId'],'title':i['snippet']['title'],'channel':i['snippet']['channelTitle'],'thumb':i['snippet']['thumbnails'].get('medium',{}).get('url',''),'date':i['snippet']['publishedAt'],'views':stats.get(i['id']['videoId'],0),'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in pool]
+              print(f'수집 완료: {len(videos)}개')
+          except Exception as e:
+            print(f'에러: {e}')
+
+          with open('monitoring_videos.json', 'w', encoding='utf-8') as f:
+            json.dump({'videos': videos, 'fetched_at': now.isoformat(), 'count': len(videos)}, f, ensure_ascii=False, indent=2)
+          PYEOF
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add monitoring_videos.json
+          git diff --staged --quiet || git commit -m "Monitoring update: $(date -u '+%Y-%m-%d %H:%M')"
+          git push
+
+      - name: Upload to Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload latest monitoring_videos.json --clobber
