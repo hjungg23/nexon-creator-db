@@ -267,3 +267,17 @@ jobs:
           git add weekly_videos.json channel_stats.json monitoring_videos.json creator_videos.json
           git diff --staged --quiet || git commit -m "Daily update: $(date -u '+%Y-%m-%d')"
           git push
+
+      - name: Upload to Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete latest --yes 2>/dev/null || true
+          gh release create latest \
+            weekly_videos.json \
+            channel_stats.json \
+            monitoring_videos.json \
+            creator_videos.json \
+            --title "Latest Data" \
+            --notes "Auto-updated by GitHub Actions" \
+            --latest
