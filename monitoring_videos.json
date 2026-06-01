@@ -1,12 +1,39 @@
 {
   "videos": [
     {
+      "id": "l7BXZYwbO88",
+      "title": "The First Berserker: KHAZAN",
+      "channel": "EYYÜP",
+      "thumb": "https://i.ytimg.com/vi/l7BXZYwbO88/mqdefault.jpg",
+      "date": "2026-05-31T22:46:31Z",
+      "views": 19,
+      "url": "https://www.youtube.com/watch?v=l7BXZYwbO88"
+    },
+    {
+      "id": "vReuwQxGf10",
+      "title": "The First Berserker Khazan Walkthrough Gameplay Part 7 - El Ravaca Village BOSS ELAMEIN",
+      "channel": "BitBytBoy",
+      "thumb": "https://i.ytimg.com/vi/vReuwQxGf10/mqdefault.jpg",
+      "date": "2026-05-31T22:00:15Z",
+      "views": 1,
+      "url": "https://www.youtube.com/watch?v=vReuwQxGf10"
+    },
+    {
+      "id": "F8mkyszak3g",
+      "title": "Seguimos dando khazanmadrazo a diestra y siniestra | The First Berserker: Khazan | Directo 4",
+      "channel": "Darku-Gaming VT",
+      "thumb": "https://i.ytimg.com/vi/F8mkyszak3g/mqdefault.jpg",
+      "date": "2026-05-31T15:52:50Z",
+      "views": 15,
+      "url": "https://www.youtube.com/watch?v=F8mkyszak3g"
+    },
+    {
       "id": "w-zte0dXNGU",
       "title": "Seguimos dando khazanmadrazo a diestra y siniestra | The First Berserker: Khazan | Directo 4.5",
       "channel": "Darku-Gaming VT",
       "thumb": "https://i.ytimg.com/vi/w-zte0dXNGU/mqdefault.jpg",
       "date": "2026-05-31T08:40:10Z",
-      "views": 24,
+      "views": 37,
       "url": "https://www.youtube.com/watch?v=w-zte0dXNGU"
     },
     {
@@ -15,7 +42,7 @@
       "channel": "BitBytBoy",
       "thumb": "https://i.ytimg.com/vi/6cTkTKcU0wk/mqdefault.jpg",
       "date": "2026-05-31T06:00:00Z",
-      "views": 2,
+      "views": 3,
       "url": "https://www.youtube.com/watch?v=6cTkTKcU0wk"
     },
     {
@@ -24,7 +51,7 @@
       "channel": "BitBytBoy",
       "thumb": "https://i.ytimg.com/vi/t-Mxup13J34/mqdefault.jpg",
       "date": "2026-05-30T22:00:15Z",
-      "views": 4,
+      "views": 6,
       "url": "https://www.youtube.com/watch?v=t-Mxup13J34"
     },
     {
@@ -33,7 +60,7 @@
       "channel": "Adrigho_sama",
       "thumb": "https://i.ytimg.com/vi/JcqId72VMh8/mqdefault.jpg",
       "date": "2026-05-30T18:59:59Z",
-      "views": 11,
+      "views": 12,
       "url": "https://www.youtube.com/watch?v=JcqId72VMh8"
     },
     {
@@ -42,7 +69,7 @@
       "channel": "例のセキグチ",
       "thumb": "https://i.ytimg.com/vi/ZtB-thj2_Ao/mqdefault.jpg",
       "date": "2026-05-30T12:38:57Z",
-      "views": 9,
+      "views": 11,
       "url": "https://www.youtube.com/watch?v=ZtB-thj2_Ao"
     },
     {
@@ -60,7 +87,7 @@
       "channel": "BitBytBoy",
       "thumb": "https://i.ytimg.com/vi/TQz6o8pi2VY/mqdefault.jpg",
       "date": "2026-05-29T22:00:12Z",
-      "views": 8,
+      "views": 12,
       "url": "https://www.youtube.com/watch?v=TQz6o8pi2VY"
     },
     {
@@ -69,7 +96,7 @@
       "channel": "Chơi Game Hoy",
       "thumb": "https://i.ytimg.com/vi/5E5OBtgE38I/mqdefault.jpg",
       "date": "2026-05-29T18:04:15Z",
-      "views": 69,
+      "views": 74,
       "url": "https://www.youtube.com/watch?v=5E5OBtgE38I"
     },
     {
@@ -87,7 +114,7 @@
       "channel": "Darku-Gaming VT",
       "thumb": "https://i.ytimg.com/vi/f3hm3j3Dg5U/mqdefault.jpg",
       "date": "2026-05-29T06:42:40Z",
-      "views": 50,
+      "views": 52,
       "url": "https://www.youtube.com/watch?v=f3hm3j3Dg5U"
     },
     {
@@ -96,7 +123,7 @@
       "channel": "BitBytBoy",
       "thumb": "https://i.ytimg.com/vi/ldXQHo3NZsQ/mqdefault.jpg",
       "date": "2026-05-29T06:00:13Z",
-      "views": 15,
+      "views": 16,
       "url": "https://www.youtube.com/watch?v=ldXQHo3NZsQ"
     },
     {
@@ -105,26 +132,8 @@
       "channel": "GreenLinG Gamer",
       "thumb": "https://i.ytimg.com/vi/jSf3A-c99qA/mqdefault.jpg",
       "date": "2026-05-29T05:02:52Z",
-      "views": 19,
+      "views": 20,
       "url": "https://www.youtube.com/watch?v=jSf3A-c99qA"
-    },
-    {
-      "id": "XDU-StqUv1o",
-      "title": "The First Berserker Khazan Walkthrough Gameplay Part 2 - Embars Ruins BOSS VIPER",
-      "channel": "BitBytBoy",
-      "thumb": "https://i.ytimg.com/vi/XDU-StqUv1o/mqdefault.jpg",
-      "date": "2026-05-28T22:00:07Z",
-      "views": 10,
-      "url": "https://www.youtube.com/watch?v=XDU-StqUv1o"
-    },
-    {
-      "id": "qGEsx75UNNM",
-      "title": "The First Berserker Khazan | En Español | Capitulo 26 &quot;BOSS Elamein&quot;",
-      "channel": "DarkMarcvs",
-      "thumb": "https://i.ytimg.com/vi/qGEsx75UNNM/mqdefault.jpg",
-      "date": "2026-05-26T21:57:17Z",
-      "views": 38,
-      "url": "https://www.youtube.com/watch?v=qGEsx75UNNM"
     },
     {
       "id": "LgAeTj4_xx8",
@@ -134,15 +143,6 @@
       "date": "2026-05-24T14:42:21Z",
       "views": 10,
       "url": "https://www.youtube.com/watch?v=LgAeTj4_xx8"
-    },
-    {
-      "id": "smam9Z6fd2E",
-      "title": "The First Berserker:Khazan (PS5). Ép29. Boss &quot;Yerid l&#39;Achevé&quot; de la quête La complainte des oubliés.",
-      "channel": "Sabrina820 Gaming",
-      "thumb": "https://i.ytimg.com/vi/smam9Z6fd2E/mqdefault.jpg",
-      "date": "2026-05-21T08:00:45Z",
-      "views": 33,
-      "url": "https://www.youtube.com/watch?v=smam9Z6fd2E"
     },
     {
       "id": "qwtdXXV90t8",
@@ -208,15 +208,6 @@
       "url": "https://www.youtube.com/watch?v=pTwAvq4fbAw"
     },
     {
-      "id": "y8DqKyvUbOM",
-      "title": "The First Berserker Khazan | En Español | Capitulo 24 &quot;El Ravaca&quot;",
-      "channel": "DarkMarcvs",
-      "thumb": "https://i.ytimg.com/vi/y8DqKyvUbOM/mqdefault.jpg",
-      "date": "2026-05-12T20:27:34Z",
-      "views": 18,
-      "url": "https://www.youtube.com/watch?v=y8DqKyvUbOM"
-    },
-    {
       "id": "YxD2Q0OwZF4",
       "title": "DEFINISI FINAL BOSS SESUNGGUHNYA - The First Berserker: Khazan (indonesia)",
       "channel": "Skiesplays",
@@ -231,7 +222,7 @@
       "channel": "SHiNWiN",
       "thumb": "https://i.ytimg.com/vi/0BuOrngoFcM/mqdefault.jpg",
       "date": "2026-05-07T01:29:28Z",
-      "views": 1397,
+      "views": 1398,
       "url": "https://www.youtube.com/watch?v=0BuOrngoFcM"
     },
     {
@@ -253,24 +244,33 @@
       "url": "https://www.youtube.com/watch?v=VY7_HOYeXAI"
     },
     {
-      "id": "V5zU5QDykTg",
-      "title": "Test du jeu The First Berserker: Khazan #jeuxvideo #Review #rogueh24 #khazan",
-      "channel": "Rogueh24",
-      "thumb": "https://i.ytimg.com/vi/V5zU5QDykTg/mqdefault.jpg",
-      "date": "2026-05-04T22:06:30Z",
-      "views": 304,
-      "url": "https://www.youtube.com/watch?v=V5zU5QDykTg"
+      "id": "L3ISdFOlKhw",
+      "title": "Khazan’s Revenge: The Battle of the Century!⚔️#TheFirstBerserker#gaming  #ActionRPG #nexon  #shorts",
+      "channel": "Skylxn",
+      "thumb": "https://i.ytimg.com/vi/L3ISdFOlKhw/mqdefault.jpg",
+      "date": "2026-04-29T23:00:34Z",
+      "views": 389,
+      "url": "https://www.youtube.com/watch?v=L3ISdFOlKhw"
     },
     {
-      "id": "nOTW6ciyP68",
-      "title": "The First Berserker Khazan | En Español | Capitulo 22 &quot;Ciudadela de Bandidos&quot;",
-      "channel": "DarkMarcvs",
-      "thumb": "https://i.ytimg.com/vi/nOTW6ciyP68/mqdefault.jpg",
-      "date": "2026-04-29T19:11:58Z",
-      "views": 39,
-      "url": "https://www.youtube.com/watch?v=nOTW6ciyP68"
+      "id": "8NDFGEQ2CcE",
+      "title": "Let&#39;s Play The First Berserker: Khazan [57] - Das hier wird zum Running Gag T_T",
+      "channel": "Beagle on Games",
+      "thumb": "https://i.ytimg.com/vi/8NDFGEQ2CcE/mqdefault.jpg",
+      "date": "2026-04-28T12:00:26Z",
+      "views": 3,
+      "url": "https://www.youtube.com/watch?v=8NDFGEQ2CcE"
+    },
+    {
+      "id": "6h9kXtqHBcw",
+      "title": "Let&#39;s Play The First Berserker: Khazan [55] - In Soulslike über Dächer tanzen ist einfach so tödlich",
+      "channel": "Beagle on Games",
+      "thumb": "https://i.ytimg.com/vi/6h9kXtqHBcw/mqdefault.jpg",
+      "date": "2026-04-24T12:00:10Z",
+      "views": 14,
+      "url": "https://www.youtube.com/watch?v=6h9kXtqHBcw"
     }
   ],
-  "fetched_at": "2026-05-31T18:56:01.968639+00:00",
+  "fetched_at": "2026-06-01T02:17:48.613080+00:00",
   "count": 30
 }
