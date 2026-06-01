@@ -37,14 +37,20 @@ jobs:
             '"Blue Archive" OR "Arc Raiders" OR "First Descendant" game',
             'Nexon game',
           ]
-          EXCL_TITLE = ['tata nexon','nexon ev','nexon car','tractor','nexon suv']
-          EXCL_CH    = ['tata','rohit','pehchan','hr vehicle']
+          EXCL_TITLE = ['tata nexon','nexon ev','nexon car','tractor','nexon suv','rohit','pehchan','ram ram','indianvehicle','214 ram','earn with','indian bike','farming simulator']
+          EXCL_CH    = ['tata','rohit','pehchan','hr vehicle','harshgamer','akash','earn with','pro ivs','kumar','orin-chan']
 
           def is_clean(title, channel):
             t, ch = title.lower(), channel.lower()
             if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
             if any(x in t for x in EXCL_TITLE): return False
             if any(x in ch for x in EXCL_CH): return False
+            # 게임 키워드 없으면 제외
+            GAME_KW = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','dungeon','vindictus','kartrider','mabinogi']
+            if not any(k in t for k in GAME_KW): return False
+            # 채널명 라틴문자 30% 미만 제외
+            ch_latin = len(re.findall(r'[a-zA-Z]', ch))
+            if len(ch.replace(' ','')) > 3 and ch_latin / len(ch.replace(' ','')) < 0.3: return False
             return True
 
           pool, seen = [], set()
