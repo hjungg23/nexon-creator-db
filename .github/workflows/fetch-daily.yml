@@ -193,38 +193,31 @@ jobs:
 
           print(f'  통계 수집: {len(ch_stats)}명')
 
-          # ── 5. 크리에이터별 영상 수집 ─────────────────
-          # channel_stats에 수집된 채널 ID로 정확히 해당 채널 영상만 가져옴
+          # ── 5. 크리에이터별 영상 수집 (playlistItems API - 1유닛/회) ──
           print('\n[5] 크리에이터별 영상 수집')
           creator_videos = {}
           NEXON_KW_LIST = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','vindictus','kartrider','mabinogi','dungeon fighter']
+          EXCL = ['tata nexon','nexon ev','nexon car','nexon suv']
 
-          # channel_stats에서 채널 ID 역추출
-          # channels API 응답에 channel ID가 포함되어 있음
-          # id_map을 재활용
+          def get_uploads_playlist(channel_id):
+            # 채널 ID의 업로드 플레이리스트 = UU + channel_id[2:]
+            return 'UU' + channel_id[2:]
+
           for c in creators:
             name = c.get('name', '')
             if not name:
               continue
 
-            # Twitch 크리에이터는 영상 수집 불가
             if c.get('platform') != 'YouTube':
               creator_videos[name] = {'latest': [], 'nexon': []}
               continue
 
-            # 채널 ID 찾기 (id_map, handle_map에서)
+            # 채널 ID 확인
             channel_id = id_map.get(name, '')
-
-            # handle_map의 경우 channel_stats에서 ID 가져오기
             if not channel_id and name in handle_map:
-              # channels API로 핸들 → ID 변환 (이미 수집됨)
-              # forHandle로 직접 검색
-              handle = handle_map[name]
-              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
+              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forHandle={urllib.parse.quote(handle_map[name])}&key={YT_KEY}')
               channel_id = d.get('items', [{}])[0].get('id', '')
               time.sleep(0.1)
-
-            # search_list는 채널명으로 ID 검색
             if not channel_id and name in search_list:
               d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}')
               channel_id = d.get('items', [{}])[0].get('id', {}).get('channelId', '')
@@ -234,9 +227,10 @@ jobs:
               creator_videos[name] = {'latest': [], 'nexon': []}
               continue
 
-            # 해당 채널의 최신 영상 10개 수집 (channelId 파라미터로 정확히 해당 채널만)
-            d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={channel_id}&type=video&order=date&maxResults=10&key={YT_KEY}')
-            time.sleep(0.15)
+            # playlistItems로 최신 영상 15개 가져오기 (1유닛)
+            playlist_id = get_uploads_playlist(channel_id)
+            d = yt_get(f'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId={playlist_id}&maxResults=15&key={YT_KEY}')
+            time.sleep(0.1)
 
             if 'error' in d:
               print(f'  에러 ({name}): {d.get("error",{}).get("message","")}')
@@ -246,29 +240,29 @@ jobs:
             items = d.get('items', [])
 
             # 최신 2개
-            latest = [{'id':i['id']['videoId'],'title':i['snippet']['title'],'date':i['snippet']['publishedAt'],'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in items[:2]]
+            latest = []
+            for i in items[:2]:
+              s = i['snippet']
+              vid = s.get('resourceId', {}).get('videoId', '')
+              if vid:
+                latest.append({'id': vid, 'title': s['title'], 'date': s['publishedAt'], 'url': f'https://www.youtube.com/watch?v={vid}'})
 
-            # 넥슨 관련 (제목에 키워드 포함)
-            nexon_items = [i for i in items if any(k in i['snippet']['title'].lower() for k in NEXON_KW_LIST)]
+            # 넥슨 관련 영상 (키워드 필터)
+            nexon = []
+            for i in items:
+              s = i['snippet']
+              vid = s.get('resourceId', {}).get('videoId', '')
+              title_lower = s['title'].lower()
+              if vid and any(k in title_lower for k in NEXON_KW_LIST) and not any(x in title_lower for x in EXCL):
+                nexon.append({'id': vid, 'title': s['title'], 'date': s['publishedAt'], 'url': f'https://www.youtube.com/watch?v={vid}'})
+              if len(nexon) >= 4:
+                break
 
-            # 넥슨 영상이 2개 미만이면 추가 검색
-            if len(nexon_items) < 2:
-              nexon_q = urllib.parse.quote('Nexon game')
-              d2 = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={channel_id}&q={nexon_q}&type=video&order=relevance&maxResults=6&key={YT_KEY}')
-              time.sleep(0.15)
-              extra = d2.get('items', [])
-              seen_ids = {i['id']['videoId'] for i in nexon_items}
-              for item in extra:
-                if item['id']['videoId'] not in seen_ids:
-                  nexon_items.append(item)
-                  seen_ids.add(item['id']['videoId'])
-                if len(nexon_items) >= 4:
-                  break
-
-            nexon = [{'id':i['id']['videoId'],'title':i['snippet']['title'],'date':i['snippet']['publishedAt'],'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in nexon_items[:4]]
             creator_videos[name] = {'latest': latest, 'nexon': nexon}
 
           print(f'  완료: {len(creator_videos)}명')
+          yt_used = len([c for c in creators if c.get('platform')=='YouTube'])
+          print(f'  예상 추가 유닛: ~{yt_used}유닛 (playlistItems 1유닛/채널)')
 
           # ── 6. 저장 ────────────────────────────────────
           print('\n[6] 파일 저장')
