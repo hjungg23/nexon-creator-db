@@ -1,7 +1,20 @@
 {
   "videos": {
     "Arrekz Gaming": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "HAeKcxiARDw",
+          "title": "Is Modern Warfare 4 Undoing Years Of Bad Decisions? #CallOfDuty #ModernWarfare4 #CODMW4",
+          "date": "2026-06-01T22:00:34+00:00",
+          "url": "https://www.youtube.com/watch?v=HAeKcxiARDw"
+        },
+        {
+          "id": "DPrl5Iup9AY",
+          "title": "Modern Warfare 4 HUGE Multiplayer Changes, Campaign, DMZ & New Details - COD MW4",
+          "date": "2026-06-01T19:00:32+00:00",
+          "url": "https://www.youtube.com/watch?v=DPrl5Iup9AY"
+        }
+      ],
       "nexon": []
     },
     "Easy Allies": {
@@ -41,7 +54,20 @@
       "nexon": []
     },
     "GameXplain": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "pen9385iuDg",
+          "title": "PlayStation State of Play - LIVE REACTION",
+          "date": "2026-06-02T07:21:18+00:00",
+          "url": "https://www.youtube.com/watch?v=pen9385iuDg"
+        },
+        {
+          "id": "_M662cubN6Q",
+          "title": "Nintendo Music 1.6.0 Update Tour! Mario Kart World, PC Support, & More!",
+          "date": "2026-06-02T03:47:40+00:00",
+          "url": "https://www.youtube.com/watch?v=_M662cubN6Q"
+        }
+      ],
       "nexon": []
     },
     "Gladd": {
@@ -113,7 +139,20 @@
       "nexon": []
     },
     "ZeroLenny": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "9vR1aWfBQKw",
+          "title": "My Friends Sent Me TROLL SOULS SAVES",
+          "date": "2026-05-19T16:01:02+00:00",
+          "url": "https://www.youtube.com/watch?v=9vR1aWfBQKw"
+        },
+        {
+          "id": "lba1o3kv7xE",
+          "title": "Beating Dark Souls 2 TWICE AT THE SAME TIME",
+          "date": "2026-04-11T15:12:36+00:00",
+          "url": "https://www.youtube.com/watch?v=lba1o3kv7xE"
+        }
+      ],
       "nexon": []
     },
     "Globku": {
@@ -313,11 +352,37 @@
       "nexon": []
     },
     "BawkbaSoup": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "agho1NuY9os",
+          "title": "SILENT HILL 4 THE ROOM || ANY% SPEEDRUNS",
+          "date": "2026-06-01T00:00:17+00:00",
+          "url": "https://www.youtube.com/watch?v=agho1NuY9os"
+        },
+        {
+          "id": "VUF5TvgGqZY",
+          "title": "The Backrooms Movie...",
+          "date": "2026-05-31T15:07:44+00:00",
+          "url": "https://www.youtube.com/watch?v=VUF5TvgGqZY"
+        }
+      ],
       "nexon": []
     },
     "Boomstick Gaming": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "UT57FoiAWXo",
+          "title": "Grab This Mina The Hollower Trinket ASAP!",
+          "date": "2026-05-28T21:38:55+00:00",
+          "url": "https://www.youtube.com/watch?v=UT57FoiAWXo"
+        },
+        {
+          "id": "_P5eh7r68II",
+          "title": "My Tips For Mina The Hollower (Shovel Knight Devs New Game)",
+          "date": "2026-05-28T16:52:54+00:00",
+          "url": "https://www.youtube.com/watch?v=_P5eh7r68II"
+        }
+      ],
       "nexon": []
     },
     "ItalianSpartacus": {
@@ -341,5 +406,5 @@
       "nexon": []
     }
   },
-  "fetched_at": "2026-06-01T09:04:06.235451+00:00"
+  "fetched_at": "2026-06-02T09:12:36.661135+00:00"
 }
