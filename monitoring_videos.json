@@ -1,12 +1,21 @@
 {
   "videos": [
     {
+      "id": "dftSj2knAJs",
+      "title": "¿YA ESTÁ CONFIRMADA? - Colaboración Entre Overwatch Corea &amp; Nexon | The First Descendant",
+      "channel": "El Modz",
+      "thumb": "https://i.ytimg.com/vi/dftSj2knAJs/mqdefault.jpg",
+      "date": "2026-06-04T06:15:05Z",
+      "views": 127,
+      "url": "https://www.youtube.com/watch?v=dftSj2knAJs"
+    },
+    {
       "id": "omxSxTlxer4",
       "title": "HIMARI RACINGGGG!! #anime #bluearchiveglobal #game #gaming #androidgames #nexon #gacha #shorts",
       "channel": "Jason Octorion",
       "thumb": "https://i.ytimg.com/vi/omxSxTlxer4/mqdefault.jpg",
       "date": "2026-06-04T05:52:26Z",
-      "views": 132,
+      "views": 149,
       "url": "https://www.youtube.com/watch?v=omxSxTlxer4"
     },
     {
@@ -15,28 +24,10 @@
       "channel": "NYPC",
       "thumb": "https://i.ytimg.com/vi/ua2sgIlRlio/mqdefault.jpg",
       "date": "2026-06-04T05:00:01Z",
-      "views": 6118,
+      "views": 16426,
       "url": "https://www.youtube.com/watch?v=ua2sgIlRlio"
-    },
-    {
-      "id": "83KJqACPTyg",
-      "title": "Bolero 🔙👍8 Indian life simulator 3D game 🎯🎮 video 📷 #automobile #gaming #nexonev #nexon #tiago",
-      "channel": "car_gaming44",
-      "thumb": "https://i.ytimg.com/vi/83KJqACPTyg/mqdefault.jpg",
-      "date": "2026-06-04T02:50:05Z",
-      "views": 1035,
-      "url": "https://www.youtube.com/watch?v=83KJqACPTyg"
-    },
-    {
-      "id": "OzajJwJlOYE",
-      "title": "maplestory classic world preview (provided by nexon)",
-      "channel": "dinofries",
-      "thumb": "https://i.ytimg.com/vi/OzajJwJlOYE/mqdefault.jpg",
-      "date": "2026-04-16T18:00:21Z",
-      "views": 9303,
-      "url": "https://www.youtube.com/watch?v=OzajJwJlOYE"
     }
   ],
-  "fetched_at": "2026-06-04T11:36:34.122540+00:00",
-  "count": 4
+  "fetched_at": "2026-06-04T19:48:18.728937+00:00",
+  "count": 3
 }
