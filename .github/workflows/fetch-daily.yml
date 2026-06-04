@@ -117,51 +117,61 @@ jobs:
           weekly_videos = sorted([{'id':i['id']['videoId'],'title':i['snippet']['title'],'channel':i['snippet']['channelTitle'],'thumb':i['snippet']['thumbnails'].get('medium',{}).get('url',''),'date':i['snippet']['publishedAt'],'views':v_stats.get(i['id']['videoId'],0),'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in pool],key=lambda x:x['views'],reverse=True)
           print(f'  완료: {len(weekly_videos)}개')
 
-          # ── [일별] RSS로 크리에이터 영상 수집 (0유닛) ────
-          print('\n[일별] RSS 크리에이터 영상 수집')
-          NS = {'atom':'http://www.w3.org/2005/Atom','yt':'http://www.youtube.com/xml/schemas/2015'}
-          NEXON_KW_LIST = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','vindictus','kartrider','mabinogi','dungeon fighter']
-
-          def get_rss(channel_id):
-            url = f'https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}'
-            req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0 (compatible; Googlebot/2.1)'})
-            try:
-              with urllib.request.urlopen(req, timeout=10) as r:
-                return ET.fromstring(r.read())
-            except Exception as e:
-              print(f'  RSS 실패 ({channel_id[:15]}): {e}'); return None
-
+          # ── 4. playlistItems로 크리에이터 영상 수집 (1유닛/채널) ─
+          print('\n[4] 크리에이터별 영상 수집 (playlistItems - 1유닛/채널)')
           creator_videos = {}
-          rss_ok = 0
+          NEXON_KW_LIST = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','vindictus','kartrider','mabinogi','dungeon fighter']
+          EXCL_VIDEO = ['tata nexon','nexon ev','nexon car','nexon suv']
+
+          # 채널ID 맵 구성 (ch_stats에 저장된 channelId 우선 활용)
+          cid_map = {}
+          for c in creators:
+            name = c.get('name','')
+            if c.get('platform') != 'YouTube': continue
+            # ch_stats에서 먼저 찾기
+            cid = ch_stats.get(name,{}).get('channelId','')
+            if not cid: cid = id_map.get(name,'')
+            if cid: cid_map[name] = cid
+
+          print(f'  채널ID 확보: {len(cid_map)}명')
+
           for c in creators:
             name = c.get('name','')
             if not name: continue
             if c.get('platform') != 'YouTube':
-              creator_videos[name] = {'latest':[],'nexon':[]}; continue
-            channel_id = id_map.get(name,'')
-            if not channel_id:
-              creator_videos[name] = {'latest':[],'nexon':[]}; continue
-            root = get_rss(channel_id)
-            time.sleep(0.05)
-            if root is None:
-              creator_videos[name] = {'latest':[],'nexon':[]}; continue
-            entries = root.findall('atom:entry', NS)
-            rss_ok += 1
+              creator_videos[name] = {'latest':[],'nexon':[]}
+              continue
+            cid = cid_map.get(name,'')
+            if not cid:
+              creator_videos[name] = {'latest':[],'nexon':[]}
+              continue
+
+            # 업로드 플레이리스트 ID = UU + channelId[2:]
+            playlist_id = 'UU' + cid[2:]
+            d = yt_get(f'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId={playlist_id}&maxResults=15&key={YT_KEY}')
+            time.sleep(0.1)
+
+            if 'error' in d:
+              creator_videos[name] = {'latest':[],'nexon':[]}
+              continue
+
+            items = d.get('items',[])
             latest, nexon = [], []
-            for entry in entries:
-              vid_el = entry.find('yt:videoId', NS)
-              title_el = entry.find('atom:title', NS)
-              date_el = entry.find('atom:published', NS)
-              if vid_el is None or title_el is None: continue
-              vid_id = vid_el.text
-              title = title_el.text or ''
-              date = date_el.text if date_el is not None else ''
-              obj = {'id':vid_id,'title':title,'date':date,'url':f'https://www.youtube.com/watch?v={vid_id}'}
+            for i in items:
+              s = i.get('snippet',{})
+              vid = s.get('resourceId',{}).get('videoId','')
+              title = s.get('title','')
+              date = s.get('publishedAt','')
+              if not vid or title in ('Private video','Deleted video'): continue
+              obj = {'id':vid,'title':title,'date':date,'url':f'https://www.youtube.com/watch?v={vid}'}
               if len(latest) < 2: latest.append(obj)
-              if any(k in title.lower() for k in NEXON_KW_LIST) and not any(x in title.lower() for x in ['tata nexon','nexon ev','nexon car']) and len(nexon) < 4:
+              tl = title.lower()
+              if any(k in tl for k in NEXON_KW_LIST) and not any(x in tl for x in EXCL_VIDEO) and len(nexon)<4:
                 nexon.append(obj)
             creator_videos[name] = {'latest':latest,'nexon':nexon}
-          print(f'  RSS 성공: {rss_ok}명')
+
+          yt_cnt = len([c for c in creators if c.get('platform')=='YouTube' and cid_map.get(c.get('name',''))])
+          print(f'  완료: {yt_cnt}명 처리 (~{yt_cnt}유닛)')
 
           # ── [월요일] 채널 통계 수집 ───────────────────────
           ch_stats = {}
