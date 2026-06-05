@@ -60,11 +60,44 @@
       "nexon": []
     },
     "Ziostorm": {
-      "latest": [],
-      "nexon": []
+      "latest": [
+        {
+          "id": "eCsHbtyNM2c",
+          "title": "New Nintendo Direct Leak | The Duskbloods Finally Shown?",
+          "date": "2026-06-03T15:53:00Z",
+          "url": "https://www.youtube.com/watch?v=eCsHbtyNM2c"
+        },
+        {
+          "id": "-PXo2j4m3pY",
+          "title": "Thoughts On Elden Ring Nightreign One Year Later...",
+          "date": "2026-05-29T15:21:34Z",
+          "url": "https://www.youtube.com/watch?v=-PXo2j4m3pY"
+        }
+      ],
+      "nexon": [
+        {
+          "id": "ocpOiP7Xlpc",
+          "title": "Sad Soulslike News | First Berserker Khazan Studio Shutdown",
+          "date": "2026-04-09T15:09:57Z",
+          "url": "https://www.youtube.com/watch?v=ocpOiP7Xlpc"
+        }
+      ]
     },
     "Champs Network": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "d-WD01gup-g",
+          "title": "ILL - THIS NEW PHOTOREALISTIC HORROR GAME IS TERRIFYING | New Gameplay Demo 4K",
+          "date": "2026-06-04T17:52:36Z",
+          "url": "https://www.youtube.com/watch?v=d-WD01gup-g"
+        },
+        {
+          "id": "gPuPZfBG3CU",
+          "title": "God of War Laufey | Faye vs Begtse and Sekhmet Ancient God of War Boss Fight | (PS5 PRO 4K HDR)",
+          "date": "2026-06-04T10:45:17Z",
+          "url": "https://www.youtube.com/watch?v=gPuPZfBG3CU"
+        }
+      ],
       "nexon": []
     },
     "aceu": {
@@ -139,11 +172,31 @@
       "nexon": []
     },
     "Iron Pineapple": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "CRYB6WaVGY4",
+          "title": "I played 12 Souls-Like games you've never heard of",
+          "date": "2026-05-08T19:00:00Z",
+          "url": "https://www.youtube.com/watch?v=CRYB6WaVGY4"
+        },
+        {
+          "id": "oA32FDahrDM",
+          "title": "I played SAROS (as a Souls-Like fan)",
+          "date": "2026-04-28T18:24:04Z",
+          "url": "https://www.youtube.com/watch?v=oA32FDahrDM"
+        }
+      ],
       "nexon": []
     },
     "LilAggy": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "v05tK40aw20",
+          "title": "Last Day At Cheltenham Kingsmead",
+          "date": "2007-06-03T11:32:03Z",
+          "url": "https://www.youtube.com/watch?v=v05tK40aw20"
+        }
+      ],
       "nexon": []
     },
     "MissMikkaa": {
@@ -151,11 +204,37 @@
       "nexon": []
     },
     "MMOByte": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "Jti02wIm9KQ",
+          "title": "LORD OF MYSTERIES MMO | Everything You NEED to Know in 2026 | Release Date, Beta Tests, Co-Op",
+          "date": "2026-06-04T12:46:33Z",
+          "url": "https://www.youtube.com/watch?v=Jti02wIm9KQ"
+        },
+        {
+          "id": "fGb9OoHy34c",
+          "title": "A BRAND NEW MMO IS ABOUT TO RELEASE OUTTA NOWHERE!",
+          "date": "2026-06-02T12:41:24Z",
+          "url": "https://www.youtube.com/watch?v=fGb9OoHy34c"
+        }
+      ],
       "nexon": []
     },
     "MoistCr1tikal": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "0GECrcOqE5g",
+          "title": "LEGO Scandal Keeps Getting Messier",
+          "date": "2026-06-05T02:00:38Z",
+          "url": "https://www.youtube.com/watch?v=0GECrcOqE5g"
+        },
+        {
+          "id": "FQFH8NlTems",
+          "title": "They're Complete Trash",
+          "date": "2026-06-04T16:30:10Z",
+          "url": "https://www.youtube.com/watch?v=FQFH8NlTems"
+        }
+      ],
       "nexon": []
     },
     "SeeReax": {
@@ -264,11 +343,37 @@
       "nexon": []
     },
     "Myelin Games": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "a5UneQkQub8",
+          "title": "SENTINEL ALL DAY! SEASON 2! #marathonthegame",
+          "date": "2026-06-04T09:11:04Z",
+          "url": "https://www.youtube.com/watch?v=a5UneQkQub8"
+        },
+        {
+          "id": "O6iQRe5OGP4",
+          "title": "How to SOLVE the NEW puzzle in Dire Marsh (Night)! #marathonthegame #gaming",
+          "date": "2026-06-03T16:15:13Z",
+          "url": "https://www.youtube.com/watch?v=O6iQRe5OGP4"
+        }
+      ],
       "nexon": []
     },
     "NaturalCauzes": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "h1lxR99JmZ0",
+          "title": "It's Not Another Castle this Time",
+          "date": "2011-04-28T10:53:29Z",
+          "url": "https://www.youtube.com/watch?v=h1lxR99JmZ0"
+        },
+        {
+          "id": "IYPTptXdMe8",
+          "title": "NACTT No Diag Trailer",
+          "date": "2011-03-15T05:38:29Z",
+          "url": "https://www.youtube.com/watch?v=IYPTptXdMe8"
+        }
+      ],
       "nexon": []
     },
     "RoundTwo": {
@@ -276,11 +381,37 @@
       "nexon": []
     },
     "widdz": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "6VShEewaKvk",
+          "title": "NEW DMG Build for T10 Escalation! (The Division 2)",
+          "date": "2026-06-03T13:45:50Z",
+          "url": "https://www.youtube.com/watch?v=6VShEewaKvk"
+        },
+        {
+          "id": "dtBmYfKRGQw",
+          "title": "Solo Master Manhunt Mission was easy blind with this build!",
+          "date": "2026-05-30T12:40:08Z",
+          "url": "https://www.youtube.com/watch?v=dtBmYfKRGQw"
+        }
+      ],
       "nexon": []
     },
     "Playstation Access": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "Ih0kaubhCYw",
+          "title": "Did you notice this detail in LEGO Batman: Legacy of the Dark Knight?",
+          "date": "2026-06-04T16:00:39Z",
+          "url": "https://www.youtube.com/watch?v=Ih0kaubhCYw"
+        },
+        {
+          "id": "BlYYFoIttdk",
+          "title": "Escape The Backrooms Co-op Gameplay - Can We Escape?!",
+          "date": "2026-06-03T16:54:31Z",
+          "url": "https://www.youtube.com/watch?v=BlYYFoIttdk"
+        }
+      ],
       "nexon": []
     },
     "Outside Xbox": {
@@ -338,7 +469,20 @@
       "nexon": []
     },
     "Julien Chièze": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "AQgBPSL_JwY",
+          "title": "XBOX OFFRE UNE NOUVELLE EXCLU À LA PS5 🤯 IL Y A PROBLÈME…",
+          "date": "2026-06-04T18:01:20Z",
+          "url": "https://www.youtube.com/watch?v=AQgBPSL_JwY"
+        },
+        {
+          "id": "Lb7Zi8amYmI",
+          "title": "ELDEN RING : BONNE NOUVELLE 😍",
+          "date": "2026-06-04T14:43:48Z",
+          "url": "https://www.youtube.com/watch?v=Lb7Zi8amYmI"
+        }
+      ],
       "nexon": []
     },
     "Carole Quintaine": {
@@ -487,11 +631,37 @@
       "nexon": []
     },
     "CohhCarnage": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "LXKBIkDDgRQ",
+          "title": "Conan Exiles Enhanced | Fresh Run | Part 28",
+          "date": "2026-06-04T22:27:08Z",
+          "url": "https://www.youtube.com/watch?v=LXKBIkDDgRQ"
+        },
+        {
+          "id": "NW3IhNDiwxg",
+          "title": "Conan Exiles Enhanced | Fresh Run | Part 27",
+          "date": "2026-06-04T22:26:41Z",
+          "url": "https://www.youtube.com/watch?v=NW3IhNDiwxg"
+        }
+      ],
       "nexon": []
     },
     "Cole Evyx": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "QVEwIQwP06c",
+          "title": "Pure or Barrier Healer for Ultimate?",
+          "date": "2026-05-27T17:06:17Z",
+          "url": "https://www.youtube.com/watch?v=QVEwIQwP06c"
+        },
+        {
+          "id": "5KN8N0kYrQc",
+          "title": "FFXIV Gear, Ultimate, Drama, Being Gay + More",
+          "date": "2026-05-24T13:59:36Z",
+          "url": "https://www.youtube.com/watch?v=5KN8N0kYrQc"
+        }
+      ],
       "nexon": []
     },
     "DankRNG": {
@@ -633,7 +803,20 @@
       "nexon": []
     },
     "Jesse Cox": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "o2YF0kpjZo8",
+          "title": "Does Jesse Have Aura Now??",
+          "date": "2026-06-04T19:00:14Z",
+          "url": "https://www.youtube.com/watch?v=o2YF0kpjZo8"
+        },
+        {
+          "id": "74Wr6U1slLM",
+          "title": "Is Ace Combat 8 the best in the series?",
+          "date": "2026-06-04T13:45:20Z",
+          "url": "https://www.youtube.com/watch?v=74Wr6U1slLM"
+        }
+      ],
       "nexon": []
     },
     "BawkbaSoup": {
@@ -671,11 +854,37 @@
       "nexon": []
     },
     "ItalianSpartacus": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "sUCRxdSBuBE",
+          "title": "🔴GOTHIC 1 LAUNCH STREAM & WARHAMMRE GIVE AWAY",
+          "date": "2026-06-05T01:12:02Z",
+          "url": "https://www.youtube.com/watch?v=sUCRxdSBuBE"
+        },
+        {
+          "id": "ZUOajSGNCcU",
+          "title": "I Asked Gothic 1 Remake Devs Your Biggest Questions",
+          "date": "2026-06-04T20:00:34Z",
+          "url": "https://www.youtube.com/watch?v=ZUOajSGNCcU"
+        }
+      ],
       "nexon": []
     },
     "Yongyea": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "BPS9jw07eww",
+          "title": "Fans Flood Sony With Destiny 3 Petition And Requests After Death Of Destiny 2",
+          "date": "2026-06-04T17:03:04Z",
+          "url": "https://www.youtube.com/watch?v=BPS9jw07eww"
+        },
+        {
+          "id": "tDZvHB-k5Vo",
+          "title": "Reacting Live To Marvel's Wolverine Gameplay",
+          "date": "2026-06-02T23:09:08Z",
+          "url": "https://www.youtube.com/watch?v=tDZvHB-k5Vo"
+        }
+      ],
       "nexon": []
     },
     "Mrhappy1227": {
@@ -696,7 +905,14 @@
       "nexon": []
     },
     "Woops": {
-      "latest": [],
+      "latest": [
+        {
+          "id": "t8l96QR-Y_c",
+          "title": "bffb",
+          "date": "2006-01-30T05:29:36Z",
+          "url": "https://www.youtube.com/watch?v=t8l96QR-Y_c"
+        }
+      ],
       "nexon": []
     },
     "Zepla HQ": {
@@ -704,5 +920,5 @@
       "nexon": []
     }
   },
-  "fetched_at": "2026-06-05T04:43:19.655425+00:00"
+  "fetched_at": "2026-06-05T04:47:18.908970+00:00"
 }
