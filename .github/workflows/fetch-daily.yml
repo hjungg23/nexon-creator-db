@@ -146,6 +146,43 @@ jobs:
                 if name not in ch_stats: ch_stats[name] = {}
                 ch_stats[name]['channelId'] = cid
               time.sleep(0.1)
+              # /c/, /user/, 기타 URL → forUsername 또는 search로 채널ID 수집
+          missing_other = [c for c in creators 
+                          if c.get('platform')=='YouTube' 
+                          and c.get('name','') not in cid_map
+                          and c.get('url','')]
+          if missing_other:
+            print(f'  기타 URL 채널ID 수집: {len(missing_other)}명')
+            for c in missing_other:
+              name = c.get('name','')
+              u = c.get('url','')
+              cid = ''
+              # /user/ 형태
+              m_user = re.search(r'youtube\.com/user/([\w-]+)', u)
+              if m_user:
+                d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={urllib.parse.quote(m_user.group(1))}&key={YT_KEY}')
+                cid = d.get('items',[{}])[0].get('id','')
+              # /c/ 형태
+              if not cid:
+                m_c = re.search(r'youtube\.com/c/([\w-]+)', u)
+                if m_c:
+                  d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={urllib.parse.quote(m_c.group(1))}&key={YT_KEY}')
+                  cid = d.get('items',[{}])[0].get('id','')
+              # youtube.com/채널명 형태 (CohhCarnage, yongyea 등)
+              if not cid:
+                m_plain = re.search(r'youtube\.com/([\w-]+)$', u)
+                if m_plain and m_plain.group(1) not in ('watch','channel','playlist','user','c'):
+                  d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={urllib.parse.quote(m_plain.group(1))}&key={YT_KEY}')
+                  cid = d.get('items',[{}])[0].get('id','')
+              # 그래도 없으면 채널명 search (100유닛)
+              if not cid:
+                d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}')
+                cid = d.get('items',[{}])[0].get('id',{}).get('channelId','')
+              if cid:
+                cid_map[name] = cid
+                if name not in ch_stats: ch_stats[name] = {}
+                ch_stats[name]['channelId'] = cid
+              time.sleep(0.15)
 
           print(f'  채널ID 확보: {len(cid_map)}명')
           for c in creators:
