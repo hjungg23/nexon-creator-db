@@ -119,6 +119,54 @@ jobs:
 
           # ── 4. 크리에이터별 넥슨 영상 전체 수집 + 최신영상 ──
           print('\n[4] 크리에이터별 영상 수집')
+
+          # cid_map 구성
+          if 'ch_stats' not in dir(): ch_stats = {}
+          cid_map = {}
+          for c in creators:
+            name = c.get('name','')
+            if c.get('platform') != 'YouTube': continue
+            cid = ch_stats.get(name,{}).get('channelId','')
+            if not cid: cid = id_map.get(name,'')
+            if cid: cid_map[name] = cid
+
+          missing_handles = {name: handle for name, handle in handle_map.items() if name not in cid_map}
+          if missing_handles:
+            for name, handle in missing_handles.items():
+              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
+              cid = d.get('items',[{}])[0].get('id','')
+              if cid:
+                cid_map[name] = cid
+              time.sleep(0.1)
+
+          missing_other = [c for c in creators if c.get('platform')=='YouTube' and c.get('name','') not in cid_map and c.get('url','')]
+          if missing_other:
+            for c in missing_other:
+              name = c.get('name','')
+              u = c.get('url','')
+              cid = ''
+              m_user = re.search(r'youtube\.com/user/([\w-]+)', u)
+              if m_user:
+                d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={urllib.parse.quote(m_user.group(1))}&key={YT_KEY}')
+                cid = d.get('items',[{}])[0].get('id','')
+              if not cid:
+                m_c = re.search(r'youtube\.com/c/([\w-]+)', u)
+                if m_c:
+                  d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={urllib.parse.quote(m_c.group(1))}&key={YT_KEY}')
+                  cid = d.get('items',[{}])[0].get('id','')
+              if not cid:
+                m_plain = re.search(r'youtube\.com/([\w-]+)$', u)
+                if m_plain and m_plain.group(1) not in ('watch','channel','playlist','user','c'):
+                  d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={urllib.parse.quote(m_plain.group(1))}&key={YT_KEY}')
+                  cid = d.get('items',[{}])[0].get('id','')
+              if not cid:
+                d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}')
+                cid = d.get('items',[{}])[0].get('id',{}).get('channelId','')
+              if cid:
+                cid_map[name] = cid
+              time.sleep(0.15)
+
+          print(f'  채널ID 확보: {len(cid_map)}명')
           NEXON_KW_LIST = ['nexon','khazan','maplestory','blue archive','arc raiders',
                           'first descendant','embers','vindictus','kartrider','mabinogi',
                           'dungeon fighter','berserker']
