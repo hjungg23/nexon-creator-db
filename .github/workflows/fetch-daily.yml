@@ -220,7 +220,8 @@ jobs:
               search_url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={cid}&q=nexon+khazan+maplestory&type=video&order=date&publishedAfter={urllib.parse.quote(since)}&maxResults=10&key={YT_KEY}'
             else:
               # 최초: 전체 기간
-              search_url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={cid}&q=nexon+OR+khazan+OR+maplestory+OR+%22blue+archive%22+OR+%22arc+raiders%22+OR+%22first+descendant%22+OR+embers+OR+vindictus&type=video&order=date&maxResults=25&key={YT_KEY}'
+              nexon_q = urllib.parse.quote('nexon OR khazan OR berserker OR maplestory OR "blue archive" OR "arc raiders" OR "first descendant" OR "embers of the uncrowned" OR vindictus OR mabinogi OR kartrider OR "dungeon fighter" OR "maple story"')
+              search_url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={cid}&q={nexon_q}&type=video&order=date&maxResults=25&key={YT_KEY}'
 
             d_nexon = yt_get(search_url)
             time.sleep(0.15)
