@@ -124,18 +124,30 @@ jobs:
           EXCL_VIDEO = ['tata nexon','nexon ev','nexon car','nexon suv']
 
           if 'ch_stats' not in dir(): ch_stats = {}
-          # handle_map 크리에이터 채널ID 수집 (1유닛/개, 채널통계 없는 날)
-          if not any(ch_stats.get(name,{}).get('channelId') for name in handle_map):
-            print('  handle_map 채널ID 수집 중...')
-            for name, handle in handle_map.items():
+
+          # 채널ID 맵 구성 (ch_stats에 저장된 channelId 우선 활용)
+          cid_map = {}
+          for c in creators:
+            name = c.get('name','')
+            if c.get('platform') != 'YouTube': continue
+            cid = ch_stats.get(name,{}).get('channelId','')
+            if not cid: cid = id_map.get(name,'')
+            if cid: cid_map[name] = cid
+
+          # handle_map 크리에이터 중 채널ID 없는 경우 추가 수집
+          missing_handles = {name: handle for name, handle in handle_map.items() if name not in cid_map}
+          if missing_handles:
+            print(f'  handle_map 채널ID 추가 수집: {len(missing_handles)}명')
+            for name, handle in missing_handles.items():
               d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
               cid = d.get('items',[{}])[0].get('id','')
               if cid:
+                cid_map[name] = cid
                 if name not in ch_stats: ch_stats[name] = {}
                 ch_stats[name]['channelId'] = cid
               time.sleep(0.1)
-            print(f'  handle_map 채널ID: {len([n for n in handle_map if ch_stats.get(n,{}).get("channelId")])}명')
 
+          print(f'  채널ID 확보: {len(cid_map)}명')
           for c in creators:
             name = c.get('name','')
             if not name: continue
