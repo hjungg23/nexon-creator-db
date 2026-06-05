@@ -123,6 +123,7 @@ jobs:
           NEXON_KW_LIST = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','vindictus','kartrider','mabinogi','dungeon fighter']
           EXCL_VIDEO = ['tata nexon','nexon ev','nexon car','nexon suv']
 
+          if 'ch_stats' not in dir(): ch_stats = {}
           # 채널ID 맵 구성 (ch_stats에 저장된 channelId 우선 활용)
           cid_map = {}
           for c in creators:
