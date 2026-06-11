@@ -2,7 +2,7 @@ name: Fetch Daily Data
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # 매일 UTC 00:00
   workflow_dispatch:
 
 jobs:
@@ -13,345 +13,310 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch All Data
+      - name: Fetch Daily Data
         env:
           YT_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          TW_ID:  ${{ secrets.TWITCH_CLIENT_ID }}
-          TW_SEC: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: |
           python3 << 'PYEOF'
-          import urllib.request, json, urllib.parse, re, time, os
-          from datetime import datetime, timezone, timedelta
+import urllib.request, json, urllib.parse, re, time, os
+from datetime import datetime, timezone, timedelta
 
-          YT_KEY = os.environ['YT_KEY']
-          TW_ID  = os.environ['TW_ID']
-          TW_SEC = os.environ['TW_SEC']
+YT_KEY = os.environ['YT_KEY']
+now    = datetime.now(timezone.utc)
 
-          now = datetime.now(timezone.utc)
-          IS_DAILY = True
-          mon = now - timedelta(days=now.weekday())
-          mon = mon.replace(hour=0, minute=0, second=0, microsecond=0)
-          sun = mon + timedelta(days=6, hours=23, minutes=59, seconds=59)
-          week_label = f"{mon.strftime('%Y.%m.%d')}~{sun.strftime('%Y.%m.%d')}"
-          print(f"실행 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+# ── KST 기준 이번 주 월~일 범위 (UTC로 변환) ──────────────
+kst_now     = now + timedelta(hours=9)
+kst_weekday = kst_now.weekday()          # 0=월
+kst_monday  = (kst_now - timedelta(days=kst_weekday)).replace(
+                hour=0, minute=0, second=0, microsecond=0)
+kst_sunday  = kst_monday + timedelta(days=6, hours=23, minutes=59, seconds=59)
+utc_monday  = kst_monday - timedelta(hours=9)
+utc_sunday  = kst_sunday - timedelta(hours=9)
+week_label  = f"{kst_monday.strftime('%Y.%m.%d')}~{kst_sunday.strftime('%Y.%m.%d')}"
+print(f"실행: {now.strftime('%Y-%m-%d %H:%M')} UTC | 수집기간(KST): {week_label}")
 
-          EXCL_TITLE = ['tata nexon','nexon ev','nexon car','tractor','nexon suv','rohit','pehchan','ram ram','indianvehicle','214 ram','earn with','indian bike','farming simulator']
-          EXCL_CH    = ['tata','rohit','pehchan','hr vehicle','harshgamer','akash','earn with','pro ivs','kumar','orin-chan']
-          GAME_KW    = ['nexon','khazan','maplestory','blue archive','arc raiders','first descendant','embers','dungeon','vindictus','kartrider','mabinogi']
+# ── 공통 설정 ─────────────────────────────────────────────
+EXCL_TITLE = ['tata nexon','nexon ev','nexon car','tractor','nexon suv',
+              'rohit','pehchan','ram ram','indianvehicle','earn with',
+              'indian bike','farming simulator']
+EXCL_CH    = ['tata','rohit','pehchan','hr vehicle','harshgamer','akash',
+              'earn with','pro ivs','kumar','orin-chan']
 
-          def is_clean(title, channel):
-            t, ch = title.lower(), channel.lower()
-            if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
-            if any(x in t for x in EXCL_TITLE): return False
-            if any(x in ch for x in EXCL_CH): return False
-            ch_latin = len(re.findall(r'[a-zA-Z]', ch))
-            if len(ch.replace(' ','')) > 3 and ch_latin/len(ch.replace(' ','')) < 0.3: return False
-            if not any(k in t for k in GAME_KW): return False
-            return True
+# 14개 키워드 — 주간영상 & 크리에이터 영상 동일 적용
+GAME_QUERIES = [
+    ('넥슨',       'Nexon game -tata -car -ev -suv -tractor'),
+    ('카잔',       'Khazan OR "First Berserker Khazan" OR "Berserker Khazan"'),
+    ('메이플',     'MapleStory game'),
+    ('블루아카이브', '"Blue Archive"'),
+    ('ARC레이더스', '"Arc Raiders"'),
+    ('엠바크',     '"Embark Studios"'),
+    ('퍼디',       '"First Descendant"'),
+    ('EOTU',      '"Embers of the Uncrowned"'),
+    ('서든어택',   '"Sudden Attack" game'),
+    ('빈디커스',   'Vindictus'),
+    ('마비노기',   'Mabinogi game'),
+    ('카트라이더', 'KartRider'),
+    ('DNF',       '"Dungeon Fighter" OR "DNF Duel"'),
+    ('낙원',       'Nakwon game OR "Nakwon: Last Paradise"'),
+]
 
-          def yt_get(url):
-            try:
-              with urllib.request.urlopen(url, timeout=15) as r:
-                return json.loads(r.read())
-            except Exception as e:
-              print(f'  요청 실패: {e}'); return {}
+# 크리에이터 영상 매칭용 키워드 목록
+NEXON_KW = ['nexon','khazan','berserker','maplestory','blue archive','arc raiders',
+            'embark','first descendant','embers of the uncrowned','sudden attack',
+            'vindictus','mabinogi','kartrider','dungeon fighter','nakwon','dnf duel']
+EXCL_VIDEO = ['tata nexon','nexon ev','nexon car','nexon suv']
 
-          with open('creators.json', encoding='utf-8') as f:
-            creators = json.load(f)
+def is_clean(title, channel):
+    t, ch = title.lower(), channel.lower()
+    if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
+    if any(x in t  for x in EXCL_TITLE): return False
+    if any(x in ch for x in EXCL_CH):    return False
+    ch_latin = len(re.findall(r'[a-zA-Z]', ch))
+    if len(ch.replace(' ','')) > 3 and ch_latin/max(len(ch.replace(' ','')),1) < 0.3: return False
+    return True
 
-          # URL 패턴 분류
-          id_map, handle_map = {}, {}
-          for c in creators:
-            if c.get('platform') != 'YouTube' or not c.get('url'): continue
-            u = c['url']
-            m_id = re.search(r'/channel/(UC[\w-]+)', u)
-            m_h  = re.search(r'youtube\.com/@([\w.-]+)', u)
-            if m_id:  id_map[c['name']] = m_id.group(1)
-            elif m_h: handle_map[c['name']] = m_h.group(1)
+def tag_game(title):
+    t = title.lower()
+    if 'khazan' in t or 'berserker' in t:         return '카잔'
+    if 'arc raiders' in t:                         return 'ARC레이더스'
+    if 'embark' in t:                              return '엠바크'
+    if 'first descendant' in t:                    return '퍼디'
+    if 'blue archive' in t:                        return '블루아카이브'
+    if 'maplestory' in t or 'maple story' in t:    return '메이플'
+    if 'embers of the uncrowned' in t or 'eotu' in t: return 'EOTU'
+    if 'sudden attack' in t:                       return '서든어택'
+    if 'vindictus' in t:                           return '빈디커스'
+    if 'mabinogi' in t:                            return '마비노기'
+    if 'kartrider' in t:                           return '카트라이더'
+    if 'dungeon fighter' in t or 'dnf duel' in t:  return 'DNF'
+    if 'nakwon' in t:                              return '낙원'
+    return '넥슨'
 
-          # ── [모니터링] 항상 실행 ──────────────────────────
-          print('\n[모니터링] 영상 수집')
-          kw = 'Nexon game OR Khazan OR "Blue Archive" OR MapleStory OR "Arc Raiders" OR "First Descendant"'
-          d_mon = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date&maxResults=30&relevanceLanguage=en&key={YT_KEY}')
-          mon_pool = [i for i in d_mon.get('items',[]) if is_clean(i['snippet']['title'], i['snippet']['channelTitle'])]
-          mon_ids = ','.join(i['id']['videoId'] for i in mon_pool[:30])
-          mon_stats = {}
-          if mon_ids:
-            dm = yt_get(f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={mon_ids}&key={YT_KEY}')
-            for i in dm.get('items',[]): mon_stats[i['id']] = int(i['statistics'].get('viewCount',0))
-          mon_videos = [{'id':i['id']['videoId'],'title':i['snippet']['title'],'channel':i['snippet']['channelTitle'],'thumb':i['snippet']['thumbnails'].get('medium',{}).get('url',''),'date':i['snippet']['publishedAt'],'views':mon_stats.get(i['id']['videoId'],0),'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in mon_pool]
-          print(f'  완료: {len(mon_videos)}개')
+def yt_get(url):
+    try:
+        with urllib.request.urlopen(url, timeout=15) as r:
+            return json.loads(r.read())
+    except Exception as e:
+        print(f'  요청 실패: {e}'); return {}
 
-          # ── [일별] 주간 영상 수집 ─────────────────────────
-          print('\n[주간영상] 수집')
-          KEYWORDS = [
-            'Khazan OR "Embers of the Uncrowned" OR MapleStory game',
-            '"Blue Archive" OR "Arc Raiders" OR "First Descendant" game',
-            'Nexon game',
-          ]
-          pool, seen = [], set()
-          for kw in KEYWORDS:
-            d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date&publishedAfter={urllib.parse.quote(mon.isoformat())}&publishedBefore={urllib.parse.quote(sun.isoformat())}&maxResults=15&relevanceLanguage=en&key={YT_KEY}')
-            if 'error' in d: print(f'  에러: {d["error"]["message"]}'); continue
-            for item in d.get('items',[]):
-              vid = item['id']['videoId']
-              if vid not in seen and is_clean(item['snippet']['title'],item['snippet']['channelTitle']):
-                seen.add(vid); pool.append(item)
-          ids = ','.join(i['id']['videoId'] for i in pool[:40])
-          v_stats = {}
-          if ids:
-            d2 = yt_get(f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={ids}&key={YT_KEY}')
-            for i in d2.get('items',[]): v_stats[i['id']] = int(i['statistics'].get('viewCount',0))
-          weekly_videos = sorted([{'id':i['id']['videoId'],'title':i['snippet']['title'],'channel':i['snippet']['channelTitle'],'thumb':i['snippet']['thumbnails'].get('medium',{}).get('url',''),'date':i['snippet']['publishedAt'],'views':v_stats.get(i['id']['videoId'],0),'url':f"https://www.youtube.com/watch?v={i['id']['videoId']}"} for i in pool],key=lambda x:x['views'],reverse=True)
-          print(f'  완료: {len(weekly_videos)}개')
+with open('creators.json', encoding='utf-8') as f:
+    creators = json.load(f)
 
-          # ── [일별] 채널 통계 수집 ─────────────────────────
-          print('\n[채널통계] 수집')
-          ch_stats = {}
-          # 기존 stats 로드 (썸네일 유지)
-          try:
-            with open('channel_stats.json', encoding='utf-8') as f:
-              ch_stats = json.load(f).get('stats', {})
-          except: pass
+# ═══════════════════════════════════════════════════════════
+# [1] 주간영상 수집 — 14개 키워드 × 최대 50개, 게임당 15개 캡
+# ═══════════════════════════════════════════════════════════
+print('\n[주간영상] 수집 시작')
+pub_after  = urllib.parse.quote(utc_monday.strftime('%Y-%m-%dT%H:%M:%SZ'))
+pub_before = urllib.parse.quote(utc_sunday.strftime('%Y-%m-%dT%H:%M:%SZ'))
 
-          def parse_yt_stats(item, name):
-            s = item.get('statistics', {})
-            subs = int(s.get('subscriberCount', 0))
-            views = int(s.get('viewCount', 0))
-            vids = int(s.get('videoCount', 1)) or 1
-            thumb = item.get('snippet', {}).get('thumbnails', {}).get('default', {}).get('url', '')
-            existing_thumb = ch_stats.get(name, {}).get('thumbnail', '')
-            ch_stats[name] = {
-              'subscribers': subs,
-              'avgViews': views // vids,
-              'thumbnail': thumb or existing_thumb,  # 새 썸네일 없으면 기존 유지
-              'channelId': item.get('id', '')
-            }
+pool, seen = [], set()
+game_counts = {}  # 게임당 수집 카운트
 
-          # /channel/ ID 배치 조회
-          items_list = list(id_map.items())
-          for i in range(0, len(items_list), 50):
-            batch = items_list[i:i+50]
-            ids_str = ','.join(cid for _, cid in batch)
-            id_to_name = {cid: nm for nm, cid in batch}
-            d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&id={ids_str}&key={YT_KEY}')
-            for item in d.get('items', []):
-              nm = id_to_name.get(item['id'], '')
-              if nm: parse_yt_stats(item, nm)
-            time.sleep(0.3)
+for game_tag, kw in GAME_QUERIES:
+    url = (f'https://www.googleapis.com/youtube/v3/search'
+           f'?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date'
+           f'&publishedAfter={pub_after}&publishedBefore={pub_before}'
+           f'&maxResults=50&relevanceLanguage=en&key={YT_KEY}')
+    d = yt_get(url)
+    if 'error' in d:
+        print(f'  [{game_tag}] 에러: {d["error"]["message"]}'); time.sleep(1); continue
+    added = 0
+    for item in d.get('items', []):
+        vid   = item['id']['videoId']
+        title = item['snippet']['title']
+        ch    = item['snippet']['channelTitle']
+        if vid in seen: continue
+        if not is_clean(title, ch): continue
+        if game_counts.get(game_tag, 0) >= 15: continue  # 게임당 15개 캡
+        seen.add(vid)
+        pool.append({'item': item, 'game': game_tag})
+        game_counts[game_tag] = game_counts.get(game_tag, 0) + 1
+        added += 1
+    print(f'  [{game_tag}] {len(d.get("items",[]))}개 검색 → {added}개 통과')
+    time.sleep(0.3)
 
-          # @핸들 조회
-          for name, handle in handle_map.items():
-            d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
-            if d.get('items'): parse_yt_stats(d['items'][0], name)
-            time.sleep(0.1)
+# 조회수 배치 수집 (50개씩)
+all_ids = [p['item']['id']['videoId'] for p in pool]
+v_stats = {}
+for i in range(0, len(all_ids), 50):
+    batch = ','.join(all_ids[i:i+50])
+    d2 = yt_get(f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={batch}&key={YT_KEY}')
+    for item in d2.get('items', []):
+        v_stats[item['id']] = int(item['statistics'].get('viewCount', 0))
+    time.sleep(0.1)
 
-          # 기타 URL 조회
-          other_creators = [c for c in creators if c.get('platform')=='YouTube' and c.get('name','') not in ch_stats and c.get('url','')]
-          for c in other_creators:
-            name = c.get('name', '')
-            u = c.get('url', '')
-            cid = ''
-            m_user = re.search(r'youtube\.com/user/([\w-]+)', u)
-            if m_user:
-              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forUsername={urllib.parse.quote(m_user.group(1))}&key={YT_KEY}')
-              if d.get('items'): parse_yt_stats(d['items'][0], name); time.sleep(0.1); continue
-            m_c = re.search(r'youtube\.com/c/([\w-]+)', u)
-            if m_c:
-              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forUsername={urllib.parse.quote(m_c.group(1))}&key={YT_KEY}')
-              if d.get('items'): parse_yt_stats(d['items'][0], name); time.sleep(0.1); continue
-            m_plain = re.search(r'youtube\.com/([\w-]+)$', u)
-            if m_plain and m_plain.group(1) not in ('watch','channel','playlist','user','c'):
-              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forUsername={urllib.parse.quote(m_plain.group(1))}&key={YT_KEY}')
-              if d.get('items'): parse_yt_stats(d['items'][0], name); time.sleep(0.1); continue
-            # 마지막 수단: search (100유닛)
-            d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}')
-            cid = d.get('items',[{}])[0].get('id',{}).get('channelId','')
-            if cid:
-              d2 = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&id={cid}&key={YT_KEY}')
-              if d2.get('items'): parse_yt_stats(d2['items'][0], name)
-            time.sleep(0.15)
+weekly_videos = sorted([{
+    'id':      p['item']['id']['videoId'],
+    'title':   p['item']['snippet']['title'],
+    'channel': p['item']['snippet']['channelTitle'],
+    'thumb':   p['item']['snippet']['thumbnails'].get('medium',{}).get('url',''),
+    'date':    p['item']['snippet']['publishedAt'],
+    'views':   v_stats.get(p['item']['id']['videoId'], 0),
+    'url':     f"https://www.youtube.com/watch?v={p['item']['id']['videoId']}",
+    'game':    p['game'],
+    'plat':    'YouTube',
+} for p in pool], key=lambda x: x['views'], reverse=True)
 
-          # Twitch 통계
-          tw_token = ''
-          try:
-            req = urllib.request.Request('https://id.twitch.tv/oauth2/token',
-              data=f'client_id={TW_ID}&client_secret={TW_SEC}&grant_type=client_credentials'.encode(),
-              headers={'Content-Type':'application/x-www-form-urlencoded'}, method='POST')
-            with urllib.request.urlopen(req) as r:
-              tw_token = json.loads(r.read()).get('access_token','')
-          except Exception as e:
-            print(f'  Twitch 토큰 에러: {e}')
+print(f'  완료: {len(weekly_videos)}개 | 게임별: {game_counts}')
 
-          if tw_token:
-            for c in creators:
-              if c.get('platform') != 'Twitch' or not c.get('url'): continue
-              m = re.search(r'twitch\.tv/([\w]+)', c['url'])
-              if not m: continue
-              login = m.group(1).lower()
-              try:
-                def tw(path):
-                  req = urllib.request.Request(f'https://api.twitch.tv/helix/{path}',
-                    headers={'Client-Id':TW_ID,'Authorization':f'Bearer {tw_token}'})
-                  with urllib.request.urlopen(req, timeout=10) as r:
-                    return json.loads(r.read())
-                uid = tw(f'users?login={login}').get('data',[{}])[0].get('id','')
-                if not uid: continue
-                followers = tw(f'channels/followers?broadcaster_id={uid}').get('total',0)
-                vods = tw(f'videos?user_id={uid}&type=archive&first=5').get('data',[])
-                avg_v = sum(int(v.get('view_count',0)) for v in vods)//len(vods) if vods else 0
-                existing_thumb = ch_stats.get(c['name'],{}).get('thumbnail','')
-                prof = tw(f'users?id={uid}').get('data',[{}])[0].get('profile_image_url','') or existing_thumb
-                ch_stats[c['name']] = {'subscribers':followers,'avgViews':avg_v,'thumbnail':prof,'channelId':''}
-              except Exception as e:
-                print(f'  Twitch {c["name"]}: {e}')
-              time.sleep(0.1)
+# 기존 weekly_videos 로드 후 이번 주 범위로 머지 (매일 누적)
+try:
+    with open('weekly_videos.json', encoding='utf-8') as f:
+        existing = json.load(f)
+    # 같은 주의 데이터면 머지, 다른 주면 교체
+    if existing.get('week_label') == week_label:
+        existing_ids = {v['id'] for v in existing.get('videos', [])}
+        new_only = [v for v in weekly_videos if v['id'] not in existing_ids]
+        weekly_videos = sorted(
+            existing.get('videos', []) + new_only,
+            key=lambda x: x['views'], reverse=True
+        )
+        print(f'  기존 머지: 신규 {len(new_only)}개 추가 → 총 {len(weekly_videos)}개')
+except: pass
 
-          print(f'  완료: {len(ch_stats)}명')
+# ═══════════════════════════════════════════════════════════
+# [2] 크리에이터별 넥슨 영상 수집
+# ═══════════════════════════════════════════════════════════
+print('\n[크리에이터 영상] 수집 시작')
 
-          # ── [일별] 크리에이터별 영상 수집 ────────────────
-          print('\n[크리에이터 영상] 수집')
-          NEXON_KW_LIST = ['nexon','khazan','berserker','maplestory','blue archive','arc raiders','first descendant','embers of the uncrowned','embers','vindictus','kartrider','mabinogi','dungeon fighter']
-          EXCL_VIDEO = ['tata nexon','nexon ev','nexon car','nexon suv']
+# channel_stats에서 channelId 활용
+ch_stats = {}
+try:
+    with open('channel_stats.json', encoding='utf-8') as f:
+        ch_stats = json.load(f).get('stats', {})
+except: pass
 
-          # cid_map 구성
-          cid_map = {}
-          for c in creators:
-            name = c.get('name','')
-            if c.get('platform') != 'YouTube': continue
-            cid = ch_stats.get(name,{}).get('channelId','')
-            if not cid: cid = id_map.get(name,'')
-            if cid: cid_map[name] = cid
+# URL 형식 파악
+id_map, handle_map = {}, {}
+for c in creators:
+    if c.get('platform') != 'YouTube' or not c.get('url'): continue
+    u = c['url']
+    m_id = re.search(r'/channel/(UC[\w-]+)', u)
+    m_h  = re.search(r'youtube\.com/@([\w.-]+)', u)
+    if m_id:  id_map[c['name']] = m_id.group(1)
+    elif m_h: handle_map[c['name']] = m_h.group(1)
 
-          # handle_map 중 cid_map에 없는 것 추가
-          for name, handle in handle_map.items():
-            if name not in cid_map:
-              d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
-              cid = d.get('items',[{}])[0].get('id','')
-              if cid: cid_map[name] = cid
-              time.sleep(0.1)
+# cid_map 구성
+cid_map = {}
+for c in creators:
+    name = c.get('name','')
+    if c.get('platform') != 'YouTube': continue
+    cid = ch_stats.get(name,{}).get('channelId','') or id_map.get(name,'')
+    if cid: cid_map[name] = cid
 
-          # 기타 URL 중 cid_map에 없는 것 추가
-          for c in creators:
-            name = c.get('name','')
-            if c.get('platform') != 'YouTube' or name in cid_map: continue
-            u = c.get('url','')
-            cid = ''
-            for pattern, param in [
-              (r'youtube\.com/user/([\w-]+)', 'forUsername'),
-              (r'youtube\.com/c/([\w-]+)', 'forUsername'),
-            ]:
-              m = re.search(pattern, u)
-              if m:
-                d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&{param}={urllib.parse.quote(m.group(1))}&key={YT_KEY}')
-                cid = d.get('items',[{}])[0].get('id','')
-                if cid: break
-                time.sleep(0.1)
-            if not cid:
-              m_plain = re.search(r'youtube\.com/([\w-]+)$', u)
-              if m_plain and m_plain.group(1) not in ('watch','channel','playlist','user','c'):
-                d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forUsername={urllib.parse.quote(m_plain.group(1))}&key={YT_KEY}')
-                cid = d.get('items',[{}])[0].get('id','')
-            if not cid:
-              d = yt_get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}')
-              cid = d.get('items',[{}])[0].get('id',{}).get('channelId','')
-            if cid: cid_map[name] = cid
-            time.sleep(0.15)
+for name, handle in handle_map.items():
+    if name not in cid_map:
+        d = yt_get(f'https://www.googleapis.com/youtube/v3/channels?part=id&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
+        cid = d.get('items',[{}])[0].get('id','')
+        if cid: cid_map[name] = cid
+        time.sleep(0.1)
 
-          print(f'  채널ID 확보: {len(cid_map)}명')
+# 기존 creator_videos 로드
+existing_videos = {}
+try:
+    with open('creator_videos.json', encoding='utf-8') as f:
+        existing_videos = json.load(f).get('videos', {})
+except: pass
 
-          # 기존 creator_videos 로드 (증분 업데이트)
-          existing_videos = {}
-          try:
-            with open('creator_videos.json', encoding='utf-8') as f:
-              existing_videos = json.load(f).get('videos', {})
-          except: pass
+# 넥슨 키워드 검색 쿼리 (14개 게임 전부 포함)
+nexon_q = urllib.parse.quote(
+    'nexon OR khazan OR berserker OR maplestory OR "blue archive" OR "arc raiders" '
+    'OR "embark studios" OR "first descendant" OR "embers of the uncrowned" '
+    'OR "sudden attack" OR vindictus OR mabinogi OR kartrider '
+    'OR "dungeon fighter" OR nakwon OR "dnf duel"'
+)
 
-          creator_videos = {}
-          for c in creators:
-            name = c.get('name','')
-            if not name: continue
-            if c.get('platform') != 'YouTube':
-              creator_videos[name] = existing_videos.get(name, {'latest':[],'nexon':[]})
-              continue
-            cid = cid_map.get(name,'')
-            if not cid:
-              creator_videos[name] = existing_videos.get(name, {'latest':[],'nexon':[]})
-              continue
+creator_videos = {}
+for c in creators:
+    name = c.get('name','')
+    if not name: continue
 
-            existing = existing_videos.get(name, {'latest':[],'nexon':[]})
-            existing_nexon_ids = {v['id'] for v in existing.get('nexon',[])}
+    # Twitch는 영상 수집 제외 (통계만)
+    if c.get('platform') != 'YouTube':
+        creator_videos[name] = existing_videos.get(name, {'nexon':[]})
+        continue
 
-            # 최신 영상 2개 (playlistItems - 1유닛)
-            playlist_id = 'UU' + cid[2:]
-            d_latest = yt_get(f'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId={playlist_id}&maxResults=5&key={YT_KEY}')
-            time.sleep(0.1)
-            latest = []
-            for i in d_latest.get('items',[]):
-              s = i.get('snippet',{})
-              vid = s.get('resourceId',{}).get('videoId','')
-              title = s.get('title','')
-              if not vid or title in ('Private video','Deleted video'): continue
-              latest.append({'id':vid,'title':title,'date':s.get('publishedAt',''),'url':f'https://www.youtube.com/watch?v={vid}'})
-              if len(latest) >= 2: break
+    cid = cid_map.get(name,'')
+    if not cid:
+        creator_videos[name] = existing_videos.get(name, {'nexon':[]})
+        continue
 
-            # 넥슨 게임 영상 (search+channelId - 100유닛)
-            has_existing = len(existing_nexon_ids) > 0
-            if has_existing:
-              since = (now - timedelta(days=30)).isoformat()
-              nexon_q = urllib.parse.quote('nexon OR khazan OR berserker OR maplestory OR "blue archive" OR "arc raiders" OR "first descendant" OR "embers of the uncrowned" OR vindictus OR mabinogi OR kartrider OR "dungeon fighter"')
-              search_url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={cid}&q={nexon_q}&type=video&order=date&publishedAfter={urllib.parse.quote(since)}&maxResults=10&key={YT_KEY}'
-            else:
-              nexon_q = urllib.parse.quote('nexon OR khazan OR berserker OR maplestory OR "blue archive" OR "arc raiders" OR "first descendant" OR "embers of the uncrowned" OR vindictus OR mabinogi OR kartrider OR "dungeon fighter"')
-              search_url = f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={cid}&q={nexon_q}&type=video&order=date&maxResults=25&key={YT_KEY}'
+    existing = existing_videos.get(name, {'nexon':[]})
+    existing_nexon_ids = {v['id'] for v in existing.get('nexon',[])}
+    has_existing = len(existing_nexon_ids) > 0
 
-            d_nexon = yt_get(search_url)
-            time.sleep(0.15)
+    # 증분: 기존 데이터 있으면 최근 30일, 없으면 전체
+    since_str = ''
+    if has_existing:
+        since_dt = (now - timedelta(days=30)).strftime('%Y-%m-%dT%H:%M:%SZ')
+        since_str = f'&publishedAfter={urllib.parse.quote(since_dt)}'
 
-            new_nexon = []
-            for i in d_nexon.get('items',[]):
-              vid = i['id'].get('videoId','')
-              title = i['snippet'].get('title','')
-              date = i['snippet'].get('publishedAt','')
-              tl = title.lower()
-              if (vid and vid not in existing_nexon_ids
-                  and any(k in tl for k in NEXON_KW_LIST)
-                  and not any(x in tl for x in EXCL_VIDEO)):
-                new_nexon.append({'id':vid,'title':title,'date':date,'url':f'https://www.youtube.com/watch?v={vid}'})
+    search_url = (f'https://www.googleapis.com/youtube/v3/search'
+                  f'?part=snippet&channelId={cid}&q={nexon_q}'
+                  f'&type=video&order=date{since_str}'
+                  f'&maxResults={"10" if has_existing else "50"}&key={YT_KEY}')
+    d_nexon = yt_get(search_url)
+    time.sleep(0.2)
 
-            all_nexon = existing.get('nexon',[]) + new_nexon
-            seen_ids = set()
-            deduped = []
-            for v in sorted(all_nexon, key=lambda x: x.get('date',''), reverse=True):
-              if v['id'] not in seen_ids:
-                seen_ids.add(v['id'])
-                deduped.append(v)
+    new_nexon = []
+    for item in d_nexon.get('items', []):
+        vid   = item['id'].get('videoId','')
+        title = item['snippet'].get('title','')
+        date  = item['snippet'].get('publishedAt','')
+        tl    = title.lower()
+        if (vid
+            and vid not in existing_nexon_ids
+            and any(k in tl for k in NEXON_KW)
+            and not any(x in tl for x in EXCL_VIDEO)):
+            new_nexon.append({
+                'id':    vid,
+                'title': title,
+                'date':  date,
+                'game':  tag_game(title),
+                'url':   f'https://www.youtube.com/watch?v={vid}'
+            })
 
-            creator_videos[name] = {'latest':latest,'nexon':deduped}
-            if new_nexon:
-              print(f'  {name}: 넥슨영상 {len(deduped)}개 (신규 {len(new_nexon)}개)')
+    # 중복 제거 후 날짜 내림차순
+    all_nexon  = existing.get('nexon',[]) + new_nexon
+    seen_cr    = set()
+    deduped    = []
+    for v in sorted(all_nexon, key=lambda x: x.get('date',''), reverse=True):
+        if v['id'] not in seen_cr:
+            seen_cr.add(v['id']); deduped.append(v)
 
-          yt_cnt = len([c for c in creators if c.get('platform')=='YouTube' and cid_map.get(c.get('name',''))])
-          print(f'  완료: {yt_cnt}명')
+    creator_videos[name] = {'nexon': deduped}
+    if new_nexon:
+        print(f'  {name}: 신규 {len(new_nexon)}개 (누적 {len(deduped)}개)')
 
-          # ── 저장 ──────────────────────────────────────────
-          print('\n[저장]')
-          with open('weekly_videos.json','w',encoding='utf-8') as f:
-            json.dump({'videos':weekly_videos,'week_label':week_label,'week_start':mon.isoformat(),'week_end':sun.isoformat(),'fetched_at':now.isoformat(),'count':len(weekly_videos)},f,ensure_ascii=False,indent=2)
-          with open('channel_stats.json','w',encoding='utf-8') as f:
-            json.dump({'stats':ch_stats,'fetched_at':now.isoformat(),'count':len(ch_stats)},f,ensure_ascii=False,indent=2)
-          with open('creator_videos.json','w',encoding='utf-8') as f:
-            json.dump({'videos':creator_videos,'fetched_at':now.isoformat()},f,ensure_ascii=False,indent=2)
-          with open('monitoring_videos.json','w',encoding='utf-8') as f:
-            json.dump({'videos':mon_videos,'fetched_at':now.isoformat(),'count':len(mon_videos)},f,ensure_ascii=False,indent=2)
-          print('완료')
+yt_cnt = len([c for c in creators if c.get('platform')=='YouTube' and cid_map.get(c.get('name',''))])
+print(f'  완료: YouTube {yt_cnt}명 처리')
+
+# ═══════════════════════════════════════════════════════════
+# 저장
+# ═══════════════════════════════════════════════════════════
+print('\n[저장]')
+with open('weekly_videos.json','w',encoding='utf-8') as f:
+    json.dump({
+        'videos':     weekly_videos,
+        'week_label': week_label,
+        'week_start': utc_monday.isoformat(),
+        'week_end':   utc_sunday.isoformat(),
+        'fetched_at': now.isoformat(),
+        'count':      len(weekly_videos)
+    }, f, ensure_ascii=False, indent=2)
+
+with open('creator_videos.json','w',encoding='utf-8') as f:
+    json.dump({'videos': creator_videos, 'fetched_at': now.isoformat()},
+              f, ensure_ascii=False, indent=2)
+
+print('완료')
           PYEOF
 
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add weekly_videos.json channel_stats.json creator_videos.json monitoring_videos.json
+          git add weekly_videos.json creator_videos.json
           git diff --staged --quiet || git commit -m "Daily update: $(date -u '+%Y-%m-%d %H:%M')"
           git push
 
@@ -359,4 +324,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload latest weekly_videos.json channel_stats.json creator_videos.json monitoring_videos.json --clobber
+          gh release upload latest weekly_videos.json creator_videos.json --clobber
