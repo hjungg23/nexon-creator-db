@@ -1,8 +1,9 @@
 import urllib.request, json, urllib.parse, re, time, os
 from datetime import datetime, timezone, timedelta
 
-YT_KEY = os.environ['YT_KEY']
-now    = datetime.now(timezone.utc)
+YT_KEY  = os.environ['YT_KEY']   # 크리에이터별 넥슨영상 search (무거운 작업)
+YT_KEY2 = os.environ['YT_KEY2']  # 주간영상 search + 조회수 (가벼운 작업)
+now     = datetime.now(timezone.utc)
 
 # KST 기준 이번 주 월~일 범위
 kst_now     = now + timedelta(hours=9)
@@ -93,7 +94,7 @@ for game_tag, kw in GAME_QUERIES:
     url = (f'https://www.googleapis.com/youtube/v3/search'
            f'?part=snippet&q={urllib.parse.quote(kw)}&type=video&order=date'
            f'&publishedAfter={pub_after}&publishedBefore={pub_before}'
-           f'&maxResults=50&relevanceLanguage=en&key={YT_KEY}')
+           f'&maxResults=50&relevanceLanguage=en&key={YT_KEY2}')
     d = yt_get(url)
     if 'error' in d:
         print(f'  [{game_tag}] 에러: {d["error"]["message"]}')
@@ -118,7 +119,7 @@ all_ids = [p['item']['id']['videoId'] for p in pool]
 v_stats = {}
 for i in range(0, len(all_ids), 50):
     batch = ','.join(all_ids[i:i+50])
-    d2 = yt_get(f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={batch}&key={YT_KEY}')
+    d2 = yt_get(f'https://www.googleapis.com/youtube/v3/videos?part=statistics&id={batch}&key={YT_KEY2}')
     for item in d2.get('items', []):
         v_stats[item['id']] = int(item['statistics'].get('viewCount', 0))
     time.sleep(0.1)
