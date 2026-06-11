@@ -1,7 +1,7 @@
 import urllib.request, json, urllib.parse, re, time, os
 from datetime import datetime, timezone
 
-YT_KEY = os.environ['YT_KEY']
+YT_KEY = os.environ['YT_KEY2']  # 채널통계 — 가벼운 작업이므로 YT_KEY2 사용
 TW_ID  = os.environ['TW_ID']
 TW_SEC = os.environ['TW_SEC']
 now    = datetime.now(timezone.utc)
