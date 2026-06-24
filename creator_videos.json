@@ -4940,6 +4940,13 @@
     "EdeLive": {
       "nexon": [
         {
+          "id": "Jnak26URWbQ",
+          "title": "Liebe auf den ZWEITEN Blick? | The First Berserker: Khazan",
+          "date": "2026-06-23T14:00:27Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=Jnak26URWbQ"
+        },
+        {
           "id": "53BwlJegLEA",
           "title": "FETTES erstes UPDATE 2026 | ARC Raiders mit Budi und Dennis Heinrichs",
           "date": "2026-01-28T15:00:00Z",
@@ -8598,7 +8605,29 @@
       "nexon": []
     },
     "Túlio Santos": {
-      "nexon": []
+      "nexon": [
+        {
+          "id": "4TDVdkv_Z8Q",
+          "title": "UM JOGO ABUNDANTE! Vindictus: Defying Fate é BOM? PRIMEIRAS IMPRESSÕES DA DEMO",
+          "date": "2025-06-09T21:30:01Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=4TDVdkv_Z8Q"
+        },
+        {
+          "id": "z7galiUOXaU",
+          "title": "RODA ATÉ NO PC DA XUXA! The First Berserker: Khazan Otimização e Desempenho!",
+          "date": "2025-03-25T21:45:00Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=z7galiUOXaU"
+        },
+        {
+          "id": "t19T4ianoq8",
+          "title": "THE FIRST BERSERKER KHAZAM com DESEMPENHO SURREAL NO PC! (Demo Disponível!)",
+          "date": "2025-01-17T21:30:07Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=t19T4ianoq8"
+        }
+      ]
     },
     "Base Nerd": {
       "nexon": [
@@ -12609,5 +12638,5 @@
       "nexon": []
     }
   },
-  "fetched_at": "2026-06-23T11:43:55.910819+00:00"
+  "fetched_at": "2026-06-24T10:36:51.868221+00:00"
 }
