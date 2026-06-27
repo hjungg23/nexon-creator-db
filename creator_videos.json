@@ -4940,6 +4940,13 @@
     "EdeLive": {
       "nexon": [
         {
+          "id": "kifw6uwMkCk",
+          "title": "SCHLAFLOS wegen dem BOSS | The First Berserker: Khazan",
+          "date": "2026-06-26T12:08:34Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=kifw6uwMkCk"
+        },
+        {
           "id": "Jnak26URWbQ",
           "title": "Liebe auf den ZWEITEN Blick? | The First Berserker: Khazan",
           "date": "2026-06-23T14:00:27Z",
@@ -6418,6 +6425,13 @@
     },
     "Hadomancer": {
       "nexon": [
+        {
+          "id": "D5q2VrahZ0Y",
+          "title": "ARC Raiders: A 4ª Expedição TIROU seus Pontos de Habilidade? (entenda ANTES de partir)",
+          "date": "2026-06-26T17:42:57Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=D5q2VrahZ0Y"
+        },
         {
           "id": "aLlPHcaYWeM",
           "title": "Arc Raiders Tem Um Problema Que o Ban Não Resolve",
@@ -12753,5 +12767,5 @@
       "nexon": []
     }
   },
-  "fetched_at": "2026-06-26T11:20:00.917921+00:00"
+  "fetched_at": "2026-06-27T09:32:46.910132+00:00"
 }
