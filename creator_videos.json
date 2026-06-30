@@ -1003,7 +1003,22 @@
       "nexon": []
     },
     "The Spiffing Brit": {
-      "nexon": []
+      "nexon": [
+        {
+          "id": "EgUStQLgIYs",
+          "title": "OBLIVION REMASTERED IS A PERFECTLY BALANCED GAME ™ - Infinite Stats Is 100% Developer Approved  🄮",
+          "date": "2025-08-21T17:13:01Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=EgUStQLgIYs"
+        },
+        {
+          "id": "uQUBuvXmQuU",
+          "title": "BECOMING OVERPOWERED FAST - Skyrim Is A Perfectly Balanced Game With No Exploits",
+          "date": "2024-04-29T17:30:05Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=uQUBuvXmQuU"
+        }
+      ]
     },
     "Tubbo": {
       "latest": [],
@@ -6643,5 +6658,5 @@
       ]
     }
   },
-  "fetched_at": "2026-06-30T10:04:10.869817+00:00"
+  "fetched_at": "2026-06-30T10:16:44.228577+00:00"
 }
