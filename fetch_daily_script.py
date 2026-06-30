@@ -238,8 +238,10 @@ for c in creators:
         title = item['snippet'].get('title','')
         date  = item['snippet'].get('publishedAt','')
         tl    = title.lower()
+        # API의 q 검색이 채널 내에서 이미 키워드 매칭(제목+설명+태그)을 수행함.
+        # 제목만 다시 영어 키워드로 재검증하면, 매체처럼 제목에 약칭/다른 표현을 쓰는
+        # 채널의 영상이 전부 걸러지는 문제가 있어 제거. 명백한 오탐(차량 등)만 제외.
         if (vid and vid not in ex_ids
-                and any(k in tl for k in NEXON_KW)
                 and not any(x in tl for x in EXCL_VIDEO)):
             new_nexon.append({
                 'id':    vid,
