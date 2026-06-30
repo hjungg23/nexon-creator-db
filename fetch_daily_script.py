@@ -184,7 +184,8 @@ for name, handle in handle_map.items():
     if name not in cid_map:
         d = yt_get(f'https://www.googleapis.com/youtube/v3/channels'
                    f'?part=id&forHandle={urllib.parse.quote(handle)}&key={YT_KEY}')
-        cid = d.get('items',[{}])[0].get('id','')
+        items = d.get('items') or []
+        cid = items[0].get('id','') if items else ''
         if cid: cid_map[name] = cid
         time.sleep(0.1)
 
