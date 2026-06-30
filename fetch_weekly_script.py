@@ -81,7 +81,8 @@ for c in other:
     if not found:
         d = yt_get(f'https://www.googleapis.com/youtube/v3/search'
                    f'?part=snippet&q={urllib.parse.quote(name)}&type=channel&maxResults=1&key={YT_KEY}')
-        cid = d.get('items',[{}])[0].get('id',{}).get('channelId','')
+        items = d.get('items') or []
+        cid = items[0].get('id',{}).get('channelId','') if items else ''
         if cid:
             d2 = yt_get(f'https://www.googleapis.com/youtube/v3/channels'
                         f'?part=statistics,snippet&id={cid}&key={YT_KEY}')
@@ -111,13 +112,15 @@ if tw_token:
                     headers={'Client-Id':TW_ID,'Authorization':f'Bearer {tw_token}'})
                 with urllib.request.urlopen(req, timeout=10) as r:
                     return json.loads(r.read())
-            uid = tw(f'users?login={login}').get('data',[{}])[0].get('id','')
+            ud = tw(f'users?login={login}').get('data') or []
+            uid = ud[0].get('id','') if ud else ''
             if not uid: continue
             followers = tw(f'channels/followers?broadcaster_id={uid}').get('total',0)
             vods      = tw(f'videos?user_id={uid}&type=archive&first=5').get('data',[])
             avg_v     = sum(int(v.get('view_count',0)) for v in vods)//len(vods) if vods else 0
             existing_thumb = ch_stats.get(c['name'],{}).get('thumbnail','')
-            prof = tw(f'users?id={uid}').get('data',[{}])[0].get('profile_image_url','') or existing_thumb
+            ud2 = tw(f'users?id={uid}').get('data') or []
+            prof = (ud2[0].get('profile_image_url','') if ud2 else '') or existing_thumb
             ch_stats[c['name']] = {'subscribers':followers,'avgViews':avg_v,'thumbnail':prof,'channelId':''}
         except Exception as e:
             print(f'  Twitch {c["name"]}: {e}')
