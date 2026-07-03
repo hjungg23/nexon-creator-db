@@ -1965,6 +1965,13 @@
     "ItalianSpartacus": {
       "nexon": [
         {
+          "id": "2WvVHZQX_KY",
+          "title": "Your Next Class Combo for EverQuest Legends",
+          "date": "2026-07-02T15:00:19Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=2WvVHZQX_KY"
+        },
+        {
           "id": "sKGGN1X3yuk",
           "title": "EverQuest Legends Classes Guide: Choose Your First Trio",
           "date": "2026-06-30T22:38:28Z",
@@ -6351,6 +6358,13 @@
           "url": "https://www.youtube.com/watch?v=lPr2z3Qc720"
         },
         {
+          "id": "AOzpbiI9JXo",
+          "title": "Xbox Games Showcase and Gears of War: E-Day Direct Livestream",
+          "date": "2026-06-07T19:28:35Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=AOzpbiI9JXo"
+        },
+        {
           "id": "ngquU3t9vnk",
           "title": "Gears of War: E-Day - Official Gameplay Reveal Trailer | Xbox Games Showcase 2026",
           "date": "2026-06-07T18:46:03Z",
@@ -8113,7 +8127,71 @@
       ]
     },
     "Eurogamer": {
-      "nexon": []
+      "nexon": [
+        {
+          "id": "o4qaF5LM2Ys",
+          "title": "ARC Raiders Duo Gameplay - SEE YOU IN 2026!",
+          "date": "2025-12-19T16:03:17Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=o4qaF5LM2Ys"
+        },
+        {
+          "id": "3AoNHeWv8Q0",
+          "title": "Why Do Players Hate ARC Raiders PvP? We Asked a Social Behaviour Expert",
+          "date": "2025-11-18T12:00:08Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=3AoNHeWv8Q0"
+        },
+        {
+          "id": "oXigyRsVeB0",
+          "title": "ARC Raiders Review",
+          "date": "2025-11-11T17:01:28Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=oXigyRsVeB0"
+        },
+        {
+          "id": "E3LOS9KY1GA",
+          "title": "#ArcRaiders players are waging a war of words online, in addition an actual war in-game! #Gaming",
+          "date": "2025-11-06T12:00:24Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=E3LOS9KY1GA"
+        },
+        {
+          "id": "LojY0nslUoY",
+          "title": "19 ARC Raiders Tips We Wish We’d Known!",
+          "date": "2025-11-05T17:00:42Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=LojY0nslUoY"
+        },
+        {
+          "id": "ziFMFFkMJ2Y",
+          "title": "Is Arc Raiders Any Good?",
+          "date": "2025-10-29T16:44:53Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=ziFMFFkMJ2Y"
+        },
+        {
+          "id": "_TsQT2Q1AcA",
+          "title": "15 ADVANCED God Of War Ragnarok Tips - COMBAT TIPS YOU NEED TO KNOW GOD OF WAR RAGNAROK PS5 GAMEPLAY",
+          "date": "2022-11-10T16:48:03Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=_TsQT2Q1AcA"
+        },
+        {
+          "id": "nliVUbeW-qc",
+          "title": "Elden Ring Combat for dummies: Combat Tips Basics for EVERYTHING You Need to Know - PS5 GAMEPLAY",
+          "date": "2022-03-12T14:00:31Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=nliVUbeW-qc"
+        },
+        {
+          "id": "lqmNKQqAW_g",
+          "title": "Borderlands 2 - &#39;A Meat Bicycle Built For Two&#39; Krieg Story Trailer - Eurogamer",
+          "date": "2013-05-31T13:32:36Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=lqmNKQqAW_g"
+        }
+      ]
     },
     "Dexerto": {
       "nexon": []
@@ -8943,5 +9021,5 @@
       ]
     }
   },
-  "fetched_at": "2026-07-02T03:57:13.670542+00:00"
+  "fetched_at": "2026-07-03T03:40:10.746622+00:00"
 }
