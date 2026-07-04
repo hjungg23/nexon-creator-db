@@ -8282,7 +8282,78 @@
       ]
     },
     "Game Informer": {
-      "nexon": []
+      "nexon": [
+        {
+          "id": "skMbT7MkLKQ",
+          "title": "Ranking the 10 BEST GAMES of 2025 | Game Informer Game of the Year",
+          "date": "2025-12-24T16:01:27Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=skMbT7MkLKQ"
+        },
+        {
+          "id": "EuGuG7zZieM",
+          "title": "Game Informer Plays ARC Raiders",
+          "date": "2025-11-08T09:53:48Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=EuGuG7zZieM"
+        },
+        {
+          "id": "H3ylJ9m4L0A",
+          "title": "Are ARC Raiders &amp; DISPATCH Worth Your Time? | The Game Informer Show",
+          "date": "2025-11-08T04:46:49Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=H3ylJ9m4L0A"
+        },
+        {
+          "id": "xPgHjXdqou4",
+          "title": "The First Descendant: Nexon Aims for The West with New RPG Shooter",
+          "date": "2024-05-30T22:02:34Z",
+          "game": "퍼디",
+          "url": "https://www.youtube.com/watch?v=xPgHjXdqou4"
+        },
+        {
+          "id": "iV-1w_awalA",
+          "title": "Inside The 48 Hours Leading Up To The Finals&#39; Stealth Release",
+          "date": "2023-12-20T15:30:10Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=iV-1w_awalA"
+        },
+        {
+          "id": "Aj6rUG6IZO8",
+          "title": "DNF Duel | New Gameplay Today",
+          "date": "2021-12-22T21:09:44Z",
+          "game": "DNF",
+          "url": "https://www.youtube.com/watch?v=Aj6rUG6IZO8"
+        },
+        {
+          "id": "5XDJGo4JyGE",
+          "title": "KartRider Drift | New Gameplay Today",
+          "date": "2021-12-17T19:05:51Z",
+          "game": "카트라이더",
+          "url": "https://www.youtube.com/watch?v=5XDJGo4JyGE"
+        },
+        {
+          "id": "GZIf0WZJEqs",
+          "title": "Test Chamber - Dungeon Fighter Online",
+          "date": "2015-04-03T21:38:34Z",
+          "game": "DNF",
+          "url": "https://www.youtube.com/watch?v=GZIf0WZJEqs"
+        },
+        {
+          "id": "iDKsqi3Xx70",
+          "title": "NBA 2K14 - Eco-Motion Trailer",
+          "date": "2013-11-07T20:47:55Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=iDKsqi3Xx70"
+        },
+        {
+          "id": "CN4o2WWFqeg",
+          "title": "Lost Saga Relaunch Trailer",
+          "date": "2013-04-19T20:34:40Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=CN4o2WWFqeg"
+        }
+      ]
     },
     "Crunchyroll": {
       "nexon": []
@@ -9021,5 +9092,5 @@
       ]
     }
   },
-  "fetched_at": "2026-07-03T03:40:10.746622+00:00"
+  "fetched_at": "2026-07-04T03:33:28.708109+00:00"
 }
