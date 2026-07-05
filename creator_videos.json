@@ -7760,6 +7760,13 @@
     "The Gamer": {
       "nexon": [
         {
+          "id": "QPB7hDwKGRw",
+          "title": "Everything You NEED To Know About The 4th Raider Expedition",
+          "date": "2026-06-30T22:30:21Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=QPB7hDwKGRw"
+        },
+        {
           "id": "gDtftf_NRqI",
           "title": "Everything You NEED To Know About The 4th Raider Expedition",
           "date": "2026-06-30T13:00:33Z",
@@ -9092,5 +9099,5 @@
       ]
     }
   },
-  "fetched_at": "2026-07-04T03:33:28.708109+00:00"
+  "fetched_at": "2026-07-05T03:51:37.540282+00:00"
 }
