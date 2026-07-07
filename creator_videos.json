@@ -8754,11 +8754,25 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "7_wtdhM3T80",
+          "title": "The Finals - Official Season 11 Teaser Trailer",
+          "date": "2026-07-06T15:15:42Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=7_wtdhM3T80"
+        },
+        {
           "id": "QK4L9WF-3ic",
           "title": "The First Descendant - Official Season 4: Episode 1 Story Trailer",
           "date": "2026-07-02T03:00:10Z",
           "game": "퍼디",
           "url": "https://www.youtube.com/watch?v=QK4L9WF-3ic"
+        },
+        {
+          "id": "1rlgprZ1OuY",
+          "title": "Abyssus - Official Console Launch Trailer",
+          "date": "2026-06-25T16:20:35Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=1rlgprZ1OuY"
         },
         {
           "id": "4jdPtSiq99M",
@@ -9106,5 +9120,5 @@
       ]
     }
   },
-  "fetched_at": "2026-07-06T03:58:38.483108+00:00"
+  "fetched_at": "2026-07-07T03:49:44.957439+00:00"
 }
