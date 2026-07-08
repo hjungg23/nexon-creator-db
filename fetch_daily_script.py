@@ -73,11 +73,15 @@ EXCL_VIDEO = ['tata nexon','nexon ev','nexon car','nexon suv']
 
 def is_clean(title, channel):
     t, ch = title.lower(), channel.lower()
-    if re.search(r'[\uAC00-\uD7AF\u0900-\u097F]', t+ch): return False
+    # 한국어, 힌디어, 중국어, 일본어(히라가나/가타카나) 제외
+    if re.search(r'[\uAC00-\uD7AF\u0900-\u097F\u4e00-\u9fff\u3400-\u4dbf\u3040-\u30ff]', t+ch):
+        return False
     if any(x in t  for x in EXCL_TITLE): return False
     if any(x in ch for x in EXCL_CH):    return False
+    # 채널명에 영문이 40% 미만이면 제외 (비영어권 채널 필터)
+    ch_stripped = ch.replace(' ','')
     ch_latin = len(re.findall(r'[a-zA-Z]', ch))
-    if len(ch.replace(' ','')) > 3 and ch_latin/max(len(ch.replace(' ','')),1) < 0.3:
+    if len(ch_stripped) > 3 and ch_latin/max(len(ch_stripped),1) < 0.4:
         return False
     return True
 
