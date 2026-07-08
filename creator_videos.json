@@ -6302,6 +6302,20 @@
     "IGN": {
       "nexon": [
         {
+          "id": "fUkTirVw2oc",
+          "title": "Sudden Attack Zero Point - Official Cinematic Trailer",
+          "date": "2026-07-07T23:30:15Z",
+          "game": "서든어택",
+          "url": "https://www.youtube.com/watch?v=fUkTirVw2oc"
+        },
+        {
+          "id": "29sa2L0Gh4g",
+          "title": "The Finals - Official Season 11 Teaser Trailer",
+          "date": "2026-07-06T15:15:41Z",
+          "game": "넥슨",
+          "url": "https://www.youtube.com/watch?v=29sa2L0Gh4g"
+        },
+        {
           "id": "hiGBZqnakvY",
           "title": "The First Descendant - Official Season 4: Episode 1 Story Trailer",
           "date": "2026-07-02T03:00:18Z",
@@ -8754,6 +8768,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "ErcxmK6Y5Fo",
+          "title": "Sudden Attack Zero Point - Official Cinematic Trailer",
+          "date": "2026-07-07T22:58:18Z",
+          "game": "서든어택",
+          "url": "https://www.youtube.com/watch?v=ErcxmK6Y5Fo"
+        },
+        {
           "id": "7_wtdhM3T80",
           "title": "The Finals - Official Season 11 Teaser Trailer",
           "date": "2026-07-06T15:15:42Z",
@@ -9120,5 +9141,5 @@
       ]
     }
   },
-  "fetched_at": "2026-07-07T03:49:44.957439+00:00"
+  "fetched_at": "2026-07-08T03:17:00.236907+00:00"
 }
