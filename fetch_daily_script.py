@@ -39,9 +39,36 @@ GAME_QUERIES = [
     ('낙원',       'Nakwon game OR "Nakwon: Last Paradise"'),
 ]
 
-NEXON_KW = ['nexon','khazan','berserker','maplestory','blue archive','arc raiders',
-            'embark','first descendant','embers of the uncrowned','sudden attack',
-            'vindictus','mabinogi','kartrider','dungeon fighter','nakwon','dnf duel']
+NEXON_KW = [
+    # 넥슨 브랜드
+    'nexon',
+    # 퍼스트 버서커: 카잔
+    'khazan', 'berserker', 'first berserker',
+    # 메이플스토리
+    'maplestory', 'maple story',
+    # 블루아카이브
+    'blue archive',
+    # ARC레이더스
+    'arc raiders', 'arc raider',
+    # 엠바크
+    'embark studios', 'embark studio',
+    # 퍼스트 디센던트
+    'first descendant',
+    # 엠버스 오브 디 언크라운드
+    'embers of the uncrowned', 'embers uncrowned', 'eotu',
+    # 서든어택
+    'sudden attack',
+    # 빈딕투스
+    'vindictus', 'defying fate',
+    # 마비노기
+    'mabinogi',
+    # 카트라이더
+    'kartrider', 'kart rider',
+    # DNF
+    'dungeon fighter', 'dnf duel',
+    # 낙원
+    'nakwon',
+]
 EXCL_VIDEO = ['tata nexon','nexon ev','nexon car','nexon suv']
 
 def is_clean(title, channel):
@@ -238,10 +265,8 @@ for c in creators:
         title = item['snippet'].get('title','')
         date  = item['snippet'].get('publishedAt','')
         tl    = title.lower()
-        # API의 q 검색이 채널 내에서 이미 키워드 매칭(제목+설명+태그)을 수행함.
-        # 제목만 다시 영어 키워드로 재검증하면, 매체처럼 제목에 약칭/다른 표현을 쓰는
-        # 채널의 영상이 전부 걸러지는 문제가 있어 제거. 명백한 오탐(차량 등)만 제외.
         if (vid and vid not in ex_ids
+                and any(k in tl for k in NEXON_KW)
                 and not any(x in tl for x in EXCL_VIDEO)):
             new_nexon.append({
                 'id':    vid,
