@@ -77,7 +77,36 @@
     "titles": "퍼스트 버서커: 카잔",
     "medialist": "퍼스트 버서커: 카잔",
     "risk": "2025년 AC Shadows Yasuke 옹호하며 인종주의적 시청자 비판 성향",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=3PCrCc-PxMA",
+        "title": "The First Berserker: Khazan - Let's Play",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "1470000",
+        "date": "2025-04-09",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=PRTmdFqcEP0",
+        "title": "The First Berserker: Khazan - Let's Play Part 1: Banished Hero",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "Neutral",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "1470000",
+        "date": "2025-03-24",
+        "likes": "",
+        "comments": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -324,7 +353,64 @@
     "titles": "퍼스트 버서커: 카잔",
     "medialist": "퍼스트 버서커: 카잔",
     "risk": "",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=meW1_D2GDDo",
+        "title": "IT'S SO GOOD | The First Berserker: Khazan Casual Playthrough",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "105000",
+        "date": "2025-04-08",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=eNkOWUv1fig",
+        "title": "Oh these bosses are HARD | The First Berserker: Khazan Casual Playthrough [2]",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "105000",
+        "date": "2025-04-08",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=DqOv7Gma2SE",
+        "title": "This game's combat is SO SATISFYING | The First Berserker: Khazan Casual Playthrough [3]",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "105000",
+        "date": "2025-04-08",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=2Q4ppPP2zQY",
+        "title": "AN ACTUALLY GOOD MAGE BOSS FIGHT | The First Berserker: Khazan Casual Playthrough [4]",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "105000",
+        "date": "2025-04-08",
+        "likes": "",
+        "comments": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -668,6 +754,20 @@
         "note": "General",
         "views": "",
         "date": "2025-03-27",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=n7JC52cvx_o",
+        "title": "The First Berserker: Khazan - 90 Mins of the Best New Soulslike on PS5",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "Positive",
+        "sentimentSummary": "",
+        "note": "General",
+        "views": "",
+        "date": "2025-03-10",
         "likes": "",
         "comments": ""
       }
@@ -1076,6 +1176,34 @@
         "date": "27/1/2025",
         "likes": "",
         "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=xylDXdNcCag",
+        "title": "These Bosses are SICK! MAX PLAYS: The First Berserker: Khazan Pt 3",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "1810000",
+        "date": "2025-05-15",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_J4WOk9xRCw",
+        "title": "This Game Is Actually Amazing?! MAX PLAYS: The First Berserker: Khazan",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "1710000",
+        "date": "2025-03-31",
+        "likes": "",
+        "comments": ""
       }
     ],
     "subscribers": 0,
@@ -1278,10 +1406,67 @@
     "country": "NA",
     "tier": "",
     "genre": "버라이어티/MMORPG",
-    "titles": "엠버스 오브 디 언크라운드",
-    "medialist": "엠버스 오브 디 언크라운드",
+    "titles": "엠버스 오브 디 언크라운드, 퍼스트 버서커: 카잔",
+    "medialist": "엠버스 오브 디 언크라운드, 퍼스트 버서커: 카잔",
     "risk": " 2021년 Tripwire 낙태법 발언 보이콧 주도, 트럼프 비판 등 정치 이슈 적극 발언 성향, 사전 인지 필요",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=PK_r1HJwra4&list=PLN39y5i_H0FlY86hXZhtg4fouz8_X0U5Q&index=5",
+        "title": "The First Berserker: Khazan Demo | Part 5",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "416000",
+        "date": "2025-01-21",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=z3JpwOyGxRU&list=PLN39y5i_H0FlY86hXZhtg4fouz8_X0U5Q&index=4",
+        "title": "The First Berserker: Khazan Demo | Part 4",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "416000",
+        "date": "2025-01-21",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_WZBWCP5Ixo&list=PLN39y5i_H0FlY86hXZhtg4fouz8_X0U5Q&index=3",
+        "title": "The First Berserker: Khazan Demo | Part 3",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "416000",
+        "date": "2025-01-21",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=jkhYHJSCze0",
+        "title": "The First Berserker: Khazan Demo | Part 2",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "416000",
+        "date": "2025-01-21",
+        "likes": "",
+        "comments": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -1687,7 +1872,36 @@
     "titles": "퍼스트 버서커: 카잔",
     "medialist": "퍼스트 버서커: 카잔",
     "risk": "",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=T3POQi0RRVk",
+        "title": "Blue Tries - The First Berserker: Khazan DEMO - Part 2",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "44500",
+        "date": "2025-01-16",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=x4Nipe7bj20",
+        "title": "Blue Tries - The First Berserker: Khazan DEMO - Part 1",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "44500",
+        "date": "2025-01-16",
+        "likes": "",
+        "comments": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -1704,7 +1918,22 @@
     "titles": "퍼스트 버서커: 카잔",
     "medialist": "퍼스트 버서커: 카잔",
     "risk": "",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=4RYpiUkjKaA",
+        "title": "The First Berserker: Khazan Demo Impressions",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "110000",
+        "date": "2025-01-16",
+        "likes": "",
+        "comments": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -1789,7 +2018,22 @@
     "titles": "퍼스트 버서커: 카잔",
     "medialist": "퍼스트 버서커: 카잔",
     "risk": "",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=D1bWUj4hHzc",
+        "title": "FIRST BERSERKER KHAZAN DEMO + Regionlocked All 207 Bosses Hitless Routing",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "524000",
+        "date": "2025-01-23",
+        "likes": "",
+        "comments": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -1857,7 +2101,50 @@
     "titles": "퍼스트 버서커: 카잔",
     "medialist": "퍼스트 버서커: 카잔",
     "risk": "",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=Mr-WRXSplWQ",
+        "title": "The First Berserker: KHAZAN - DEMO - Part 3 - Ending!",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "2000000",
+        "date": "2025-01-20",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=GgVTeXZd2U8",
+        "title": "The First Berserker: KHAZAN - DEMO - Part 2",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "2000000",
+        "date": "2025-01-20",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=dMly8QJUu3Q",
+        "title": "The First Berserker: KHAZAN - DEMO - Part 1",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "",
+        "sentimentSummary": "",
+        "note": "",
+        "views": "2000000",
+        "date": "2025-01-20",
+        "likes": "",
+        "comments": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -3489,6 +3776,20 @@
         "note": "Previews",
         "views": "13000",
         "date": "2024-10-19",
+        "likes": "",
+        "comments": ""
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=KRAvEi4vqPo",
+        "title": "The First Berserker: Khazan - Playing the Live Demo!!!!",
+        "game": "퍼스트 버서커: 카잔",
+        "description": "",
+        "collabForm": "Creator - Stream",
+        "sentiment": "Neutral",
+        "sentimentSummary": "",
+        "note": "General",
+        "views": "13453",
+        "date": "2025-01-20",
         "likes": "",
         "comments": ""
       }
