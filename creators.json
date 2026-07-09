@@ -8,10 +8,21 @@
     "country": "NA",
     "tier": "1",
     "genre": "소울라이크",
-    "titles": "퍼스트 버서커: 카잔",
-    "medialist": "퍼스트 버서커: 카잔",
+    "titles": "퍼스트 버서커: 카잔, 빈딕투스: 디파잉 페이트",
+    "medialist": "퍼스트 버서커: 카잔, 빈딕투스: 디파잉 페이트",
     "risk": "",
-    "collab_videos": [],
+    "collab_videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=HgIATe8nFOA",
+        "title": "Vindictus Defying Fate All Classes Showcase & Gameplay - Which One Is Right For You?",
+        "game": "빈딕투스: 디파잉 페이트",
+        "description": "VDF 알파 테스트 프리뷰 참여",
+        "collabForm": "VDF 알파 테스트 프리뷰 코드 제공",
+        "sentiment": "긍정",
+        "sentimentSummary": "정교한 전략적 전투에 대해 호평",
+        "note": ""
+      }
+    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
@@ -2649,34 +2660,6 @@
     "medialist": "퍼스트 버서커: 카잔",
     "risk": "",
     "collab_videos": [],
-    "subscribers": 0,
-    "avgViews": 0,
-    "thumbnail": ""
-  },
-  {
-    "name": "Arekz",
-    "type": "크리에이터",
-    "platform": "YouTube",
-    "url": "https://www.youtube.com/channel/UC-zjH-e5XBzMpy_VtwIGRxQ",
-    "email": "",
-    "country": "UK",
-    "tier": "1",
-    "genre": "소울라이크",
-    "titles": "퍼스트 버서커: 카잔, 빈딕투스: 디파잉 페이트",
-    "medialist": "퍼스트 버서커: 카잔, 빈딕투스: 디파잉 페이트",
-    "risk": "",
-    "collab_videos": [
-      {
-        "url": "https://www.youtube.com/watch?v=HgIATe8nFOA",
-        "title": "Vindictus Defying Fate All Classes Showcase & Gameplay - Which One Is Right For You?",
-        "game": "빈딕투스: 디파잉 페이트",
-        "description": "VDF 알파 테스트 프리뷰 참여",
-        "collabForm": "VDF 알파 테스트 프리뷰 코드 제공",
-        "sentiment": "긍정",
-        "sentimentSummary": "정교한 전략적 전투에 대해 호평",
-        "note": ""
-      }
-    ],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
