@@ -172,10 +172,12 @@ try:
     with open('weekly_videos.json', encoding='utf-8') as f:
         existing = json.load(f)
     if existing.get('week_label') == week_label:
-        existing_ids = {v['id'] for v in existing.get('videos', [])}
+        # 기존 데이터도 CJK 필터 적용 후 머지
+        existing_clean = [v for v in existing.get('videos', []) if is_clean(v.get('title',''), v.get('channel',''))]
+        existing_ids = {v['id'] for v in existing_clean}
         new_only = [v for v in weekly_videos if v['id'] not in existing_ids]
         weekly_videos = sorted(
-            existing.get('videos', []) + new_only,
+            existing_clean + new_only,
             key=lambda x: x['views'], reverse=True
         )
         print(f'  기존 머지: 신규 {len(new_only)}개 추가 → 총 {len(weekly_videos)}개')
