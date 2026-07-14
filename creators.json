@@ -4556,22 +4556,7 @@
     "titles": "퍼스트 디센던트, 퍼스트 버서커: 카잔, 엠버스 오브 디 언크라운드, 빈딕투스: 디파잉 페이트, 아크 레이더스, 낙원",
     "medialist": "퍼스트 디센던트, 퍼스트 버서커: 카잔, 엠버스 오브 디 언크라운드, 빈딕투스: 디파잉 페이트, 아크 레이더스, 낙원",
     "risk": "",
-    "collab_videos": [
-      {
-        "url": "https://www.youtube.com/watch?v=cWNaM5GeVK8",
-        "title": "Un Seul Essai, Pas de Seconde Chance - The First Berserker Khazan EN",
-        "game": "퍼스트 버서커: 카잔",
-        "description": "",
-        "collabForm": "체험판 플레이",
-        "sentiment": "Neutral",
-        "sentimentSummary": "",
-        "note": "Demo Public Beta",
-        "views": "1000",
-        "date": "2025-02-24",
-        "likes": "",
-        "comments": ""
-      }
-    ],
+    "collab_videos": [],
     "subscribers": 0,
     "avgViews": 0,
     "thumbnail": ""
