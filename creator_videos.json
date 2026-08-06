@@ -7185,6 +7185,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "SXLJTBf8o9Q",
+          "title": "ARC Raiders - Official &#39;The Tick Hunter&#39; Set Trailer",
+          "date": "2026-08-04T16:45:04Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=SXLJTBf8o9Q"
+        },
+        {
           "id": "ErcxmK6Y5Fo",
           "title": "Sudden Attack Zero Point - Official Cinematic Trailer",
           "date": "2026-07-07T22:58:18Z",
@@ -7537,5 +7544,5 @@
       ]
     }
   },
-  "fetched_at": "2026-08-05T02:49:30.407431+00:00"
+  "fetched_at": "2026-08-06T02:52:41.288274+00:00"
 }
