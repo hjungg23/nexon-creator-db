@@ -5057,6 +5057,20 @@
     "Ex Serv": {
       "nexon": [
         {
+          "id": "VTolnkvic2g",
+          "title": "The First Berserker Khazan : un an après, 3e épisode de la session patient gaming !",
+          "date": "2026-08-19T18:31:50Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=VTolnkvic2g"
+        },
+        {
+          "id": "FniITfXHXE0",
+          "title": "The First Berserker Khazan : un an après, 2e épisode de patient gaming !",
+          "date": "2026-08-19T13:06:40Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=FniITfXHXE0"
+        },
+        {
           "id": "oh303eD4P5w",
           "title": "Un an après, comment a évolué The First Berserker Khazan ? On regarde ça en live !",
           "date": "2026-08-18T17:29:50Z",
@@ -7614,5 +7628,5 @@
       ]
     }
   },
-  "fetched_at": "2026-08-19T01:26:23.412033+00:00"
+  "fetched_at": "2026-08-20T01:25:57.331007+00:00"
 }
