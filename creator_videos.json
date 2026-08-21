@@ -7241,6 +7241,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "gEOintH94xA",
+          "title": "ARC Raiders x Subway - Official Subterranean Outfit Collaboration Trailer",
+          "date": "2026-08-20T13:33:47Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=gEOintH94xA"
+        },
+        {
           "id": "W6OqpqpQdNc",
           "title": "ARC Raiders - Official Phantom Targets Event Launch Trailer",
           "date": "2026-08-18T14:01:56Z",
@@ -7628,5 +7635,5 @@
       ]
     }
   },
-  "fetched_at": "2026-08-20T01:25:57.331007+00:00"
+  "fetched_at": "2026-08-21T01:36:25.594855+00:00"
 }
