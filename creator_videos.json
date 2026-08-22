@@ -5606,6 +5606,20 @@
     "IGN": {
       "nexon": [
         {
+          "id": "1GLpgsH_Ptk",
+          "title": "ARC Raiders x Subway - Official Subterranean Outfit Collaboration Trailer",
+          "date": "2026-08-20T13:33:48Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=1GLpgsH_Ptk"
+        },
+        {
+          "id": "imDMMEpioNM",
+          "title": "ARC Raiders - Official Phantom Targets Event Launch Trailer",
+          "date": "2026-08-18T14:02:03Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=imDMMEpioNM"
+        },
+        {
           "id": "mSRPxuMLYcM",
           "title": "ARC Raiders - Official &#39;The Tick Hunter&#39; Set Trailer",
           "date": "2026-08-04T16:43:10Z",
@@ -7635,5 +7649,5 @@
       ]
     }
   },
-  "fetched_at": "2026-08-21T01:36:25.594855+00:00"
+  "fetched_at": "2026-08-22T01:24:58.753236+00:00"
 }
