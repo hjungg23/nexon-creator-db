@@ -732,6 +732,13 @@
     "SeeReax": {
       "nexon": [
         {
+          "id": "BDGk0M3UBxc",
+          "title": "The First Berserker Khazan Movie (This Game Is Insane)",
+          "date": "2026-08-22T18:00:12Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=BDGk0M3UBxc"
+        },
+        {
           "id": "Oengt700ZQw",
           "title": "It&#39;s Harder Than Elden Ring.... (The First Berserker Khazan)",
           "date": "2025-06-21T01:36:27Z",
@@ -7649,5 +7656,5 @@
       ]
     }
   },
-  "fetched_at": "2026-08-22T01:24:58.753236+00:00"
+  "fetched_at": "2026-08-23T01:38:56.008475+00:00"
 }
