@@ -5064,6 +5064,13 @@
     "Ex Serv": {
       "nexon": [
         {
+          "id": "xO8AUQV2epA",
+          "title": "The First Berserker Khazan : un an après, 4e épisode on se rapproche de la fin ?",
+          "date": "2026-08-23T18:46:43Z",
+          "game": "카잔",
+          "url": "https://www.youtube.com/watch?v=xO8AUQV2epA"
+        },
+        {
           "id": "VTolnkvic2g",
           "title": "The First Berserker Khazan : un an après, 3e épisode de la session patient gaming !",
           "date": "2026-08-19T18:31:50Z",
@@ -7656,5 +7663,5 @@
       ]
     }
   },
-  "fetched_at": "2026-08-23T01:38:56.008475+00:00"
+  "fetched_at": "2026-08-24T01:36:58.171300+00:00"
 }
