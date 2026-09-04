@@ -1,6 +1,17 @@
 {
   "videos": [
     {
+      "id": "vofwqHpZB7A",
+      "title": "Is Nexon Trying To Buy the StarCraft IP?",
+      "channel": "More Lowko",
+      "thumb": "https://i.ytimg.com/vi/vofwqHpZB7A/mqdefault.jpg",
+      "date": "2026-09-03T09:30:00Z",
+      "views": 28327,
+      "url": "https://www.youtube.com/watch?v=vofwqHpZB7A",
+      "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
       "id": "ChNBt1OIubA",
       "title": "OFFICIALLY UNBANNED WE ARE BACK | ARC RAIDERS",
       "channel": "Shady",
@@ -45,6 +56,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "f4n8CjpyB5I",
+      "title": "SECRET ITEM Revealed in ARC Raiders... | Embark Partner",
+      "channel": "Phixate",
+      "thumb": "https://i.ytimg.com/vi/f4n8CjpyB5I/mqdefault.jpg",
+      "date": "2026-09-02T16:47:39Z",
+      "views": 15737,
+      "url": "https://www.youtube.com/watch?v=f4n8CjpyB5I",
+      "game": "엠바크",
+      "plat": "YouTube"
+    },
+    {
       "id": "_xW5boR0tZ8",
       "title": "🔴LIVE | FRIENDLY Raider.. Until You Shoot🤭 Arc Raiders",
       "channel": "Gems",
@@ -52,6 +74,17 @@
       "date": "2026-09-01T00:31:38Z",
       "views": 14920,
       "url": "https://www.youtube.com/watch?v=_xW5boR0tZ8",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "n-BTs1jzrq8",
+      "title": "ARC Raiders then WARDOGS BETA",
+      "channel": "FadeClippedYou",
+      "thumb": "https://i.ytimg.com/vi/n-BTs1jzrq8/mqdefault.jpg",
+      "date": "2026-09-04T00:56:15Z",
+      "views": 14571,
+      "url": "https://www.youtube.com/watch?v=n-BTs1jzrq8",
       "game": "ARC레이더스",
       "plat": "YouTube"
     },
@@ -78,6 +111,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "uVvcAa3ymro",
+      "title": "Iron Arrow is FIRE! Old School Maple Day 2",
+      "channel": "MrMuscleUp",
+      "thumb": "https://i.ytimg.com/vi/uVvcAa3ymro/mqdefault.jpg",
+      "date": "2026-09-03T04:41:42Z",
+      "views": 11877,
+      "url": "https://www.youtube.com/watch?v=uVvcAa3ymro",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "VGgCt00orEQ",
       "title": "ARC Raiders | Trios w/ @MoreShadyy &amp; @Pakman",
       "channel": "FadeClippedYou",
@@ -97,6 +141,17 @@
       "views": 10357,
       "url": "https://www.youtube.com/watch?v=BI_ShGJ1JIE",
       "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "73Id-ZeP73E",
+      "title": "HUGE NEWS! XBOX Bringing Back STARCRAFT | Banjo Kazooie PITCHED | XBOX Disc to Digital Gets BETTER",
+      "channel": "Plume Gaming",
+      "thumb": "https://i.ytimg.com/vi/73Id-ZeP73E/mqdefault.jpg",
+      "date": "2026-09-03T12:02:08Z",
+      "views": 10333,
+      "url": "https://www.youtube.com/watch?v=73Id-ZeP73E",
+      "game": "넥슨",
       "plat": "YouTube"
     },
     {
@@ -140,6 +195,17 @@
       "date": "2026-09-02T11:00:11Z",
       "views": 5983,
       "url": "https://www.youtube.com/watch?v=_FoliP3s8Vg",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "H9HjjCZDxPU",
+      "title": "MAPLE WEAPONS ARE CRACKED!",
+      "channel": "Dahni",
+      "thumb": "https://i.ytimg.com/vi/H9HjjCZDxPU/mqdefault.jpg",
+      "date": "2026-09-03T20:22:24Z",
+      "views": 5904,
+      "url": "https://www.youtube.com/watch?v=H9HjjCZDxPU",
       "game": "메이플",
       "plat": "YouTube"
     },
@@ -188,6 +254,28 @@
       "plat": "YouTube"
     },
     {
+      "id": "TAQWsaDVP8Y",
+      "title": "MapleStory Worlds - Old School Maple [day3]",
+      "channel": "HairNotHair",
+      "thumb": "https://i.ytimg.com/vi/TAQWsaDVP8Y/mqdefault.jpg",
+      "date": "2026-09-03T18:57:08Z",
+      "views": 3620,
+      "url": "https://www.youtube.com/watch?v=TAQWsaDVP8Y",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "uhs0PQRtXk0",
+      "title": "Arc Raiders Lives! (Portrait)",
+      "channel": "RomeFTF",
+      "thumb": "https://i.ytimg.com/vi/uhs0PQRtXk0/mqdefault.jpg",
+      "date": "2026-09-04T00:18:52Z",
+      "views": 3606,
+      "url": "https://www.youtube.com/watch?v=uhs0PQRtXk0",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
       "id": "8SxXI58l5Co",
       "title": "I Trolled Players With REAL ARC RAIDERS CHEATS🤣",
       "channel": "Golu React",
@@ -199,6 +287,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "UYzrdB9lRdg",
+      "title": "DAY 78 - MAPLESTORY EREL LIGHT CW3 PROGRESSION!",
+      "channel": "MisusingTV",
+      "thumb": "https://i.ytimg.com/vi/UYzrdB9lRdg/mqdefault.jpg",
+      "date": "2026-09-03T13:38:50Z",
+      "views": 3528,
+      "url": "https://www.youtube.com/watch?v=UYzrdB9lRdg",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "NBuow-DY7pI",
       "title": "Arc Raiders vs The Finals - Which is Embark&#39;s better game",
       "channel": "Retro_Hazard",
@@ -207,6 +306,17 @@
       "views": 3385,
       "url": "https://www.youtube.com/watch?v=NBuow-DY7pI",
       "game": "엠바크",
+      "plat": "YouTube"
+    },
+    {
+      "id": "FwsnNtvmv9Y",
+      "title": "Pink Bean/ Swiping / AMA",
+      "channel": "PumpkinIdle",
+      "thumb": "https://i.ytimg.com/vi/FwsnNtvmv9Y/mqdefault.jpg",
+      "date": "2026-09-03T04:12:46Z",
+      "views": 3184,
+      "url": "https://www.youtube.com/watch?v=FwsnNtvmv9Y",
+      "game": "메이플",
       "plat": "YouTube"
     },
     {
@@ -265,6 +375,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "ZKFgfwjUnns",
+      "title": "MapleStory Idle: RPG | Did they fix Starforce? | September 3rd | Live Patch Notes |",
+      "channel": "Shio9000 Gamba",
+      "thumb": "https://i.ytimg.com/vi/ZKFgfwjUnns/mqdefault.jpg",
+      "date": "2026-09-03T04:07:33Z",
+      "views": 1978,
+      "url": "https://www.youtube.com/watch?v=ZKFgfwjUnns",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "IkqQjZRNHIk",
       "title": "🔴 เข้าตำราเซียน แกล้งๆทำแพทห่วยเพื่อ Classic | Maplestory N",
       "channel": "Trust Z",
@@ -317,6 +438,17 @@
       "views": 1502,
       "url": "https://www.youtube.com/watch?v=QNCKE3YeHJQ",
       "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
+      "id": "w0CSEnW39OY",
+      "title": "Apocalypse: Anti Enbi 👹⚔️",
+      "channel": "Dungeon Fighter Online",
+      "thumb": "https://i.ytimg.com/vi/w0CSEnW39OY/mqdefault.jpg",
+      "date": "2026-09-03T06:04:08Z",
+      "views": 1478,
+      "url": "https://www.youtube.com/watch?v=w0CSEnW39OY",
+      "game": "DNF",
       "plat": "YouTube"
     },
     {
@@ -408,6 +540,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "83Gej2cClLY",
+      "title": "#jaiveeru #love #automobile #nexon #nexon #games #thar #gameplay #gta #funny #song #answer #sorts",
+      "channel": "Mahendra kumawat",
+      "thumb": "https://i.ytimg.com/vi/83Gej2cClLY/mqdefault.jpg",
+      "date": "2026-09-03T08:02:44Z",
+      "views": 1210,
+      "url": "https://www.youtube.com/watch?v=83Gej2cClLY",
+      "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
       "id": "SNDsfarzCKE",
       "title": "#jaiveeru #love #automobile #song #punjabisong #nexon #gaming #games #thar",
       "channel": "Mahendra kumawat",
@@ -441,6 +584,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "N9kZe3-OaZ8",
+      "title": "#jaiveeru #love #automobile #song #punjabisong #remix #nexon #gaming #games",
+      "channel": "Mahendra kumawat",
+      "thumb": "https://i.ytimg.com/vi/N9kZe3-OaZ8/mqdefault.jpg",
+      "date": "2026-09-03T10:45:44Z",
+      "views": 1159,
+      "url": "https://www.youtube.com/watch?v=N9kZe3-OaZ8",
+      "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
       "id": "hYo1Nj00vUk",
       "title": "🍏 Petra / petra.fyed ⭐ Toki Asuma [Mode 2 outifit] ⚡ Blue Archive",
       "channel": "Girls & Gloves",
@@ -463,6 +617,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "AfFQ6GgPvPY",
+      "title": "ARC RAIDERS | EMBARK CREATOR | CONTROLLER CAM + PVPVE | !discord !throne",
+      "channel": "eeemsie",
+      "thumb": "https://i.ytimg.com/vi/AfFQ6GgPvPY/mqdefault.jpg",
+      "date": "2026-09-02T18:45:18Z",
+      "views": 1088,
+      "url": "https://www.youtube.com/watch?v=AfFQ6GgPvPY",
+      "game": "엠바크",
+      "plat": "YouTube"
+    },
+    {
       "id": "YmBB34Y58GM",
       "title": "Phantom&#39;s Sudden Attack on Agent 😱",
       "channel": "StreamWire",
@@ -481,6 +646,17 @@
       "date": "2026-09-01T12:00:21Z",
       "views": 1082,
       "url": "https://www.youtube.com/watch?v=lE9nx9EtQt0",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "effgxhwnrZQ",
+      "title": "Maplestory M - Playing the STRONGEST Class in the Game! (WITH ENDLESS IFRAMES!)",
+      "channel": "Echo MSM",
+      "thumb": "https://i.ytimg.com/vi/effgxhwnrZQ/mqdefault.jpg",
+      "date": "2026-09-03T17:26:40Z",
+      "views": 1074,
+      "url": "https://www.youtube.com/watch?v=effgxhwnrZQ",
       "game": "메이플",
       "plat": "YouTube"
     },
@@ -551,6 +727,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "PzTMC_06dwQ",
+      "title": "Nos mintieron con Dave the diver? #davethediver #gamedev #juegosindie #nexon",
+      "channel": "CS Gaming",
+      "thumb": "https://i.ytimg.com/vi/PzTMC_06dwQ/mqdefault.jpg",
+      "date": "2026-09-04T00:14:45Z",
+      "views": 962,
+      "url": "https://www.youtube.com/watch?v=PzTMC_06dwQ",
+      "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
       "id": "lEsbWGpDyXY",
       "title": "Embark Can’t Please Everyone… But There’s Clearly a Disconnect",
       "channel": "Nickels",
@@ -570,6 +757,17 @@
       "views": 941,
       "url": "https://www.youtube.com/watch?v=mSSS1AgAK64",
       "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "f5Zu5I3tMyM",
+      "title": "STARCRAFT 3 développé par NEXON ? Blizzard serait proche d’un accord !",
+      "channel": "Lusty",
+      "thumb": "https://i.ytimg.com/vi/f5Zu5I3tMyM/mqdefault.jpg",
+      "date": "2026-09-03T10:00:07Z",
+      "views": 936,
+      "url": "https://www.youtube.com/watch?v=f5Zu5I3tMyM",
+      "game": "넥슨",
       "plat": "YouTube"
     },
     {
@@ -760,6 +958,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "rnLChlaV3ho",
+      "title": "The Daily Life of the Takanashi Family || Blue Archive",
+      "channel": "Shin Edit",
+      "thumb": "https://i.ytimg.com/vi/rnLChlaV3ho/mqdefault.jpg",
+      "date": "2026-09-04T02:45:22Z",
+      "views": 743,
+      "url": "https://www.youtube.com/watch?v=rnLChlaV3ho",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
       "id": "OSQrJ5bkO5I",
       "title": "Gley — I Will Leave My Mark | Blood is the Price",
       "channel": "PhantomMilk",
@@ -778,6 +987,28 @@
       "date": "2026-09-02T22:58:33Z",
       "views": 727,
       "url": "https://www.youtube.com/watch?v=7Bi2ujCTs9g",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "nZjox-K0E50",
+      "title": "Hotachi&#39;s-chan cute moment part special | Blue Archive cute moment",
+      "channel": "Tendou Kei-chan😾    ",
+      "thumb": "https://i.ytimg.com/vi/nZjox-K0E50/mqdefault.jpg",
+      "date": "2026-09-04T00:00:31Z",
+      "views": 720,
+      "url": "https://www.youtube.com/watch?v=nZjox-K0E50",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "dV9yrRDNRMw",
+      "title": "⚠️ Stop Chasing Players in ARC Raiders #arcraiders",
+      "channel": "Lance from Timesaver",
+      "thumb": "https://i.ytimg.com/vi/dV9yrRDNRMw/mqdefault.jpg",
+      "date": "2026-09-03T23:05:52Z",
+      "views": 719,
+      "url": "https://www.youtube.com/watch?v=dV9yrRDNRMw",
       "game": "ARC레이더스",
       "plat": "YouTube"
     },
@@ -826,6 +1057,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "EJdfg8oIZGs",
+      "title": "Weekly Bossing with Dawn Warrior ⚔️ | MapleStory N | LIVE",
+      "channel": "widyws",
+      "thumb": "https://i.ytimg.com/vi/EJdfg8oIZGs/mqdefault.jpg",
+      "date": "2026-09-03T21:43:07Z",
+      "views": 638,
+      "url": "https://www.youtube.com/watch?v=EJdfg8oIZGs",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "YEDgXWLD4gE",
       "title": "The doors in idv ",
       "channel": "Pikas",
@@ -834,6 +1076,17 @@
       "views": 609,
       "url": "https://www.youtube.com/watch?v=YEDgXWLD4gE",
       "game": "마비노기",
+      "plat": "YouTube"
+    },
+    {
+      "id": "Ch4S0FzWggU",
+      "title": "ARC Raiders- Прыгун все понял...",
+      "channel": "Atas_tv",
+      "thumb": "https://i.ytimg.com/vi/Ch4S0FzWggU/mqdefault.jpg",
+      "date": "2026-09-03T22:06:58Z",
+      "views": 596,
+      "url": "https://www.youtube.com/watch?v=Ch4S0FzWggU",
+      "game": "ARC레이더스",
       "plat": "YouTube"
     },
     {
@@ -848,6 +1101,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "i7mzJUM_D3E",
+      "title": "Gaslighting Everyone in ARC Raiders 😂 | Funny PvP Proximity Chat Moments",
+      "channel": "SpicyDingle",
+      "thumb": "https://i.ytimg.com/vi/i7mzJUM_D3E/mqdefault.jpg",
+      "date": "2026-09-04T02:30:38Z",
+      "views": 582,
+      "url": "https://www.youtube.com/watch?v=i7mzJUM_D3E",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
       "id": "pTFm3w1S8CU",
       "title": "Volcano Feels So Good in Arc Raiders",
       "channel": "Miguel Meola",
@@ -856,6 +1120,17 @@
       "views": 577,
       "url": "https://www.youtube.com/watch?v=pTFm3w1S8CU",
       "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "o5YkKGLSqGA",
+      "title": "Restoring Netherworld and Mortal world | The First Berserker: Khazan | Part 8 | KishoreKratos",
+      "channel": "KishoreKratos",
+      "thumb": "https://i.ytimg.com/vi/o5YkKGLSqGA/mqdefault.jpg",
+      "date": "2026-09-04T02:34:03Z",
+      "views": 571,
+      "url": "https://www.youtube.com/watch?v=o5YkKGLSqGA",
+      "game": "카잔",
       "plat": "YouTube"
     },
     {
@@ -881,6 +1156,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "WDYfEmJC36Y",
+      "title": "BUFFED NIGHTFALL Raven Is BROKEN | The First Descendant",
+      "channel": "xAlisa",
+      "thumb": "https://i.ytimg.com/vi/WDYfEmJC36Y/mqdefault.jpg",
+      "date": "2026-09-04T00:27:42Z",
+      "views": 546,
+      "url": "https://www.youtube.com/watch?v=WDYfEmJC36Y",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
       "id": "88wfKMQtgi4",
       "title": "kata kata motivasi blue archive makoto",
       "channel": "afaq 2327",
@@ -899,6 +1185,28 @@
       "date": "2026-09-01T03:35:11Z",
       "views": 520,
       "url": "https://www.youtube.com/watch?v=52RKafDE5JE",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "sdN7Cik7klE",
+      "title": "HIS FIRST TIME SEEING ARC RAIDERS #arcraiders #arcraidersgameplay",
+      "channel": "thejrneyFPS",
+      "thumb": "https://i.ytimg.com/vi/sdN7Cik7klE/mqdefault.jpg",
+      "date": "2026-09-03T22:04:53Z",
+      "views": 511,
+      "url": "https://www.youtube.com/watch?v=sdN7Cik7klE",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "GYnZnZJrwWM",
+      "title": "anime edit [blue archive] hayase yuuka # #bluearchiveglobal #hayaseyuuka #seminar",
+      "channel": "zyy archive ",
+      "thumb": "https://i.ytimg.com/vi/GYnZnZJrwWM/mqdefault.jpg",
+      "date": "2026-09-04T02:26:54Z",
+      "views": 504,
+      "url": "https://www.youtube.com/watch?v=GYnZnZJrwWM",
       "game": "블루아카이브",
       "plat": "YouTube"
     },
@@ -925,6 +1233,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "w9msMUMYtyY",
+      "title": "[DFO] SEP 1 Event Summary",
+      "channel": "Dungeon Fighter Online",
+      "thumb": "https://i.ytimg.com/vi/w9msMUMYtyY/mqdefault.jpg",
+      "date": "2026-09-03T05:32:51Z",
+      "views": 479,
+      "url": "https://www.youtube.com/watch?v=w9msMUMYtyY",
+      "game": "DNF",
+      "plat": "YouTube"
+    },
+    {
       "id": "GT-3GZM36WY",
       "title": "MapleStory Idle: RPG | Pity System Added? New Raid Boss? | September 3rd Update Preview |",
       "channel": "Shio9000 Gamba",
@@ -936,6 +1255,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "2Rh91jGLlqc",
+      "title": "Had to show around quick 😂 | ARC Raiders",
+      "channel": "Topside FM",
+      "thumb": "https://i.ytimg.com/vi/2Rh91jGLlqc/mqdefault.jpg",
+      "date": "2026-09-04T00:39:50Z",
+      "views": 463,
+      "url": "https://www.youtube.com/watch?v=2Rh91jGLlqc",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
       "id": "kJEurTaz7zA",
       "title": "The first Berseker Khazan Viper song #videojuegos #musica #thefirstberserkerkhazan #metal",
       "channel": "The Lord of the Lore's Songs",
@@ -944,6 +1274,28 @@
       "views": 447,
       "url": "https://www.youtube.com/watch?v=kJEurTaz7zA",
       "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "OkEuX6oWvp8",
+      "title": "HOW TO KILL ROCKETEER 101 | EASIER METHOD | ARC RAIDERS!",
+      "channel": "Beezan",
+      "thumb": "https://i.ytimg.com/vi/OkEuX6oWvp8/mqdefault.jpg",
+      "date": "2026-09-03T23:41:27Z",
+      "views": 445,
+      "url": "https://www.youtube.com/watch?v=OkEuX6oWvp8",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "AbocSo0QfUg",
+      "title": "anime edit [blue archive] hatami Erika #bluearchiveglobal #hatamierika",
+      "channel": "zyy archive ",
+      "thumb": "https://i.ytimg.com/vi/AbocSo0QfUg/mqdefault.jpg",
+      "date": "2026-09-04T02:58:44Z",
+      "views": 434,
+      "url": "https://www.youtube.com/watch?v=AbocSo0QfUg",
+      "game": "블루아카이브",
       "plat": "YouTube"
     },
     {
@@ -966,6 +1318,17 @@
       "views": 362,
       "url": "https://www.youtube.com/watch?v=d71r9kDo3Io",
       "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "JXrF-g7hcc4",
+      "title": "kata kata motivasi blue archive",
+      "channel": "afaq 2327",
+      "thumb": "https://i.ytimg.com/vi/JXrF-g7hcc4/mqdefault.jpg",
+      "date": "2026-09-04T02:14:48Z",
+      "views": 356,
+      "url": "https://www.youtube.com/watch?v=JXrF-g7hcc4",
+      "game": "블루아카이브",
       "plat": "YouTube"
     },
     {
@@ -1035,6 +1398,28 @@
       "plat": "YouTube"
     },
     {
+      "id": "NGhcfZuqmc4",
+      "title": "Arc Raiders Tick Beware",
+      "channel": "TrinityHunts9555",
+      "thumb": "https://i.ytimg.com/vi/NGhcfZuqmc4/mqdefault.jpg",
+      "date": "2026-09-04T02:51:43Z",
+      "views": 321,
+      "url": "https://www.youtube.com/watch?v=NGhcfZuqmc4",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "uvRiK-__IXQ",
+      "title": "👑 RAVEN BOOM BOOM! 💥 Onslaught 4 | The First Descendant",
+      "channel": "ISR👑Princess👑AEL",
+      "thumb": "https://i.ytimg.com/vi/uvRiK-__IXQ/mqdefault.jpg",
+      "date": "2026-09-04T01:19:28Z",
+      "views": 320,
+      "url": "https://www.youtube.com/watch?v=uvRiK-__IXQ",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
       "id": "xwfvCwVzKTo",
       "title": "Analyzing MapleStory Classic Skill Changes #shorts",
       "channel": "JohnnyTV",
@@ -1043,6 +1428,17 @@
       "views": 318,
       "url": "https://www.youtube.com/watch?v=xwfvCwVzKTo",
       "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "ax_roAL_oKI",
+      "title": "ARC RAIDERS стрим #shorts #arcraiders",
+      "channel": "MACLLOUDBOY",
+      "thumb": "https://i.ytimg.com/vi/ax_roAL_oKI/mqdefault.jpg",
+      "date": "2026-09-04T00:58:41Z",
+      "views": 317,
+      "url": "https://www.youtube.com/watch?v=ax_roAL_oKI",
+      "game": "ARC레이더스",
       "plat": "YouTube"
     },
     {
@@ -1101,6 +1497,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "HDl2B1iQtuU",
+      "title": "anime edit [blue archive] Takakura Kurumi dan tenjiyama otogi #bluearchiveglobal #foxsquad",
+      "channel": "zyy archive ",
+      "thumb": "https://i.ytimg.com/vi/HDl2B1iQtuU/mqdefault.jpg",
+      "date": "2026-09-04T02:59:54Z",
+      "views": 279,
+      "url": "https://www.youtube.com/watch?v=HDl2B1iQtuU",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
       "id": "Ax62VA1pDeU",
       "title": "The First Descendant",
       "channel": "mamont",
@@ -1134,6 +1541,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "ZO1V8zk-Jtg",
+      "title": "StarCraft May Leave Blizzard, 600 Resident Evil 4 Lines Leak, SteamDB Sold After 13 Years",
+      "channel": "Last 24h in Gaming",
+      "thumb": "https://i.ytimg.com/vi/ZO1V8zk-Jtg/mqdefault.jpg",
+      "date": "2026-09-03T04:18:25Z",
+      "views": 259,
+      "url": "https://www.youtube.com/watch?v=ZO1V8zk-Jtg",
+      "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
       "id": "gEf69wmMiCs",
       "title": "Valby Slays / Onslaught Build / ONE OF THE BEST DESCENDANTS - The First Descendant",
       "channel": "Proxy Plays Mincraft",
@@ -1153,6 +1571,17 @@
       "views": 246,
       "url": "https://www.youtube.com/watch?v=20cqVnEeUA4",
       "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "O_aU2MwO5hk",
+      "title": "Kartrider Cat Etti",
+      "channel": "🐱Haesol Meow😻 ",
+      "thumb": "https://i.ytimg.com/vi/O_aU2MwO5hk/mqdefault.jpg",
+      "date": "2026-09-03T12:12:51Z",
+      "views": 246,
+      "url": "https://www.youtube.com/watch?v=O_aU2MwO5hk",
+      "game": "카트라이더",
       "plat": "YouTube"
     },
     {
@@ -1208,6 +1637,17 @@
       "views": 216,
       "url": "https://www.youtube.com/watch?v=yET3GRQosIs",
       "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "mL9w96rmhQo",
+      "title": "Sensei &amp; Chiaki Moment~Blue Archive#bluearchiveglobal#shorts",
+      "channel": "Schale Archive ",
+      "thumb": "https://i.ytimg.com/vi/mL9w96rmhQo/mqdefault.jpg",
+      "date": "2026-09-04T00:54:06Z",
+      "views": 216,
+      "url": "https://www.youtube.com/watch?v=mL9w96rmhQo",
+      "game": "블루아카이브",
       "plat": "YouTube"
     },
     {
@@ -1310,6 +1750,28 @@
       "plat": "YouTube"
     },
     {
+      "id": "rc2JGVox760",
+      "title": "kata kata motivasi blue archive makoto",
+      "channel": "afaq 2327",
+      "thumb": "https://i.ytimg.com/vi/rc2JGVox760/mqdefault.jpg",
+      "date": "2026-09-04T02:15:09Z",
+      "views": 183,
+      "url": "https://www.youtube.com/watch?v=rc2JGVox760",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "xEIbWSLPV5Q",
+      "title": "Let&#39;s Play The First Descendant - Weekly Ancestor Module Farm &amp; More (Gameplay, No Commentary)",
+      "channel": "Bloody-Rayne",
+      "thumb": "https://i.ytimg.com/vi/xEIbWSLPV5Q/mqdefault.jpg",
+      "date": "2026-09-04T02:53:08Z",
+      "views": 182,
+      "url": "https://www.youtube.com/watch?v=xEIbWSLPV5Q",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
       "id": "WNQeZ6xzDPg",
       "title": "Let&#39;s Grind Ancestor Mods &amp; Transcendent Weapons! - The First Descendant",
       "channel": "Ascending Rift",
@@ -1321,6 +1783,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "H0T0_sSLmVE",
+      "title": "ARC RAIDERS ADMITTED SOMETHING SERIOUS ABOUT THE UPDATES! #gaming #videogames",
+      "channel": "DZSH Gaming",
+      "thumb": "https://i.ytimg.com/vi/H0T0_sSLmVE/mqdefault.jpg",
+      "date": "2026-09-04T03:17:57Z",
+      "views": 172,
+      "url": "https://www.youtube.com/watch?v=H0T0_sSLmVE",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
       "id": "orsb4UWxdB0",
       "title": "Counter Strike Nexon l cs_747 l Zombie Z",
       "channel": "ZakePlay987",
@@ -1329,6 +1802,28 @@
       "views": 170,
       "url": "https://www.youtube.com/watch?v=orsb4UWxdB0",
       "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
+      "id": "0QWIUNp7eWw",
+      "title": "always other fish in the sea | The First Descendant",
+      "channel": "anasiangamer",
+      "thumb": "https://i.ytimg.com/vi/0QWIUNp7eWw/mqdefault.jpg",
+      "date": "2026-09-04T01:27:19Z",
+      "views": 169,
+      "url": "https://www.youtube.com/watch?v=0QWIUNp7eWw",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "4NSp_0A_8iI",
+      "title": "The Summer Tropical Vacation set, up close. | Vindictus",
+      "channel": "Vindictus",
+      "thumb": "https://i.ytimg.com/vi/4NSp_0A_8iI/mqdefault.jpg",
+      "date": "2026-09-03T14:00:05Z",
+      "views": 168,
+      "url": "https://www.youtube.com/watch?v=4NSp_0A_8iI",
+      "game": "빈디커스",
       "plat": "YouTube"
     },
     {
@@ -1351,6 +1846,17 @@
       "views": 157,
       "url": "https://www.youtube.com/watch?v=bjFNi-gtSn8",
       "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "t5RaAj_kkt4",
+      "title": "RAVEN | Lara Croft Cosplay | Field Survival Trainee Skin | The First Descendant",
+      "channel": "Waifus Academy of Albion",
+      "thumb": "https://i.ytimg.com/vi/t5RaAj_kkt4/mqdefault.jpg",
+      "date": "2026-09-04T00:37:46Z",
+      "views": 156,
+      "url": "https://www.youtube.com/watch?v=t5RaAj_kkt4",
+      "game": "퍼디",
       "plat": "YouTube"
     },
     {
@@ -1428,6 +1934,17 @@
       "views": 145,
       "url": "https://www.youtube.com/watch?v=-wK6ZeTXG28",
       "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "Fu6RLismIYA",
+      "title": "MODEL 1887 | THE FINALS #embark #thefinals #games #gameplay #игры #зефиналс",
+      "channel": "LUX",
+      "thumb": "https://i.ytimg.com/vi/Fu6RLismIYA/mqdefault.jpg",
+      "date": "2026-09-02T13:18:02Z",
+      "views": 143,
+      "url": "https://www.youtube.com/watch?v=Fu6RLismIYA",
+      "game": "엠바크",
       "plat": "YouTube"
     },
     {
@@ -1519,6 +2036,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "l6MPQ5Ggpdc",
+      "title": "Learn how to use Pro Mode in the MapleStory Worlds Client!",
+      "channel": "MapleStory Worlds",
+      "thumb": "https://i.ytimg.com/vi/l6MPQ5Ggpdc/mqdefault.jpg",
+      "date": "2026-09-03T17:33:02Z",
+      "views": 119,
+      "url": "https://www.youtube.com/watch?v=l6MPQ5Ggpdc",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "q_NLrYfTg0Y",
       "title": "The First Descendant/Whatever else",
       "channel": "Uprising_Quevo",
@@ -1527,6 +2055,17 @@
       "views": 117,
       "url": "https://www.youtube.com/watch?v=q_NLrYfTg0Y",
       "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "QFgrbRm0HhA",
+      "title": "[Blue Archive JP] Perorodzilla Insane/Torment/Lunatic Attempts",
+      "channel": "tomogumodu",
+      "thumb": "https://i.ytimg.com/vi/QFgrbRm0HhA/mqdefault.jpg",
+      "date": "2026-09-04T02:37:04Z",
+      "views": 115,
+      "url": "https://www.youtube.com/watch?v=QFgrbRm0HhA",
+      "game": "블루아카이브",
       "plat": "YouTube"
     },
     {
@@ -1541,6 +2080,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "OaluijrWN4w",
+      "title": "Forza Kartrider Symphogear Mega Pizzaplex Voice English US Original",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/OaluijrWN4w/mqdefault.jpg",
+      "date": "2026-09-03T07:33:40Z",
+      "views": 111,
+      "url": "https://www.youtube.com/watch?v=OaluijrWN4w",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
       "id": "tMXjvhd4TcA",
       "title": "[Blue Archive]  สอบประมวล วันนี้ หุ่นกระป๋อง",
       "channel": "Sa-ru-to",
@@ -1549,6 +2099,17 @@
       "views": 110,
       "url": "https://www.youtube.com/watch?v=tMXjvhd4TcA",
       "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "e33bGlykPxM",
+      "title": "Best Absolute Zero Ultimate Viessa Build with Frost Blossom - The First Descendant",
+      "channel": "JITheThunder",
+      "thumb": "https://i.ytimg.com/vi/e33bGlykPxM/mqdefault.jpg",
+      "date": "2026-09-04T01:35:26Z",
+      "views": 107,
+      "url": "https://www.youtube.com/watch?v=e33bGlykPxM",
+      "game": "퍼디",
       "plat": "YouTube"
     },
     {
@@ -1571,6 +2132,17 @@
       "views": 95,
       "url": "https://www.youtube.com/watch?v=ZjJerkVLaQc",
       "game": "빈디커스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "-e59dGAGejU",
+      "title": "[EN] HardEdge Bucket Night Weekly #54 Extra | SMS, DOA2, DNF, BAG2, Tekken3, BDC | FT3 Exhibitions",
+      "channel": "HardEdge_org",
+      "thumb": "https://i.ytimg.com/vi/-e59dGAGejU/mqdefault.jpg",
+      "date": "2026-08-31T06:25:50Z",
+      "views": 95,
+      "url": "https://www.youtube.com/watch?v=-e59dGAGejU",
+      "game": "DNF",
       "plat": "YouTube"
     },
     {
@@ -1603,6 +2175,17 @@
       "date": "2026-09-02T23:30:21Z",
       "views": 88,
       "url": "https://www.youtube.com/watch?v=DQ1cTRLkEHg",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "E4qKNrhCg5g",
+      "title": "[Blue Archive] Chise - Sora ga aoi ne~",
+      "channel": "CallMeImouto",
+      "thumb": "https://i.ytimg.com/vi/E4qKNrhCg5g/mqdefault.jpg",
+      "date": "2026-09-03T23:30:20Z",
+      "views": 88,
+      "url": "https://www.youtube.com/watch?v=E4qKNrhCg5g",
       "game": "블루아카이브",
       "plat": "YouTube"
     },
@@ -1662,6 +2245,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "PM_tWcbS4CE",
+      "title": "is thief class good in maplestory classic....",
+      "channel": "EpicVideoGameMaster",
+      "thumb": "https://i.ytimg.com/vi/PM_tWcbS4CE/mqdefault.jpg",
+      "date": "2026-09-03T16:45:55Z",
+      "views": 82,
+      "url": "https://www.youtube.com/watch?v=PM_tWcbS4CE",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "XQ9bVJs3D28",
       "title": "VINDICTUS DLSS5 Hagie (Sylas) Gameplay",
       "channel": "Alyona “iya” Turova",
@@ -1691,6 +2285,17 @@
       "date": "2026-09-01T00:26:16Z",
       "views": 79,
       "url": "https://www.youtube.com/watch?v=ajScnt4ZCPc",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "NdICIucmars",
+      "title": "The first Descendant",
+      "channel": "Johny Dang",
+      "thumb": "https://i.ytimg.com/vi/NdICIucmars/mqdefault.jpg",
+      "date": "2026-09-04T00:35:21Z",
+      "views": 79,
+      "url": "https://www.youtube.com/watch?v=NdICIucmars",
       "game": "퍼디",
       "plat": "YouTube"
     },
@@ -1783,6 +2388,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "pHIFrAEe8jM",
+      "title": "MapleStory: Idle RPG - Marksman Gameplay Part 32 | PC, Android &amp; iOS | 4K 60FPS",
+      "channel": "NV Gaming M",
+      "thumb": "https://i.ytimg.com/vi/pHIFrAEe8jM/mqdefault.jpg",
+      "date": "2026-09-03T10:44:06Z",
+      "views": 70,
+      "url": "https://www.youtube.com/watch?v=pHIFrAEe8jM",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "H8cCyaKppcg",
       "title": "VINDICTUS DLSS5  Romel",
       "channel": "Alyona “iya” Turova",
@@ -1838,6 +2454,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "CPb0XzNtx8A",
+      "title": "arc raiders in at spaceport.",
+      "channel": "fordgirl1225",
+      "thumb": "https://i.ytimg.com/vi/CPb0XzNtx8A/mqdefault.jpg",
+      "date": "2026-09-04T01:18:06Z",
+      "views": 61,
+      "url": "https://www.youtube.com/watch?v=CPb0XzNtx8A",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
       "id": "_z7jc4BWwls",
       "title": "The First Descendant LIVE PS5pro Gameplay #265",
       "channel": "Aiden Arkham",
@@ -1849,6 +2476,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "QnqGavNHLhg",
+      "title": "This Game Is WAY Harder Than I Expected | Khazan",
+      "channel": "MyersV2",
+      "thumb": "https://i.ytimg.com/vi/QnqGavNHLhg/mqdefault.jpg",
+      "date": "2026-09-04T02:18:31Z",
+      "views": 60,
+      "url": "https://www.youtube.com/watch?v=QnqGavNHLhg",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
       "id": "B7mmIOe98ss",
       "title": "ROOC DEFIANT vs Vindictus - Guild League: Stellar Clash (01-09-2026)",
       "channel": "Lordaemon",
@@ -1857,6 +2495,39 @@
       "views": 59,
       "url": "https://www.youtube.com/watch?v=B7mmIOe98ss",
       "game": "빈디커스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "oqoNA5fvAPc",
+      "title": "Mabinogi: What&#39;s your mabi goal? #HeresBecky",
+      "channel": "Rebeca828ss",
+      "thumb": "https://i.ytimg.com/vi/oqoNA5fvAPc/mqdefault.jpg",
+      "date": "2026-09-03T11:33:29Z",
+      "views": 59,
+      "url": "https://www.youtube.com/watch?v=oqoNA5fvAPc",
+      "game": "마비노기",
+      "plat": "YouTube"
+    },
+    {
+      "id": "Ps9k4WKi1VE",
+      "title": "Mabinogi: Do you think we will be able to return to Gorias when its all done? #HeresBecky",
+      "channel": "Rebeca828ss",
+      "thumb": "https://i.ytimg.com/vi/Ps9k4WKi1VE/mqdefault.jpg",
+      "date": "2026-08-31T20:01:54Z",
+      "views": 59,
+      "url": "https://www.youtube.com/watch?v=Ps9k4WKi1VE",
+      "game": "마비노기",
+      "plat": "YouTube"
+    },
+    {
+      "id": "EhSIZjL-iq0",
+      "title": "The First Descendant LIVE PS5pro Gameplay #266",
+      "channel": "Aiden Arkham",
+      "thumb": "https://i.ytimg.com/vi/EhSIZjL-iq0/mqdefault.jpg",
+      "date": "2026-09-04T02:36:31Z",
+      "views": 58,
+      "url": "https://www.youtube.com/watch?v=EhSIZjL-iq0",
+      "game": "퍼디",
       "plat": "YouTube"
     },
     {
@@ -1882,6 +2553,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "fVRg29J5jjs",
+      "title": "[SHORTS] #31 CLL Radio | AKTHESAVIOR X Maple Story | I&#39;M LOOKING FOR A FAIRY OR A GENIE",
+      "channel": "MagicKoopaMarc",
+      "thumb": "https://i.ytimg.com/vi/fVRg29J5jjs/mqdefault.jpg",
+      "date": "2026-09-03T10:05:46Z",
+      "views": 55,
+      "url": "https://www.youtube.com/watch?v=fVRg29J5jjs",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
       "id": "LEau_mZBT-Y",
       "title": "Blue Archive~(Android,IOS,PC)~Mizuha Mimori~Recolletion(L2D) Mode",
       "channel": "Schale Archive ",
@@ -1890,6 +2572,17 @@
       "views": 54,
       "url": "https://www.youtube.com/watch?v=LEau_mZBT-Y",
       "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "7r-qCkJSkZw",
+      "title": "Live The First Berserker (The First Berserker: Khazan) EP.3",
+      "channel": "Za Nuker",
+      "thumb": "https://i.ytimg.com/vi/7r-qCkJSkZw/mqdefault.jpg",
+      "date": "2026-09-04T02:13:56Z",
+      "views": 54,
+      "url": "https://www.youtube.com/watch?v=7r-qCkJSkZw",
+      "game": "카잔",
       "plat": "YouTube"
     },
     {
@@ -1912,6 +2605,17 @@
       "views": 53,
       "url": "https://www.youtube.com/watch?v=b4r-O7ZzlI4",
       "game": "서든어택",
+      "plat": "YouTube"
+    },
+    {
+      "id": "yuixxC4tHsQ",
+      "title": "[DFO] stupid powerline adapter",
+      "channel": "freecomkcf",
+      "thumb": "https://i.ytimg.com/vi/yuixxC4tHsQ/mqdefault.jpg",
+      "date": "2026-09-02T15:06:59Z",
+      "views": 53,
+      "url": "https://www.youtube.com/watch?v=yuixxC4tHsQ",
+      "game": "DNF",
       "plat": "YouTube"
     },
     {
@@ -2036,6 +2740,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "1V5biuzfOp0",
+      "title": "The First Descendant (PS5) - Karel&#39;s Mothership on Conquest Difficulty with Ultimate Ajax",
+      "channel": "Warrior Yagami",
+      "thumb": "https://i.ytimg.com/vi/1V5biuzfOp0/mqdefault.jpg",
+      "date": "2026-09-04T01:34:20Z",
+      "views": 44,
+      "url": "https://www.youtube.com/watch?v=1V5biuzfOp0",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
       "id": "qHmyb0l4usg",
       "title": "Cómo Empezar en DFO 2026: Tu Primer Set de Armadura y Misiones Diarias",
       "channel": "Jonathan Lozada Gamer",
@@ -2124,6 +2839,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "0t0AumGITPE",
+      "title": "🔥Juegos next-gen con gráficos brutales para 2026 y 2027",
+      "channel": "Neo KarmaLP",
+      "thumb": "https://i.ytimg.com/vi/0t0AumGITPE/mqdefault.jpg",
+      "date": "2026-09-03T16:26:17Z",
+      "views": 34,
+      "url": "https://www.youtube.com/watch?v=0t0AumGITPE",
+      "game": "EOTU",
+      "plat": "YouTube"
+    },
+    {
       "id": "94nBBmiZRnE",
       "title": "MapleStorySEA #12 Weekly boss and event",
       "channel": "Sync Game",
@@ -2165,6 +2891,28 @@
       "views": 32,
       "url": "https://www.youtube.com/watch?v=62stoHYekGo",
       "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "G6Oq6-7TNyo",
+      "title": "The First Descendant  Day 4 | The 7x2 Days Journey",
+      "channel": "Markie Gamie",
+      "thumb": "https://i.ytimg.com/vi/G6Oq6-7TNyo/mqdefault.jpg",
+      "date": "2026-09-04T03:17:36Z",
+      "views": 32,
+      "url": "https://www.youtube.com/watch?v=G6Oq6-7TNyo",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "QB52sOO0NFk",
+      "title": "Sudden Attack Zero Point Gameplay D36 SAZ",
+      "channel": "meltz44gamer",
+      "thumb": "https://i.ytimg.com/vi/QB52sOO0NFk/mqdefault.jpg",
+      "date": "2026-09-03T17:07:14Z",
+      "views": 32,
+      "url": "https://www.youtube.com/watch?v=QB52sOO0NFk",
+      "game": "서든어택",
       "plat": "YouTube"
     },
     {
@@ -2355,6 +3103,28 @@
       "plat": "YouTube"
     },
     {
+      "id": "4JPJ_ZuTb9s",
+      "title": "Blue Archive &amp; Project RX Devs on the Future of NEXON Games | Dorkaholics",
+      "channel": "Dorkaholics",
+      "thumb": "https://i.ytimg.com/vi/4JPJ_ZuTb9s/mqdefault.jpg",
+      "date": "2026-09-03T20:03:48Z",
+      "views": 21,
+      "url": "https://www.youtube.com/watch?v=4JPJ_ZuTb9s",
+      "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
+      "id": "EJ6QEkc6z00",
+      "title": "IS KHazan HARDER THAN SEKIRO?! 😳 | The First Berserker: Khazan FIRST PLAYTHROUGH",
+      "channel": "EspadaVerse",
+      "thumb": "https://i.ytimg.com/vi/EJ6QEkc6z00/mqdefault.jpg",
+      "date": "2026-09-03T23:55:55Z",
+      "views": 21,
+      "url": "https://www.youtube.com/watch?v=EJ6QEkc6z00",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
       "id": "09907Ubis5k",
       "title": "Lets get some GOOP, Arc raiders live",
       "channel": "Tannors Bricks",
@@ -2440,6 +3210,17 @@
       "views": 18,
       "url": "https://www.youtube.com/watch?v=p9VNpKCfEkQ",
       "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "dJcZzPw4K8E",
+      "title": "The First Berserker : Khazan is so peak",
+      "channel": "Parry Merchant",
+      "thumb": "https://i.ytimg.com/vi/dJcZzPw4K8E/mqdefault.jpg",
+      "date": "2026-09-03T23:53:09Z",
+      "views": 18,
+      "url": "https://www.youtube.com/watch?v=dJcZzPw4K8E",
+      "game": "카잔",
       "plat": "YouTube"
     },
     {
@@ -2553,6 +3334,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "aFivxDPKYWk",
+      "title": "¿¡Cómo que solo han pasado 4 meses en Blue Archive!? #bluearchiveglobal #bluearchiveespañol",
+      "channel": "Atsu-lover",
+      "thumb": "https://i.ytimg.com/vi/aFivxDPKYWk/mqdefault.jpg",
+      "date": "2026-09-04T03:40:15Z",
+      "views": 14,
+      "url": "https://www.youtube.com/watch?v=aFivxDPKYWk",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
       "id": "nHA1f_-cMgA",
       "title": "Vindictus: Defying Fate | Alpha Test Teaser Trailer: One Moment, One Destiny",
       "channel": "bifteez",
@@ -2641,6 +3433,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "zx7HcnjUFEY",
+      "title": "KRR+ Big League, Chinese (Ranked Speed)",
+      "channel": "Diz E",
+      "thumb": "https://i.ytimg.com/vi/zx7HcnjUFEY/mqdefault.jpg",
+      "date": "2026-09-02T12:00:29Z",
+      "views": 11,
+      "url": "https://www.youtube.com/watch?v=zx7HcnjUFEY",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
       "id": "NGje5qaeelY",
       "title": "Hero+ Esras Solo (Lumielle)",
       "channel": "Kanzaki415",
@@ -2671,6 +3474,28 @@
       "views": 10,
       "url": "https://www.youtube.com/watch?v=EteGG6gDWjM",
       "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "VpPilrd4koc",
+      "title": "ARC RAIDERS — История создания, триумф и главный риск Embark!",
+      "channel": "Quiet Core",
+      "thumb": "https://i.ytimg.com/vi/VpPilrd4koc/mqdefault.jpg",
+      "date": "2026-09-03T12:02:19Z",
+      "views": 10,
+      "url": "https://www.youtube.com/watch?v=VpPilrd4koc",
+      "game": "엠바크",
+      "plat": "YouTube"
+    },
+    {
+      "id": "tHYlnRZRsEk",
+      "title": "DFO Gameplay 3 (2026)",
+      "channel": "CCTurles",
+      "thumb": "https://i.ytimg.com/vi/tHYlnRZRsEk/mqdefault.jpg",
+      "date": "2026-09-02T06:57:30Z",
+      "views": 10,
+      "url": "https://www.youtube.com/watch?v=tHYlnRZRsEk",
+      "game": "DNF",
       "plat": "YouTube"
     },
     {
@@ -2729,6 +3554,17 @@
       "plat": "YouTube"
     },
     {
+      "id": "g70eMYIEQ2o",
+      "title": "Forza Kartrider Symphogear Mega Pizzaplex Voice English US Original And Another",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/g70eMYIEQ2o/mqdefault.jpg",
+      "date": "2026-09-03T08:15:33Z",
+      "views": 9,
+      "url": "https://www.youtube.com/watch?v=g70eMYIEQ2o",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
       "id": "XK228ot_qkA",
       "title": "Was not expecting this #foryou #trending #gaming #thefirstberserkerkhazan #bossfight #soulslike #fyp",
       "channel": "LazyLeo",
@@ -2759,6 +3595,28 @@
       "views": 8,
       "url": "https://www.youtube.com/watch?v=wvV6-ruKTTw",
       "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "QVsr0hduqAQ",
+      "title": "“Come here — you ain’t going NOWHERE” 💀 Arc Raiders clutch #Shorts",
+      "channel": "Haydoorie",
+      "thumb": "https://i.ytimg.com/vi/QVsr0hduqAQ/mqdefault.jpg",
+      "date": "2026-09-03T22:30:28Z",
+      "views": 8,
+      "url": "https://www.youtube.com/watch?v=QVsr0hduqAQ",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "iOnROhG9bY4",
+      "title": "Forza Kartrider Symphogear Mega Pizzaplex Voice English US Another",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/iOnROhG9bY4/mqdefault.jpg",
+      "date": "2026-09-03T07:38:15Z",
+      "views": 8,
+      "url": "https://www.youtube.com/watch?v=iOnROhG9bY4",
+      "game": "카트라이더",
       "plat": "YouTube"
     },
     {
@@ -2824,6 +3682,39 @@
       "date": "2026-09-02T05:47:00Z",
       "views": 7,
       "url": "https://www.youtube.com/watch?v=a2HYqoqjCUU",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
+      "id": "PIwc5McOjoQ",
+      "title": "The First Descendant battle pass spawn",
+      "channel": "dazzler🇦🇺",
+      "thumb": "https://i.ytimg.com/vi/PIwc5McOjoQ/mqdefault.jpg",
+      "date": "2026-09-04T03:32:04Z",
+      "views": 7,
+      "url": "https://www.youtube.com/watch?v=PIwc5McOjoQ",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "2PE53-JndjM",
+      "title": "Forza Kartrider Symphogear Mega Pizzaplex Voice English USA Hoyoverse Anime Game It&#39;s Welcome Back",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/2PE53-JndjM/mqdefault.jpg",
+      "date": "2026-09-03T08:44:32Z",
+      "views": 7,
+      "url": "https://www.youtube.com/watch?v=2PE53-JndjM",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
+      "id": "hcBtWNPpx-Q",
+      "title": "Pegassi Sports Car Forza Kartrider Ed. Complete",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/hcBtWNPpx-Q/mqdefault.jpg",
+      "date": "2026-09-03T08:35:16Z",
+      "views": 7,
+      "url": "https://www.youtube.com/watch?v=hcBtWNPpx-Q",
       "game": "카트라이더",
       "plat": "YouTube"
     },
@@ -2949,6 +3840,39 @@
       "plat": "YouTube"
     },
     {
+      "id": "45OELut0AhE",
+      "title": "[ Sudden Attack ] WAR CLAN (A Site) UnFairplay | Biệt Đội Thần Tốc",
+      "channel": "MC Nguyena9",
+      "thumb": "https://i.ytimg.com/vi/45OELut0AhE/mqdefault.jpg",
+      "date": "2026-09-04T01:00:21Z",
+      "views": 6,
+      "url": "https://www.youtube.com/watch?v=45OELut0AhE",
+      "game": "서든어택",
+      "plat": "YouTube"
+    },
+    {
+      "id": "xi6CTPJ-MeI",
+      "title": "SUDDEN ATTACK! 😱 1 VS 2 — Can He Survive? 🔥 | Gaming Shorts #gameplay #gamingshorts #Shorts #Gaming",
+      "channel": "NexRush",
+      "thumb": "https://i.ytimg.com/vi/xi6CTPJ-MeI/mqdefault.jpg",
+      "date": "2026-09-02T02:35:54Z",
+      "views": 6,
+      "url": "https://www.youtube.com/watch?v=xi6CTPJ-MeI",
+      "game": "서든어택",
+      "plat": "YouTube"
+    },
+    {
+      "id": "vG8bfPUnp68",
+      "title": "vindictus ultrawide mode",
+      "channel": "Shredmachine",
+      "thumb": "https://i.ytimg.com/vi/vG8bfPUnp68/mqdefault.jpg",
+      "date": "2026-09-03T12:10:24Z",
+      "views": 6,
+      "url": "https://www.youtube.com/watch?v=vG8bfPUnp68",
+      "game": "빈디커스",
+      "plat": "YouTube"
+    },
+    {
       "id": "bTaeqep7Rgk",
       "title": "NEVER third party a leaper in ARC Raiders #arcraiders #arc #arcraidersgameplay",
       "channel": "dipperfr",
@@ -3033,6 +3957,72 @@
       "date": "2026-09-02T06:09:05Z",
       "views": 5,
       "url": "https://www.youtube.com/watch?v=zF44xA65uDQ",
+      "game": "DNF",
+      "plat": "YouTube"
+    },
+    {
+      "id": "kMTBz-hhsac",
+      "title": "Primeira Vez Jogando: The First Berserker Khazan - Viper Fase 2 #khazan #gaming #soulslike #shorts",
+      "channel": "Brandão",
+      "thumb": "https://i.ytimg.com/vi/kMTBz-hhsac/mqdefault.jpg",
+      "date": "2026-09-04T00:00:26Z",
+      "views": 5,
+      "url": "https://www.youtube.com/watch?v=kMTBz-hhsac",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "fkkjpSqxBHo",
+      "title": "anime edit [blue archive] sunaookami shiroko terror / kuroko #sunaookamishiroko #blueaechi #kuroko",
+      "channel": "zyy archive ",
+      "thumb": "https://i.ytimg.com/vi/fkkjpSqxBHo/mqdefault.jpg",
+      "date": "2026-09-04T02:30:12Z",
+      "views": 5,
+      "url": "https://www.youtube.com/watch?v=fkkjpSqxBHo",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "vLoD5dTUnUU",
+      "title": "Creator Search Insights 75 Million Likes Forza Kartrider Animation Animated Symphogear Mega Pizza",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/vLoD5dTUnUU/mqdefault.jpg",
+      "date": "2026-09-03T10:30:56Z",
+      "views": 5,
+      "url": "https://www.youtube.com/watch?v=vLoD5dTUnUU",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
+      "id": "78PlgLsqaK8",
+      "title": "Creator Search Insights Forza Kartrider Animation Animated ",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/78PlgLsqaK8/mqdefault.jpg",
+      "date": "2026-09-03T10:28:41Z",
+      "views": 5,
+      "url": "https://www.youtube.com/watch?v=78PlgLsqaK8",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
+      "id": "RANRMFyD0WA",
+      "title": "Creator Search Insights Car Content Creator Forza Kartrider Animation Animated",
+      "channel": "Forza Kartrider Racing Kingmax",
+      "thumb": "https://i.ytimg.com/vi/RANRMFyD0WA/mqdefault.jpg",
+      "date": "2026-09-03T10:26:23Z",
+      "views": 5,
+      "url": "https://www.youtube.com/watch?v=RANRMFyD0WA",
+      "game": "카트라이더",
+      "plat": "YouTube"
+    },
+    {
+      "id": "TBIjdKnqne8",
+      "title": "Dungeon Fighter Online once had a PvP system so cursed!",
+      "channel": "The Trash Panda Tavern",
+      "thumb": "https://i.ytimg.com/vi/TBIjdKnqne8/mqdefault.jpg",
+      "date": "2026-09-03T15:00:25Z",
+      "views": 5,
+      "url": "https://www.youtube.com/watch?v=TBIjdKnqne8",
       "game": "DNF",
       "plat": "YouTube"
     },
@@ -3246,6 +4236,28 @@
       "plat": "YouTube"
     },
     {
+      "id": "eDPfLG693lU",
+      "title": "The First Berserker Khazan: Hismar no NG+ de Espadão!",
+      "channel": "JHOW",
+      "thumb": "https://i.ytimg.com/vi/eDPfLG693lU/mqdefault.jpg",
+      "date": "2026-09-04T02:06:19Z",
+      "views": 4,
+      "url": "https://www.youtube.com/watch?v=eDPfLG693lU",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "qUf5R457bC8",
+      "title": "DFO Venus Week Farm #dfo #dungeonfighteronline #games #anime  #gaming #gameplay #gamer",
+      "channel": "Largo",
+      "thumb": "https://i.ytimg.com/vi/qUf5R457bC8/mqdefault.jpg",
+      "date": "2026-09-02T06:27:05Z",
+      "views": 4,
+      "url": "https://www.youtube.com/watch?v=qUf5R457bC8",
+      "game": "DNF",
+      "plat": "YouTube"
+    },
+    {
       "id": "JyEk-9xyvpQ",
       "title": "The First Berserker: Khazan Trokka",
       "channel": "Raizen Random ",
@@ -3386,6 +4398,39 @@
       "views": 3,
       "url": "https://www.youtube.com/watch?v=GazSY4eCYig",
       "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
+      "id": "REDvHGoSXqE",
+      "title": "new update #automobile #automobile #viralvideo #gaming #shivatandava #thar #t #games #comedy #nexon",
+      "channel": "Harish Gurjar",
+      "thumb": "https://i.ytimg.com/vi/REDvHGoSXqE/mqdefault.jpg",
+      "date": "2026-09-04T01:05:04Z",
+      "views": 3,
+      "url": "https://www.youtube.com/watch?v=REDvHGoSXqE",
+      "game": "넥슨",
+      "plat": "YouTube"
+    },
+    {
+      "id": "aCFkdSnJEIQ",
+      "title": "How To Use ExitLag For MapleStory (2026) - Full Guide",
+      "channel": "Watch & Learn Tutorials",
+      "thumb": "https://i.ytimg.com/vi/aCFkdSnJEIQ/mqdefault.jpg",
+      "date": "2026-09-03T05:00:35Z",
+      "views": 3,
+      "url": "https://www.youtube.com/watch?v=aCFkdSnJEIQ",
+      "game": "메이플",
+      "plat": "YouTube"
+    },
+    {
+      "id": "etjfo38fX7I",
+      "title": "Vindictus: Sylas vs Lucian [Hero Mode/ Core Boost] [No Pots][NA]",
+      "channel": "SpiritRend",
+      "thumb": "https://i.ytimg.com/vi/etjfo38fX7I/mqdefault.jpg",
+      "date": "2026-09-04T01:56:34Z",
+      "views": 3,
+      "url": "https://www.youtube.com/watch?v=etjfo38fX7I",
+      "game": "빈디커스",
       "plat": "YouTube"
     },
     {
@@ -3562,6 +4607,17 @@
       "views": 2,
       "url": "https://www.youtube.com/watch?v=e7gEUd0_IZ4",
       "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "cLW6Hj_Lyps",
+      "title": "Blue Archive OST Lo-Fi Acoustic Version (page 6) | Warm Vibe for Study, Work, and Relaxation",
+      "channel": "gilibisi",
+      "thumb": "https://i.ytimg.com/vi/cLW6Hj_Lyps/mqdefault.jpg",
+      "date": "2026-09-04T01:19:28Z",
+      "views": 2,
+      "url": "https://www.youtube.com/watch?v=cLW6Hj_Lyps",
+      "game": "블루아카이브",
       "plat": "YouTube"
     },
     {
@@ -3826,6 +4882,61 @@
       "views": 1,
       "url": "https://www.youtube.com/watch?v=3L-50Mmxcyk",
       "game": "빈디커스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "kT5Ia4rgt0k",
+      "title": "The First Berserker Khazan EXPERT didn&#39;t bug this time final boss",
+      "channel": "Henrique Cabrera",
+      "thumb": "https://i.ytimg.com/vi/kT5Ia4rgt0k/mqdefault.jpg",
+      "date": "2026-09-04T03:23:34Z",
+      "views": 1,
+      "url": "https://www.youtube.com/watch?v=kT5Ia4rgt0k",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "Z7cJcOsk420",
+      "title": "Aurateur plays The First Berserker: Khazan | Part 8",
+      "channel": "Bald Man Playthroughs",
+      "thumb": "https://i.ytimg.com/vi/Z7cJcOsk420/mqdefault.jpg",
+      "date": "2026-09-04T01:03:10Z",
+      "views": 1,
+      "url": "https://www.youtube.com/watch?v=Z7cJcOsk420",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "53lH82L73FA",
+      "title": "Black knight in the first Descendant",
+      "channel": " black knight 1",
+      "thumb": "https://i.ytimg.com/vi/53lH82L73FA/mqdefault.jpg",
+      "date": "2026-09-04T01:13:56Z",
+      "views": 1,
+      "url": "https://www.youtube.com/watch?v=53lH82L73FA",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "XltZgojYoDI",
+      "title": "Mabinogi VOD - Manifesting &quot;Pure&quot; and &quot;Whisperer&quot; drops",
+      "channel": "SilhyVODs",
+      "thumb": "https://i.ytimg.com/vi/XltZgojYoDI/mqdefault.jpg",
+      "date": "2026-09-01T07:39:47Z",
+      "views": 1,
+      "url": "https://www.youtube.com/watch?v=XltZgojYoDI",
+      "game": "마비노기",
+      "plat": "YouTube"
+    },
+    {
+      "id": "v43nJZlWNxg",
+      "title": "¡Batiendo mi propio récord de velocidad! ⏱️",
+      "channel": "NitroKids ",
+      "thumb": "https://i.ytimg.com/vi/v43nJZlWNxg/mqdefault.jpg",
+      "date": "2026-09-02T16:00:29Z",
+      "views": 1,
+      "url": "https://www.youtube.com/watch?v=v43nJZlWNxg",
+      "game": "카트라이더",
       "plat": "YouTube"
     },
     {
@@ -4652,11 +5763,165 @@
       "url": "https://www.youtube.com/watch?v=PYUAAiUYKmc",
       "game": "낙원",
       "plat": "YouTube"
+    },
+    {
+      "id": "egyfIlLiaG0",
+      "title": "The First Berserker: Khazan | Expert Difficulty | Elamein",
+      "channel": "KnightFromLordran",
+      "thumb": "https://i.ytimg.com/vi/egyfIlLiaG0/mqdefault.jpg",
+      "date": "2026-09-04T03:07:17Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=egyfIlLiaG0",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "T33phYV0qzg",
+      "title": "The First Berserker: Khazan | Expert Difficulty | Mutated Xilence",
+      "channel": "KnightFromLordran",
+      "thumb": "https://i.ytimg.com/vi/T33phYV0qzg/mqdefault.jpg",
+      "date": "2026-09-04T01:32:23Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=T33phYV0qzg",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "7V_fu7EEPnI",
+      "title": "THE FIRST BERSERKER KHAZAN: EPISODE ELEVEN PT.2",
+      "channel": "LazyLeo",
+      "thumb": "https://i.ytimg.com/vi/7V_fu7EEPnI/mqdefault.jpg",
+      "date": "2026-09-04T01:30:10Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=7V_fu7EEPnI",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "lKwsrWlZOh4",
+      "title": "The First Berserker: Khazan | Expert Difficulty | Xaldin",
+      "channel": "KnightFromLordran",
+      "thumb": "https://i.ytimg.com/vi/lKwsrWlZOh4/mqdefault.jpg",
+      "date": "2026-09-04T01:11:15Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=lKwsrWlZOh4",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "LX0_x3X6Ujs",
+      "title": "THE FIRST BERSERKER KHAZAN: EPISODE ELEVEN",
+      "channel": "LazyLeo",
+      "thumb": "https://i.ytimg.com/vi/LX0_x3X6Ujs/mqdefault.jpg",
+      "date": "2026-09-04T01:00:16Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=LX0_x3X6Ujs",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "lQ0IwpuA3Zo",
+      "title": "The First Berserker: Khazan | Expert Difficulty | Maluca",
+      "channel": "KnightFromLordran",
+      "thumb": "https://i.ytimg.com/vi/lQ0IwpuA3Zo/mqdefault.jpg",
+      "date": "2026-09-04T00:45:33Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=lQ0IwpuA3Zo",
+      "game": "카잔",
+      "plat": "YouTube"
+    },
+    {
+      "id": "PvvvtFUwp7w",
+      "title": "Blue Archive Saori Birthday Line (Japanese Dub)",
+      "channel": "Edward Perez",
+      "thumb": "https://i.ytimg.com/vi/PvvvtFUwp7w/mqdefault.jpg",
+      "date": "2026-09-04T03:44:03Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=PvvvtFUwp7w",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "wPsOMpI2Km4",
+      "title": "FX&#39;s Blue Archive The Animation intro #1",
+      "channel": "TVOKids Network 2",
+      "thumb": "https://i.ytimg.com/vi/wPsOMpI2Km4/mqdefault.jpg",
+      "date": "2026-09-03T22:27:32Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=wPsOMpI2Km4",
+      "game": "블루아카이브",
+      "plat": "YouTube"
+    },
+    {
+      "id": "nzno3HIR7tE",
+      "title": "SHOCKING discovery in ARC Raiders! 🤯 #kingkoppa23  #arcraiders #gaming #loot",
+      "channel": "KINGKOOPA23 ",
+      "thumb": "https://i.ytimg.com/vi/nzno3HIR7tE/mqdefault.jpg",
+      "date": "2026-09-04T03:24:45Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=nzno3HIR7tE",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "YpX864LUPY4",
+      "title": "Is Anyone else IN LOVE WITH ARC RAIDERS STILL Or IS IT JUST ME?! #arcraiders #ragegaming #gamergirl",
+      "channel": "Samferlly",
+      "thumb": "https://i.ytimg.com/vi/YpX864LUPY4/mqdefault.jpg",
+      "date": "2026-09-03T23:40:47Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=YpX864LUPY4",
+      "game": "ARC레이더스",
+      "plat": "YouTube"
+    },
+    {
+      "id": "PDZCn6YK108",
+      "title": "The First Descendant",
+      "channel": "RockinHardDude",
+      "thumb": "https://i.ytimg.com/vi/PDZCn6YK108/mqdefault.jpg",
+      "date": "2026-09-04T02:26:23Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=PDZCn6YK108",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "xgRlfLlv97w",
+      "title": "The First Descendant Season 4",
+      "channel": "PMoney97",
+      "thumb": "https://i.ytimg.com/vi/xgRlfLlv97w/mqdefault.jpg",
+      "date": "2026-09-04T02:10:37Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=xgRlfLlv97w",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "HzpTzwC41iw",
+      "title": "The First Descendant - ÉPREUVES - GLEY ULTIME - Avec Yujin ultime, Séréna &amp; Raven - Bons Coéquipiers",
+      "channel": "maxyPowerD",
+      "thumb": "https://i.ytimg.com/vi/HzpTzwC41iw/mqdefault.jpg",
+      "date": "2026-09-04T00:17:00Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=HzpTzwC41iw",
+      "game": "퍼디",
+      "plat": "YouTube"
+    },
+    {
+      "id": "NjFEx0KSDes",
+      "title": "sudden attack",
+      "channel": "movie review ",
+      "thumb": "https://i.ytimg.com/vi/NjFEx0KSDes/mqdefault.jpg",
+      "date": "2026-09-02T18:44:35Z",
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=NjFEx0KSDes",
+      "game": "서든어택",
+      "plat": "YouTube"
     }
   ],
   "week_label": "2026.08.31~2026.09.06",
   "week_start": "2026-08-30T15:00:00+00:00",
   "week_end": "2026-09-06T14:59:59+00:00",
-  "fetched_at": "2026-09-03T03:44:59.199133+00:00",
-  "count": 423
+  "fetched_at": "2026-09-04T03:46:34.162005+00:00",
+  "count": 538
 }
