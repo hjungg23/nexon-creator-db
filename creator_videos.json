@@ -7276,6 +7276,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "ZoZ2dt2tmXs",
+          "title": "ARC Raiders - Official &#39;Ascending The Mountain&#39; Trailer",
+          "date": "2026-09-08T13:59:36Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=ZoZ2dt2tmXs"
+        },
+        {
           "id": "KQhLY1A_IKY",
           "title": "ARC Raiders - Official Camera Gadget Announce Trailer",
           "date": "2026-08-26T17:51:04Z",
@@ -7677,5 +7684,5 @@
       ]
     }
   },
-  "fetched_at": "2026-09-08T03:51:30.369340+00:00"
+  "fetched_at": "2026-09-09T03:56:07.191573+00:00"
 }
