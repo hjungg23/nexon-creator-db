@@ -5620,6 +5620,13 @@
     "IGN": {
       "nexon": [
         {
+          "id": "KltQU9xW9Is",
+          "title": "ARC Raiders - Official &#39;Ascending The Mountain&#39; Trailer",
+          "date": "2026-09-08T13:59:36Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=KltQU9xW9Is"
+        },
+        {
           "id": "1GLpgsH_Ptk",
           "title": "ARC Raiders x Subway - Official Subterranean Outfit Collaboration Trailer",
           "date": "2026-08-20T13:33:48Z",
@@ -7684,5 +7691,5 @@
       ]
     }
   },
-  "fetched_at": "2026-09-09T03:56:07.191573+00:00"
+  "fetched_at": "2026-09-10T03:56:14.908828+00:00"
 }
