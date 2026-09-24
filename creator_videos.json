@@ -3500,6 +3500,13 @@
     "Reforge Gaming": {
       "nexon": [
         {
+          "id": "16I4GcR6NVY",
+          "title": "ARC Raiders Update Changes A LOT",
+          "date": "2026-09-24T01:30:34Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=16I4GcR6NVY"
+        },
+        {
           "id": "Tc5t5-VWaEk",
           "title": "Ghost of Yōtei Complete Edition + Crimson Desert DLC + Arc Raiders Update",
           "date": "2026-08-13T17:32:47Z",
@@ -7691,5 +7698,5 @@
       ]
     }
   },
-  "fetched_at": "2026-09-23T04:03:54.364783+00:00"
+  "fetched_at": "2026-09-24T03:58:59.614246+00:00"
 }
