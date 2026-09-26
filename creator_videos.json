@@ -3507,6 +3507,13 @@
     "Reforge Gaming": {
       "nexon": [
         {
+          "id": "-3GMiP16vw8",
+          "title": "Marathon &amp; Arc Raiders PvE Updates Explained (The Future is Co-Op)",
+          "date": "2026-09-25T17:13:29Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=-3GMiP16vw8"
+        },
+        {
           "id": "JXOwP3W-Fm4",
           "title": "PvP is Dying? Why Marathon &amp; Arc Raiders Are Pivoting to PvE",
           "date": "2026-09-24T20:20:36Z",
@@ -7325,6 +7332,27 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "tFp1VEAy5bM",
+          "title": "ARC Raiders - Official The Frozen Trail Collector Set Trailer",
+          "date": "2026-09-25T18:00:58Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=tFp1VEAy5bM"
+        },
+        {
+          "id": "mcCMWsxNhWI",
+          "title": "ARC Raiders - Official Frozen Trail Teaser Trailer",
+          "date": "2026-09-24T17:08:44Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=mcCMWsxNhWI"
+        },
+        {
+          "id": "8I_XPoAg9GE",
+          "title": "ARC Raiders - Official Frozen Trail Update Developer Overview Video",
+          "date": "2026-09-23T18:38:56Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=8I_XPoAg9GE"
+        },
+        {
           "id": "ZoZ2dt2tmXs",
           "title": "ARC Raiders - Official &#39;Ascending The Mountain&#39; Trailer",
           "date": "2026-09-08T13:59:36Z",
@@ -7733,5 +7761,5 @@
       ]
     }
   },
-  "fetched_at": "2026-09-25T04:13:39.622281+00:00"
+  "fetched_at": "2026-09-26T04:18:02.591995+00:00"
 }
