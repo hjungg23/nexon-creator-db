@@ -3,6 +3,13 @@
     "Arrekz Gaming": {
       "nexon": [
         {
+          "id": "6zdn9b97M9c",
+          "title": "ARC Raiders Is BACK! Frozen Trail Update, New Map, Amplified Weapons &amp; Skill Tree Rework",
+          "date": "2026-10-07T15:00:22Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=6zdn9b97M9c"
+        },
+        {
           "id": "gMDuc76XOJE",
           "title": "ARC Raiders NEW Update, Tips, Map, ARC Turbine, Gear &amp; Tricks (Riven Tides)",
           "date": "2026-04-28T17:00:53Z",
@@ -489,6 +496,13 @@
     "Enfant Terrible": {
       "nexon": [
         {
+          "id": "GvCPcSmjEYI",
+          "title": "FROZEN TRAIL First Gameplay Demo | Brutal Snow Map &amp; PvE Beta in New Free Arc Raiders Update",
+          "date": "2026-10-07T15:00:24Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=GvCPcSmjEYI"
+        },
+        {
           "id": "j85pPm1RSZU",
           "title": "EMBERS OF THE UNCROWNED New Gameplay Demo | Dark Fantasy Massive OPEN WORLD ACTION RPG like Diablo",
           "date": "2026-06-16T15:11:11Z",
@@ -784,6 +798,13 @@
     },
     "Asmongold": {
       "nexon": [
+        {
+          "id": "2CgHNaECofo",
+          "title": "My girlfriend made me play Maplestory..",
+          "date": "2026-10-07T20:00:36Z",
+          "game": "메이플",
+          "url": "https://www.youtube.com/watch?v=2CgHNaECofo"
+        },
         {
           "id": "dwgZBijCDiY",
           "title": "So I Tried ARC Raiders..",
@@ -3506,6 +3527,20 @@
     },
     "Reforge Gaming": {
       "nexon": [
+        {
+          "id": "PW6W3k37JC4",
+          "title": "Arc Raiders Was Wrong About PVE?",
+          "date": "2026-10-08T00:19:55Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=PW6W3k37JC4"
+        },
+        {
+          "id": "3W0stwZsPaI",
+          "title": "Did ARC Raiders Just Admit They Were Wrong?",
+          "date": "2026-10-08T00:07:27Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=3W0stwZsPaI"
+        },
         {
           "id": "-3GMiP16vw8",
           "title": "Marathon &amp; Arc Raiders PvE Updates Explained (The Future is Co-Op)",
@@ -7768,5 +7803,5 @@
       ]
     }
   },
-  "fetched_at": "2026-10-07T05:10:35.396191+00:00"
+  "fetched_at": "2026-10-08T05:20:52.102022+00:00"
 }
