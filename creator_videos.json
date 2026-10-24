@@ -5844,6 +5844,13 @@
     "IGN": {
       "nexon": [
         {
+          "id": "iQ5V4f0zy1I",
+          "title": "ARC Raiders - Official Soul&#39;s Offering Teaser Trailer",
+          "date": "2026-10-23T16:50:29Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=iQ5V4f0zy1I"
+        },
+        {
           "id": "0tj8P7wl_hs",
           "title": "Chun-Li actor Callina Liang loves DBD, but has less love for ARC Raiders. #streetfighter #gaming",
           "date": "2026-10-13T22:59:17Z",
@@ -7563,6 +7570,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "gtbL6PxHsms",
+          "title": "ARC Raiders - Official Soul&#39;s Offering Teaser Trailer",
+          "date": "2026-10-23T16:53:18Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=gtbL6PxHsms"
+        },
+        {
           "id": "FLa1sLpvyXU",
           "title": "ARC Raiders - Official Frozen Trail Arrives Trailer",
           "date": "2026-10-07T16:18:11Z",
@@ -8006,5 +8020,5 @@
       ]
     }
   },
-  "fetched_at": "2026-10-23T04:03:30.616795+00:00"
+  "fetched_at": "2026-10-24T03:57:23.484653+00:00"
 }
