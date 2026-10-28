@@ -5844,6 +5844,13 @@
     "IGN": {
       "nexon": [
         {
+          "id": "kB-s-J0iYI0",
+          "title": "ARC Raiders - Official Soul&#39;s Offering: New Player Project Trailer",
+          "date": "2026-10-27T13:45:36Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=kB-s-J0iYI0"
+        },
+        {
           "id": "iQ5V4f0zy1I",
           "title": "ARC Raiders - Official Soul&#39;s Offering Teaser Trailer",
           "date": "2026-10-23T16:50:29Z",
@@ -7570,6 +7577,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "mXJ7DMvmMz4",
+          "title": "ARC Raiders - Official Soul&#39;s Offering: New Player Project Trailer",
+          "date": "2026-10-27T14:03:36Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=mXJ7DMvmMz4"
+        },
+        {
           "id": "gtbL6PxHsms",
           "title": "ARC Raiders - Official Soul&#39;s Offering Teaser Trailer",
           "date": "2026-10-23T16:53:18Z",
@@ -8020,5 +8034,5 @@
       ]
     }
   },
-  "fetched_at": "2026-10-27T04:21:47.122464+00:00"
+  "fetched_at": "2026-10-28T04:52:36.379342+00:00"
 }
