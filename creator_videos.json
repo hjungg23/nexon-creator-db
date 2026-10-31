@@ -7577,6 +7577,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "yl1259t1sfk",
+          "title": "ARC Raiders - Official 1st Anniversary Trailer",
+          "date": "2026-10-30T18:59:02Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=yl1259t1sfk"
+        },
+        {
           "id": "mXJ7DMvmMz4",
           "title": "ARC Raiders - Official Soul&#39;s Offering: New Player Project Trailer",
           "date": "2026-10-27T14:03:36Z",
@@ -8034,5 +8041,5 @@
       ]
     }
   },
-  "fetched_at": "2026-10-30T05:02:36.489540+00:00"
+  "fetched_at": "2026-10-31T04:49:57.292770+00:00"
 }
