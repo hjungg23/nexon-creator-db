@@ -5858,6 +5858,13 @@
     "IGN": {
       "nexon": [
         {
+          "id": "txx4A-rrkGI",
+          "title": "The First Descendant - Official Monet Character Trailer",
+          "date": "2026-11-10T08:00:39Z",
+          "game": "퍼디",
+          "url": "https://www.youtube.com/watch?v=txx4A-rrkGI"
+        },
+        {
           "id": "ZlRZuc-HqM8",
           "title": "ARC Raiders - Official 1st Anniversary Trailer",
           "date": "2026-10-30T19:00:00Z",
@@ -7268,6 +7275,13 @@
     "PlayStation Blog": {
       "nexon": [
         {
+          "id": "0cC6yoOk2ZA",
+          "title": "The First Descendant - &quot;Meet Monet&quot; Character Trailer | PS5 Games",
+          "date": "2026-11-10T08:00:17Z",
+          "game": "퍼디",
+          "url": "https://www.youtube.com/watch?v=0cC6yoOk2ZA"
+        },
+        {
           "id": "GcPMNsOZJfk",
           "title": "ARC Raiders: The Frozen Trail - Launch Trailer | PS5 Games",
           "date": "2026-10-08T12:00:37Z",
@@ -8062,5 +8076,5 @@
       ]
     }
   },
-  "fetched_at": "2026-11-10T06:41:12.674297+00:00"
+  "fetched_at": "2026-11-11T05:27:45.167409+00:00"
 }
