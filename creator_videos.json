@@ -7612,6 +7612,34 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "h3Gbs6XlyJw",
+          "title": "Vindictus: Defying Fate - Official Game Overview Trailer",
+          "date": "2026-11-12T16:16:03Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=h3Gbs6XlyJw"
+        },
+        {
+          "id": "HIxghBXvTGA",
+          "title": "Embers of the Uncrowned - Official 2nd Playtest Teaser Trailer",
+          "date": "2026-11-12T16:00:21Z",
+          "game": "EOTU",
+          "url": "https://www.youtube.com/watch?v=HIxghBXvTGA"
+        },
+        {
+          "id": "LMq-Kog8hbo",
+          "title": "Vindictus: Defying Fate - Official Cinematic Teaser Trailer",
+          "date": "2026-11-12T15:07:16Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=LMq-Kog8hbo"
+        },
+        {
+          "id": "bS9P97Bdpn4",
+          "title": "The First Descendant - Official Monet Character Trailer",
+          "date": "2026-11-10T08:00:04Z",
+          "game": "퍼디",
+          "url": "https://www.youtube.com/watch?v=bS9P97Bdpn4"
+        },
+        {
           "id": "yl1259t1sfk",
           "title": "ARC Raiders - Official 1st Anniversary Trailer",
           "date": "2026-10-30T18:59:02Z",
@@ -8076,5 +8104,5 @@
       ]
     }
   },
-  "fetched_at": "2026-11-12T06:32:41.008820+00:00"
+  "fetched_at": "2026-11-13T05:51:52.456115+00:00"
 }
