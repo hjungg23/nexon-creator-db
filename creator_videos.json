@@ -7275,6 +7275,13 @@
     "PlayStation Blog": {
       "nexon": [
         {
+          "id": "R4Ql9j5O858",
+          "title": "Vindictus: Defying Fate - Game Overview Trailer | PS5 Games",
+          "date": "2026-11-12T13:00:12Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=R4Ql9j5O858"
+        },
+        {
           "id": "0cC6yoOk2ZA",
           "title": "The First Descendant - &quot;Meet Monet&quot; Character Trailer | PS5 Games",
           "date": "2026-11-10T08:00:17Z",
@@ -7611,6 +7618,13 @@
     },
     "GameTrailers": {
       "nexon": [
+        {
+          "id": "vCMuxD12fd4",
+          "title": "Vindictus: Defying Fate - Official ‘Let the Righteous Judge’ Cinematic Trailer",
+          "date": "2026-11-14T00:15:26Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=vCMuxD12fd4"
+        },
         {
           "id": "h3Gbs6XlyJw",
           "title": "Vindictus: Defying Fate - Official Game Overview Trailer",
@@ -8104,5 +8118,5 @@
       ]
     }
   },
-  "fetched_at": "2026-11-13T05:51:52.456115+00:00"
+  "fetched_at": "2026-11-14T05:40:59.271879+00:00"
 }
