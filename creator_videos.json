@@ -5858,6 +5858,27 @@
     "IGN": {
       "nexon": [
         {
+          "id": "WWuoxuA9ewI",
+          "title": "Vindictus: Defying Fate - Official ‘Let the Righteous Judge’ Cinematic Trailer",
+          "date": "2026-11-14T03:00:08Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=WWuoxuA9ewI"
+        },
+        {
+          "id": "Y4fbxnEsjC8",
+          "title": "Vindictus: Defying Fate - Official Game Overview Trailer",
+          "date": "2026-11-12T16:16:04Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=Y4fbxnEsjC8"
+        },
+        {
+          "id": "62_nWQgdBSE",
+          "title": "Embers of the Uncrowned - Official 2nd Playtest Teaser Trailer",
+          "date": "2026-11-12T16:00:18Z",
+          "game": "EOTU",
+          "url": "https://www.youtube.com/watch?v=62_nWQgdBSE"
+        },
+        {
           "id": "txx4A-rrkGI",
           "title": "The First Descendant - Official Monet Character Trailer",
           "date": "2026-11-10T08:00:39Z",
@@ -8118,5 +8139,5 @@
       ]
     }
   },
-  "fetched_at": "2026-11-14T05:40:59.271879+00:00"
+  "fetched_at": "2026-11-15T05:40:07.873978+00:00"
 }
