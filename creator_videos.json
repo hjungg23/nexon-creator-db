@@ -7647,6 +7647,13 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "2nEsda9se04",
+          "title": "Vindictus: Defying Fate - Official Lann Character Story Trailer",
+          "date": "2026-11-18T14:46:00Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=2nEsda9se04"
+        },
+        {
           "id": "vCMuxD12fd4",
           "title": "Vindictus: Defying Fate - Official ‘Let the Righteous Judge’ Cinematic Trailer",
           "date": "2026-11-14T00:15:26Z",
@@ -8146,5 +8153,5 @@
       ]
     }
   },
-  "fetched_at": "2026-11-18T06:41:04.845368+00:00"
+  "fetched_at": "2026-11-19T06:42:37.696309+00:00"
 }
