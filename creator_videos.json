@@ -5865,6 +5865,13 @@
     "IGN": {
       "nexon": [
         {
+          "id": "Nh2WRm_upck",
+          "title": "ARC Raiders - Official New Event: Flickering Flames Trailer",
+          "date": "2026-11-24T14:26:22Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=Nh2WRm_upck"
+        },
+        {
           "id": "WWuoxuA9ewI",
           "title": "Vindictus: Defying Fate - Official ‘Let the Righteous Judge’ Cinematic Trailer",
           "date": "2026-11-14T03:00:08Z",
@@ -7647,6 +7654,20 @@
     "GameTrailers": {
       "nexon": [
         {
+          "id": "1GqMuBRrmHM",
+          "title": "Vindictus: Defying Fate - Official Fiona Character Story Trailer",
+          "date": "2026-11-25T14:52:34Z",
+          "game": "빈디커스",
+          "url": "https://www.youtube.com/watch?v=1GqMuBRrmHM"
+        },
+        {
+          "id": "_oz349DNocI",
+          "title": "ARC Raiders - Official New Event: Flickering Flames Trailer",
+          "date": "2026-11-24T14:26:26Z",
+          "game": "ARC레이더스",
+          "url": "https://www.youtube.com/watch?v=_oz349DNocI"
+        },
+        {
           "id": "2nEsda9se04",
           "title": "Vindictus: Defying Fate - Official Lann Character Story Trailer",
           "date": "2026-11-18T14:46:00Z",
@@ -8153,5 +8174,5 @@
       ]
     }
   },
-  "fetched_at": "2026-11-25T07:45:39.288092+00:00"
+  "fetched_at": "2026-11-26T07:36:55.968122+00:00"
 }
